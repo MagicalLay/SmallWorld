@@ -1,1 +1,2 @@
 C:\Users\mleray\Documents\Jeu\Jeu\obj\Debug\Jeu.csprojResolveAssemblyReference.cache
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\obj\Debug\Jeu.csprojResolveAssemblyReference.cache

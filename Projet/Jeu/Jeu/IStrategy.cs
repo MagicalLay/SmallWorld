@@ -5,12 +5,6 @@ using System.Text;
 
 namespace Jeu
 {
-    public interface IMapStrategy
-    {
-
-        Map Instantiate();
-    }
-
     public interface IStrategy
     {
         Map instantiate();

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Jeu
 {
-    public class StrategyMedium : Strategy, IStrategy
+    public class StrategyMedium : IStrategy
     {
         public StrategyMedium()
         {
