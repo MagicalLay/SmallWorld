@@ -1,0 +1,1477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="be674fb2-cb81-407f-b53c-efb234be6a9d"
+  name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="50f25b00-041f-4b55-b68a-54e18d4879c6"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="90f1d5d7-c4a1-4f83-90d6-0b27aecc4089"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="attaquer"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a45fd0a6-17f3-4432-9c2c-5973ee635100"
+              LastKnownName="attaquer"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="780eb960-f977-4135-8b2f-2b427da21f78"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="934e3705-6045-4d6c-9a3e-b8f393258fe5"
+                  name="attaquer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f2ed321d-f94d-4f16-837b-5a02f41734d0"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Déplacer unité courante"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bfe6aebb-2876-422b-9f83-6468007f55fb"
+              LastKnownName="Déplacer unité courante"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9bce0fed-c3cc-4e60-8c9f-f473f9afc199"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5578ab4c-5ae7-4922-999f-c04404574e53"
+                  name="Déplacer unité courante"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="29d1d8ec-677c-40d5-a4b9-92e81b203ebc"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="passer unité suivante"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d4cc6fb2-7720-4dd7-bba1-d909aacb640c"
+              LastKnownName="passer unité suivante"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="25bad38e-724f-4f12-a240-5ddf2a7074fb"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="14e7f6d3-da62-41ae-aed4-29217b99ec0b"
+                  name="passer unité suivante"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f1178638-332d-49f2-a99d-a3718bd79362"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Finir tour"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="65e5babb-65b6-440e-9d98-a827a75c387a"
+              LastKnownName="Finir tour"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e1f5f33c-0919-4de2-b0ee-8b227af65cf5"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1496056d-07a3-4bdd-99c1-e7c0a57aa915"
+                  name="Finir tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b2da08f2-9694-4d73-9f41-e94ae7f40df6"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="lancer partie"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="501e0731-0a94-4837-bd17-6db1d0451a49"
+              LastKnownName="faire partie"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="be348b03-3e20-456c-bc12-2e876dc67448"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1aaa9127-80d5-44bd-a266-67aa5440a041"
+                  name="lancer partie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="728182be-1203-47e5-9298-f16418cdbcc8"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Sauvegarder partie"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4a7b5fe5-739a-4e65-8024-a2dfc194f550"
+              LastKnownName="Sauvegarder partie"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b8f75ad3-bc5a-4f1d-b6b0-9ab88ab4706e"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="16633d2e-c106-406a-b27c-fea3bf3a4df6"
+                  name="Sauvegarder partie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="82392749-750e-473a-b477-d7a37e8df5c6"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="choisir taille carte"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="73a1b1c5-b808-4a4c-8b7e-9c1e14031a9c"
+              LastKnownName="choisir taille carte"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="05f5b08e-d3b8-405e-9cdc-6584d034c698"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e2d184d4-f1ac-48d7-bb20-7ef55064ee5e"
+                  name="choisir taille carte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="80afc161-31da-4e5b-be1d-fe380533c062"
+        name="Actor2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="6fc0bc32-ec2c-4d52-b9e0-77c1b0ced1c5"
+        name="turn"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bfe6aebb-2876-422b-9f83-6468007f55fb"
+        name="Déplacer unité courante"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="65e5babb-65b6-440e-9d98-a827a75c387a"
+        name="Finir tour"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="bf3ed8e4-dcdf-4ec9-95c3-77cf96e5775a">
+            <useCaseMoniker
+              Id="92879c4b-a738-4b46-b4ed-b9260faf172b"
+              LastKnownName="Créer tour suivant"
+              LastKnownLocation="ModelingProject1.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d4cc6fb2-7720-4dd7-bba1-d909aacb640c"
+        name="passer unité suivante"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="fd0b33f9-4bb0-42f0-a963-6827512f313f"
+        name="Game"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="38d308bd-9a75-41d4-bc6f-77d99d4b1dcc"
+        name="retirer unité(s) détruite(s)"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="92879c4b-a738-4b46-b4ed-b9260faf172b"
+        name="Créer tour suivant"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4a7b5fe5-739a-4e65-8024-a2dfc194f550"
+        name="Sauvegarder partie"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8c831330-2bc7-459e-b3b0-a35ad1ff9ce0"
+        name="pas de points de mouvement"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="3eb0861f-716a-424e-89ce-8eda7b6974d4">
+            <useCaseMoniker
+              Id="bfe6aebb-2876-422b-9f83-6468007f55fb"
+              LastKnownName="Déplacer unité courante"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9c7b6502-ff5e-435b-98bd-7903337f38ad"
+        name="pas d'unité restante"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="34a9f05a-05c4-448d-9913-1d20a7494ad8">
+            <useCaseMoniker
+              Id="d4cc6fb2-7720-4dd7-bba1-d909aacb640c"
+              LastKnownName="passer unité suivante"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="14635c88-4238-4b14-aded-4d8caf10715e"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a45fd0a6-17f3-4432-9c2c-5973ee635100"
+        name="attaquer"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="dc3b59ce-ae0e-4cb8-ba5d-7afb6e719df3">
+            <useCaseMoniker
+              Id="2e26941b-bb43-43df-b500-ec012b1233d1"
+              LastKnownName="mort d'unité(s)"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="2561718f-3cbf-4fe3-bf6f-4830b22f0139">
+            <useCaseMoniker
+              Id="bfe6aebb-2876-422b-9f83-6468007f55fb"
+              LastKnownName="Déplacer unité courante"
+              LastKnownLocation="ModelingProject1.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4eeb0da3-34b5-4713-abf6-4f4642e25b7b"
+        name="partie gagnée ou perdue"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="997cb1be-089e-49d5-a102-08a370d8eff8">
+            <useCaseMoniker
+              Id="65e5babb-65b6-440e-9d98-a827a75c387a"
+              LastKnownName="Finir tour"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="2b9e413a-2a3b-44aa-b303-bf18e2f491c8"
+        name="paramétrisation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="501e0731-0a94-4837-bd17-6db1d0451a49"
+        name="faire partie"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="1ef2067e-5a1f-4f0f-8e06-8d31e6ad7590">
+            <useCaseMoniker
+              Id="76c1f416-b033-4671-a92b-0b230b2ba04a"
+              LastKnownName="charger partie enregistrée"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+          <extend
+            Id="28ae6b95-5e4a-4756-8f2d-0e79e5728163">
+            <useCaseMoniker
+              Id="90aa6afb-9962-4bdf-9a69-a4453c5b3498"
+              LastKnownName="créer partie"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="76c1f416-b033-4671-a92b-0b230b2ba04a"
+        name="charger partie enregistrée"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="8967ac12-830b-46f9-b543-11756ddfdbb7">
+            <useCaseMoniker
+              Id="cb6ffd59-32db-4e9c-896e-adcc5998ebc5"
+              LastKnownName="choisir sauvegarde"
+              LastKnownLocation="ModelingProject1.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="71ad5796-a998-427a-b3d8-2da63667ba6a"
+            LastKnownName="createGame"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="73a1b1c5-b808-4a4c-8b7e-9c1e14031a9c"
+        name="choisir taille carte"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="65cdac4a-681c-4dc6-b4a6-379adf9b584c">
+            <useCaseMoniker
+              Id="812c1c56-ebe2-4f14-a0d3-d0ca079115b6"
+              LastKnownName="petite carte"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+          <extend
+            Id="100a5bb7-6cba-4c70-9ec1-b15ad3ddbed7">
+            <useCaseMoniker
+              Id="553674eb-9c15-4cd0-8c45-073703230e4c"
+              LastKnownName="medium carte"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+          <extend
+            Id="631efb6f-14f7-452d-86fa-b45b89e4ca5c">
+            <useCaseMoniker
+              Id="9a55ddea-8b2d-49e2-9f87-e24407d8b1ef"
+              LastKnownName="grande carte"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="2b9e413a-2a3b-44aa-b303-bf18e2f491c8"
+            LastKnownName="paramétrisation"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="812c1c56-ebe2-4f14-a0d3-d0ca079115b6"
+        name="petite carte"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="2b9e413a-2a3b-44aa-b303-bf18e2f491c8"
+            LastKnownName="paramétrisation"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="553674eb-9c15-4cd0-8c45-073703230e4c"
+        name="medium carte"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="2b9e413a-2a3b-44aa-b303-bf18e2f491c8"
+            LastKnownName="paramétrisation"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9a55ddea-8b2d-49e2-9f87-e24407d8b1ef"
+        name="grande carte"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="2b9e413a-2a3b-44aa-b303-bf18e2f491c8"
+            LastKnownName="paramétrisation"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="90aa6afb-9962-4bdf-9a69-a4453c5b3498"
+        name="créer partie"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="71ad5796-a998-427a-b3d8-2da63667ba6a"
+            LastKnownName="createGame"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fd29db87-c940-45c0-a440-bbbec820ac64"
+        name="choisir race j1"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="2b9e413a-2a3b-44aa-b303-bf18e2f491c8"
+            LastKnownName="paramétrisation"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2e26941b-bb43-43df-b500-ec012b1233d1"
+        name="mort d'unité(s)"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="e4dfbb27-a07c-4608-a045-7557812e07b0">
+            <useCaseMoniker
+              Id="38d308bd-9a75-41d4-bc6f-77d99d4b1dcc"
+              LastKnownName="retirer unité(s) détruite(s)"
+              LastKnownLocation="ModelingProject1.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="6161685e-ab89-42e2-8dee-22a60a365bee"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="c7d9dc34-83f0-4c1f-9d00-9429f3fcef98"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7b9163cb-c58e-469d-8068-1334e4fa8e95"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c3eddee2-1bec-4144-b188-924b74bbb808"
+                  LastKnownName="Action1"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="e1cfe689-e1a3-4287-b7b0-7d4459232436"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="c3eddee2-1bec-4144-b188-924b74bbb808"
+            name="Action1"
+            isLeaf="false" />
+          <objectNode
+            Id="a4626e88-4861-453c-93a8-721d5e7685c6"
+            name="Object1"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="624b3d7c-8853-4c02-9294-7e8c7629ef43"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+        name="turn1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a9df9e68-60d4-48be-99d3-e5cecbdaa280"
+        name="déplacer unité courante"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+            LastKnownName="turn1"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2274fc21-e025-48c3-92a7-89e9c93a9b14"
+        name="finir tour"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="2f7add53-dacc-4b8d-a418-f0785124dc10">
+            <useCaseMoniker
+              Id="91708d2e-eef9-4b01-82ec-166b7f9cbae9"
+              LastKnownName="créer tour suivant"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+          <extend
+            Id="ec306aac-bb8d-43af-9eb4-9e1358839a53">
+            <useCaseMoniker
+              Id="478004fe-7512-4ebf-b086-4bb4f2fe2732"
+              LastKnownName="finir Partie"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+            LastKnownName="turn1"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a7e0111f-2090-4210-bbdd-3226e5c2522c"
+        name="passer unité suivante"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+            LastKnownName="turn1"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="278278d5-8f5c-4bd1-a4e4-db3e279819cb"
+        name="retirer unité(s) détruite(s)"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+            LastKnownName="turn1"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="91708d2e-eef9-4b01-82ec-166b7f9cbae9"
+        name="créer tour suivant"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+            LastKnownName="turn1"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d3454cec-3520-403b-8155-226d27a83913"
+        name="sauvegarder partie"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+            LastKnownName="turn1"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6f1cb7ae-af57-4402-924d-3124a4dcdc47"
+        name="pas de points de mouvement"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="6038eb0a-5eed-41f7-9f91-7708b1e89dd4">
+            <useCaseMoniker
+              Id="a9df9e68-60d4-48be-99d3-e5cecbdaa280"
+              LastKnownName="déplacer unité courante"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+            LastKnownName="turn1"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1147f776-325b-44d8-b281-6d24195f5d4a"
+        name="pas d'unité restante"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="fd30c7f8-bcf0-4096-bb89-d92b7d07d72e">
+            <useCaseMoniker
+              Id="a7e0111f-2090-4210-bbdd-3226e5c2522c"
+              LastKnownName="passer unité suivante"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+            LastKnownName="turn1"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="eda0ebbb-a2f5-48c2-9525-688d2568fa27"
+        name="attaquer"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="b84c0abd-5cda-449b-ae07-14585e40d4d3">
+            <useCaseMoniker
+              Id="e8fc30d8-7f67-4adb-a953-49beeba819ff"
+              LastKnownName="mort d'unité(s)"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="2b160c6f-e86e-48c1-978a-f5fcdd84e0c5">
+            <useCaseMoniker
+              Id="a9df9e68-60d4-48be-99d3-e5cecbdaa280"
+              LastKnownName="déplacer unité courante"
+              LastKnownLocation="ModelingProject1.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+            LastKnownName="turn1"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5261388b-5adb-435b-b181-3cd73f8b7d43"
+        name="partie gagnée ou perdue"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="839af91d-596b-424b-a54d-733ef82f25d7">
+            <useCaseMoniker
+              Id="2274fc21-e025-48c3-92a7-89e9c93a9b14"
+              LastKnownName="finir tour"
+              LastKnownLocation="ModelingProject1.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e8fc30d8-7f67-4adb-a953-49beeba819ff"
+        name="mort d'unité(s)"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="42ebe28b-702b-46ac-b6df-6610876bc19c">
+            <useCaseMoniker
+              Id="278278d5-8f5c-4bd1-a4e4-db3e279819cb"
+              LastKnownName="retirer unité(s) détruite(s)"
+              LastKnownLocation="ModelingProject1.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+            LastKnownName="turn1"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="f6f8af60-c329-43de-82d7-3a9982562584"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="3d6dc9a6-5783-4d7c-94ed-346ebbbd3ae7"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Sauvegarder partie1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d3454cec-3520-403b-8155-226d27a83913"
+              LastKnownName="sauvegarder partie"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="07e85cea-00af-4d07-a663-6716d6656615"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bb8c8f42-29ac-4f6a-bbf9-fba0beadc9af"
+                  name="Sauvegarder partie1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6c20ceb0-0d40-4877-9792-7c569a76981d"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="attaquer1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="eda0ebbb-a2f5-48c2-9525-688d2568fa27"
+              LastKnownName="attaquer"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7e053a75-87dd-4f03-8f03-40e628ec378d"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="194b1847-db5c-40b6-a735-ff296c7d5e33"
+                  name="attaquer1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="03f66953-ece9-4cbf-a640-50679af9be54"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Déplacer unité courante1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a9df9e68-60d4-48be-99d3-e5cecbdaa280"
+              LastKnownName="déplacer unité courante"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="74961709-86fb-4593-9ea3-6dfc79aab676"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ec538d78-f6ba-4d4a-9936-134a74595e92"
+                  name="Déplacer unité courante1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="422fed27-8361-4f1b-8769-d918af018992"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="passer unité suivante1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a7e0111f-2090-4210-bbdd-3226e5c2522c"
+              LastKnownName="passer unité suivante"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f2212f67-5e05-4edd-957f-a24da8764e76"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="811fe5d9-7302-454e-8f3d-eeed611eb1bc"
+                  name="passer unité suivante1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="faa47124-c09e-4746-8c29-417e28cbaf8b"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Finir tour1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2274fc21-e025-48c3-92a7-89e9c93a9b14"
+              LastKnownName="finir tour"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="35ef7ab2-fc70-4d94-9439-41a17c453cf9"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="88b56f1d-947b-48dd-a05e-59e61629a84e"
+                  name="Finir tour1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="478004fe-7512-4ebf-b086-4bb4f2fe2732"
+        name="finir Partie"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="a43017d8-8a40-4a28-9df4-cd7e75ee4854"
+            LastKnownName="turn1"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="71ad5796-a998-427a-b3d8-2da63667ba6a"
+        name="createGame"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="3fbe1ec9-f869-41e4-9948-664bb86d9b3e"
+        name="Player1"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="43e60084-43f8-48c9-adfe-f668f2b5814a"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="50f25b00-041f-4b55-b68a-54e18d4879c6"
+              LastKnownName="Player"
+              LastKnownLocation="ModelingProject1.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="4ffabb62-8a4d-4b02-866c-00764ae3ec78"
+            isDerived="false"
+            sourceEndRoleName="Player1"
+            targetEndRoleName="choisir race j1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="fd29db87-c940-45c0-a440-bbbec820ac64"
+              LastKnownName="choisir race j1"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c234139a-82d4-425f-a1d3-7ecb19e47816"
+                  name="Player1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ed910da5-cf67-4f58-ad88-226d756e9cef"
+                  name="choisir race j1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8ea895a3-4ca5-4d49-a989-5110bc47e003"
+            isDerived="false"
+            sourceEndRoleName="Player1"
+            targetEndRoleName="choisir taille carte"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="73a1b1c5-b808-4a4c-8b7e-9c1e14031a9c"
+              LastKnownName="choisir taille carte"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d25b3afb-56b7-49e7-9ea4-c766d6ebafc6"
+                  name="Player1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c6c5de30-bc2d-4b08-8f36-56fef9521c77"
+                  name="choisir taille carte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="256fad11-4c5f-404e-aadb-e2361f5cefb2"
+        name="Player2"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="2d215ebd-3e64-4cbb-af20-b11d316010eb"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="50f25b00-041f-4b55-b68a-54e18d4879c6"
+              LastKnownName="Player"
+              LastKnownLocation="ModelingProject1.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="25675b01-56f0-4bf9-82f6-13c5c16e83ab"
+            isDerived="false"
+            sourceEndRoleName="Player2"
+            targetEndRoleName="choisir race j2"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5dd5db27-57ef-4522-bbd0-ff4b0ccdc401"
+              LastKnownName="choisir race j2"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="65355a0c-25fc-4778-95c1-821fd41b9ea2"
+                  name="Player2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f3521978-e340-4925-915e-1b5b7f8c7bc3"
+                  name="choisir race j2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5dd5db27-57ef-4522-bbd0-ff4b0ccdc401"
+        name="choisir race j2"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="2b9e413a-2a3b-44aa-b303-bf18e2f491c8"
+            LastKnownName="paramétrisation"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="180c3700-88df-4e23-8ecf-d4ffd0f3ef49"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f7ff0b2a-ac7e-4b5e-a36a-1e4e96269e84"
+            isDerived="false"
+            sourceEndRoleName="Actor1"
+            targetEndRoleName="faire partie"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="501e0731-0a94-4837-bd17-6db1d0451a49"
+              LastKnownName="faire partie"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d447e987-c737-4530-b479-a6d8231ec8ed"
+                  name="Actor1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b66dcd84-d04c-439b-b4de-5f822ea9dfcb"
+                  name="faire partie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d09c659f-4348-47e1-a1ce-842dbab5ebc0"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="créer partie"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="90aa6afb-9962-4bdf-9a69-a4453c5b3498"
+              LastKnownName="créer partie"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2a109b94-817e-465b-aeb5-e2b5fc82b1a6"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e828facf-9bd0-4602-a83b-6e069eab184a"
+                  name="créer partie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f093bfb8-0cf5-4a97-9e29-0c93b0f444ee"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="charger partie enregistrée"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="76c1f416-b033-4671-a92b-0b230b2ba04a"
+              LastKnownName="charger partie enregistrée"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f8341432-4a49-4c3c-b44c-89b5f259ec2d"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ea4e84bc-de3f-4688-80bd-97010fef7f76"
+                  name="charger partie enregistrée"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cb6ffd59-32db-4e9c-896e-adcc5998ebc5"
+        name="choisir sauvegarde"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="71ad5796-a998-427a-b3d8-2da63667ba6a"
+            LastKnownName="createGame"
+            LastKnownLocation="ModelingProject1.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

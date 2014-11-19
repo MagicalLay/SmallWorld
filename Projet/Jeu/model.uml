@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_-fy1IEO0EeSFatRsCoJ7pw" name="NewModel">
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_jkt5UEO1EeSFatRsCoJ7pw" name="NewModel statemachine">
+    <region xmi:id="_jkt5UUO1EeSFatRsCoJ7pw" name="Jeu">
+      <transition xmi:id="_193I8EO3EeSFatRsCoJ7pw" name="Transition_Etat InitialToen cours"/>
+      <transition xmi:id="_29OUMEO3EeSFatRsCoJ7pw" name="Transition_en coursToen cours">
+        <trigger xmi:id="_V0sXoEO4EeSFatRsCoJ7pw" name="Trans. En cours->En cours"/>
+      </transition>
+      <transition xmi:id="_4VCbsEO3EeSFatRsCoJ7pw" name="Transition_en coursTofin de partie">
+        <trigger xmi:id="_FH8RAEO5EeSFatRsCoJ7pw" name="peuples et terrain choisis"/>
+      </transition>
+      <transition xmi:id="_Upx8UEO7EeSFatRsCoJ7pw" name="Transition_Initial1ToEn cours" source="_QvwWwEO7EeSFatRsCoJ7pw" target="_SbUgsEO7EeSFatRsCoJ7pw">
+        <trigger xmi:id="_VNnCIEO7EeSFatRsCoJ7pw" name="Nouvelle partie"/>
+      </transition>
+      <transition xmi:id="_iSE-AEO7EeSFatRsCoJ7pw" name="Transition_En coursToChoice2" source="_SbUgsEO7EeSFatRsCoJ7pw" target="_hJas0EO7EeSFatRsCoJ7pw">
+        <trigger xmi:id="_isiFYEO7EeSFatRsCoJ7pw" name="Fin de tour"/>
+      </transition>
+      <transition xmi:id="_k2Fy4EO7EeSFatRsCoJ7pw" name="Transition_Choice2ToEn cours" source="_hJas0EO7EeSFatRsCoJ7pw" target="_SbUgsEO7EeSFatRsCoJ7pw">
+        <trigger xmi:id="_samGIEO7EeSFatRsCoJ7pw" name="Reste tour(s) et 2 joueurs"/>
+      </transition>
+      <transition xmi:id="_wG8cEEO7EeSFatRsCoJ7pw" name="Transition_Nouveau tourToFin du jeu" source="_hJas0EO7EeSFatRsCoJ7pw" target="_ZL9HAEO7EeSFatRsCoJ7pw">
+        <trigger xmi:id="_wpl2IEO7EeSFatRsCoJ7pw" name="Reste 0 tour ou 1 seul joueur"/>
+      </transition>
+      <transition xmi:id="_XF5HgEO9EeSFatRsCoJ7pw" name="Transition_Initial1ToEn cours" source="_QvwWwEO7EeSFatRsCoJ7pw" target="_SbUgsEO7EeSFatRsCoJ7pw">
+        <trigger xmi:id="_b2a3QEO9EeSFatRsCoJ7pw" name="Charger partie"/>
+      </transition>
+      <transition xmi:id="_fIqrIEO9EeSFatRsCoJ7pw" name="Transition_En coursToEn cours" source="_SbUgsEO7EeSFatRsCoJ7pw" target="_SbUgsEO7EeSFatRsCoJ7pw">
+        <trigger xmi:id="_ku564EO9EeSFatRsCoJ7pw" name="Sauvegarder"/>
+      </transition>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_QvwWwEO7EeSFatRsCoJ7pw" name="Initial1"/>
+      <subvertex xmi:type="uml:State" xmi:id="_SbUgsEO7EeSFatRsCoJ7pw" name="En cours"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_ZL9HAEO7EeSFatRsCoJ7pw" name="Fin du jeu"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_hJas0EO7EeSFatRsCoJ7pw" name="Nouveau tour" kind="choice"/>
+    </region>
+    <region xmi:id="_0nLNYEO4EeSFatRsCoJ7pw" name="Unité">
+      <transition xmi:id="_Be5twEO5EeSFatRsCoJ7pw" name="Transition_En combatToMort"/>
+      <transition xmi:id="_TTvL4EO6EeSFatRsCoJ7pw" name="Transition_En vieToChoice2" source="_5xsKcEO4EeSFatRsCoJ7pw" target="_E1W2wEO6EeSFatRsCoJ7pw">
+        <trigger xmi:id="_pxhAgEO6EeSFatRsCoJ7pw" name="Attaque"/>
+      </transition>
+      <transition xmi:id="_TzuTgEO6EeSFatRsCoJ7pw" name="Transition_Choice2ToMort" source="_E1W2wEO6EeSFatRsCoJ7pw">
+        <trigger xmi:id="_cM_rkEO6EeSFatRsCoJ7pw" name="0 points de vie"/>
+      </transition>
+      <transition xmi:id="_WRf9gEO6EeSFatRsCoJ7pw" name="Transition_Choice2ToEn vie" source="_E1W2wEO6EeSFatRsCoJ7pw" target="_5xsKcEO4EeSFatRsCoJ7pw">
+        <trigger xmi:id="_3xzrcEO6EeSFatRsCoJ7pw" name="Reste point(s) de vie"/>
+      </transition>
+      <transition xmi:id="_liO8oEO6EeSFatRsCoJ7pw" name="Transition_Initial1ToEn vie" source="_94ZrsEO5EeSFatRsCoJ7pw" target="_5xsKcEO4EeSFatRsCoJ7pw">
+        <trigger xmi:id="_l8f2wEO6EeSFatRsCoJ7pw" name="Nouvelle partie"/>
+      </transition>
+      <transition xmi:id="_B57K8EO7EeSFatRsCoJ7pw" name="Transition_CombatToMort" source="_E1W2wEO6EeSFatRsCoJ7pw" target="__3jDgEO6EeSFatRsCoJ7pw">
+        <trigger xmi:id="_LSv7gEO7EeSFatRsCoJ7pw" name="0 points de vie"/>
+      </transition>
+      <transition xmi:id="_ODt8YEO9EeSFatRsCoJ7pw" name="Transition_En vieToCombat" source="_5xsKcEO4EeSFatRsCoJ7pw" target="_E1W2wEO6EeSFatRsCoJ7pw">
+        <trigger xmi:id="_SHhwEEO9EeSFatRsCoJ7pw" name="Se fait attaquer"/>
+      </transition>
+      <subvertex xmi:type="uml:State" xmi:id="_5xsKcEO4EeSFatRsCoJ7pw" name="En vie"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_94ZrsEO5EeSFatRsCoJ7pw" name="Initial1"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_E1W2wEO6EeSFatRsCoJ7pw" name="Combat" kind="choice"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="__3jDgEO6EeSFatRsCoJ7pw" name="Mort"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_KYuGwEO8EeSFatRsCoJ7pw" name="Scenario_0"/>
+</uml:Model>

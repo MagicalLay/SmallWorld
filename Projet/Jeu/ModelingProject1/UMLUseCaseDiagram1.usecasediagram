@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="362b6073-91b7-4674-bedd-62b3249f9f8b" name="UMLUseCaseDiagram1" linkedPackageId="58fa01d4-dc9e-42ce-a2e6-da8c6c965e9b" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="4cbb24ee-1d17-46c8-9539-7a9793621854" name="paramétrisation" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2b9e413a-2a3b-44aa-b303-bf18e2f491c8" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="b4fd9b78-e19c-44b5-8983-2eec3a02aa4c" name="charger partie enregistrée" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="76c1f416-b033-4671-a92b-0b230b2ba04a" />
+        <additions>
+          <include Id="2c729a41-ed43-474f-8c73-2a5af20e8647">
+            <useCaseMoniker Id="1373e15a-521c-46fe-afa6-e2b8e4aed85d" LastKnownName="choisir sauvegarde" />
+            <elementDefinition Id="8967ac12-830b-46f9-b543-11756ddfdbb7" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="d9f059d4-570f-454f-a940-a8d04b9fbd99" LastKnownName="createGame" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="ee597537-abd5-4d6f-9f46-85b70be8e93d" name="choisir taille carte" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="73a1b1c5-b808-4a4c-8b7e-9c1e14031a9c" />
+        <extendedCases>
+          <extend Id="c23b758c-32f5-4497-adaf-95265c55ca58">
+            <useCaseMoniker Id="c46f7a69-6c6d-4c45-b278-5b30d74d4d17" LastKnownName="petite carte" />
+            <elementDefinition Id="65cdac4a-681c-4dc6-b4a6-379adf9b584c" />
+          </extend>
+          <extend Id="dc201f36-a151-47cd-a959-438eebbf8d4a">
+            <useCaseMoniker Id="6a5b9da2-0cbc-4f4c-a6bf-e4a780190d62" LastKnownName="medium carte" />
+            <elementDefinition Id="100a5bb7-6cba-4c70-9ec1-b15ad3ddbed7" />
+          </extend>
+          <extend Id="d5f88de2-78c7-4b08-8b57-e0e8f8124891">
+            <useCaseMoniker Id="9ab7ece1-58f5-4aa2-9698-8dc5e1010bac" LastKnownName="grande carte" />
+            <elementDefinition Id="631efb6f-14f7-452d-86fa-b45b89e4ca5c" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="4cbb24ee-1d17-46c8-9539-7a9793621854" LastKnownName="paramétrisation" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c46f7a69-6c6d-4c45-b278-5b30d74d4d17" name="petite carte" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="812c1c56-ebe2-4f14-a0d3-d0ca079115b6" />
+        <subjects>
+          <subsystemMoniker Id="4cbb24ee-1d17-46c8-9539-7a9793621854" LastKnownName="paramétrisation" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="6a5b9da2-0cbc-4f4c-a6bf-e4a780190d62" name="medium carte" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="553674eb-9c15-4cd0-8c45-073703230e4c" />
+        <subjects>
+          <subsystemMoniker Id="4cbb24ee-1d17-46c8-9539-7a9793621854" LastKnownName="paramétrisation" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9ab7ece1-58f5-4aa2-9698-8dc5e1010bac" name="grande carte" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9a55ddea-8b2d-49e2-9f87-e24407d8b1ef" />
+        <subjects>
+          <subsystemMoniker Id="4cbb24ee-1d17-46c8-9539-7a9793621854" LastKnownName="paramétrisation" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="de8a6c6d-bb89-4610-b960-8d45527733c5" name="créer partie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="90aa6afb-9962-4bdf-9a69-a4453c5b3498" />
+        <subjects>
+          <subsystemMoniker Id="d9f059d4-570f-454f-a940-a8d04b9fbd99" LastKnownName="createGame" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0ffc7e02-de75-4bd1-b9b4-f91d32a37af8" name="choisir race j1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fd29db87-c940-45c0-a440-bbbec820ac64" />
+        <subjects>
+          <subsystemMoniker Id="4cbb24ee-1d17-46c8-9539-7a9793621854" LastKnownName="paramétrisation" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="d9f059d4-570f-454f-a940-a8d04b9fbd99" name="createGame" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="71ad5796-a998-427a-b3d8-2da63667ba6a" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="b171006e-bc0d-4b36-88ec-cd6118071a42" name="Player1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3fbe1ec9-f869-41e4-9948-664bb86d9b3e" />
+        <targetEnds>
+          <association Id="dcf18c3b-0868-48bb-a24c-e58b82fe65d5" isDerived="false" sourceEndRoleName="Player1" targetEndRoleName="choisir race j1" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0ffc7e02-de75-4bd1-b9b4-f91d32a37af8" LastKnownName="choisir race j1" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="68c1fc61-859d-46c7-a3be-f69e50304c54" name="Player1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c234139a-82d4-425f-a1d3-7ecb19e47816" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bf45d62e-40a0-47f7-b06e-3dbda54968ba" name="choisir race j1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ed910da5-cf67-4f58-ad88-226d756e9cef" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4ffabb62-8a4d-4b02-866c-00764ae3ec78" />
+          </association>
+          <association Id="cba79520-eb6b-4ff5-bfe6-6e55f56b9ca6" isDerived="false" sourceEndRoleName="Player1" targetEndRoleName="choisir taille carte" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ee597537-abd5-4d6f-9f46-85b70be8e93d" LastKnownName="choisir taille carte" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c0b9b180-8341-4438-9fff-38d2231901e1" name="Player1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d25b3afb-56b7-49e7-9ea4-c766d6ebafc6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="82f6ba64-b999-4132-95f7-da265b3491c3" name="choisir taille carte" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c6c5de30-bc2d-4b08-8f36-56fef9521c77" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8ea895a3-4ca5-4d49-a989-5110bc47e003" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="80703b1e-20c3-424c-8a58-403c0ac3fddf" name="Player2" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="256fad11-4c5f-404e-aadb-e2361f5cefb2" />
+        <targetEnds>
+          <association Id="397e9c39-214f-4245-8d96-99deb7078660" isDerived="false" sourceEndRoleName="Player2" targetEndRoleName="choisir race j2" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="96f0c518-864e-4134-a023-d49044fd18e6" LastKnownName="choisir race j2" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="04057df3-c614-43e7-a151-0246c2468295" name="Player2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="65355a0c-25fc-4778-95c1-821fd41b9ea2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7343e118-3b11-427c-8900-fd661261dab9" name="choisir race j2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f3521978-e340-4925-915e-1b5b7f8c7bc3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="25675b01-56f0-4bf9-82f6-13c5c16e83ab" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="96f0c518-864e-4134-a023-d49044fd18e6" name="choisir race j2" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5dd5db27-57ef-4522-bbd0-ff4b0ccdc401" />
+        <subjects>
+          <subsystemMoniker Id="4cbb24ee-1d17-46c8-9539-7a9793621854" LastKnownName="paramétrisation" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="990a5c0b-99ff-417c-a72a-8d0059bb9b36" name="Player" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="180c3700-88df-4e23-8ecf-d4ffd0f3ef49" />
+        <targetEnds>
+          <association Id="46cbfb5c-4398-4be1-a360-1ecbb0703420" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="créer partie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="de8a6c6d-bb89-4610-b960-8d45527733c5" LastKnownName="créer partie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="45ecdd0d-5890-47ba-964c-4ec9dc10d9e3" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2a109b94-817e-465b-aeb5-e2b5fc82b1a6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="01190ea4-bd8b-4628-89f5-3240dd17a524" name="créer partie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e828facf-9bd0-4602-a83b-6e069eab184a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d09c659f-4348-47e1-a1ce-842dbab5ebc0" />
+          </association>
+          <association Id="62d08cc4-59f5-4766-a899-f45558c432f0" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="charger partie enregistrée" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b4fd9b78-e19c-44b5-8983-2eec3a02aa4c" LastKnownName="charger partie enregistrée" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a7f6328e-5ad0-4020-9cc1-58f9e8ad85d9" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f8341432-4a49-4c3c-b44c-89b5f259ec2d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1b6254dc-596b-42dc-bd4b-83731dcf6853" name="charger partie enregistrée" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ea4e84bc-de3f-4688-80bd-97010fef7f76" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f093bfb8-0cf5-4a97-9e29-0c93b0f444ee" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="1373e15a-521c-46fe-afa6-e2b8e4aed85d" name="choisir sauvegarde" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cb6ffd59-32db-4e9c-896e-adcc5998ebc5" />
+        <subjects>
+          <subsystemMoniker Id="d9f059d4-570f-454f-a940-a8d04b9fbd99" LastKnownName="createGame" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="58fa01d4-dc9e-42ce-a2e6-da8c6c965e9b" name="ModelingProject1">
+    <elementDefinition Id="be674fb2-cb81-407f-b53c-efb234be6a9d" />
+    <profileInstances>
+      <packageHasProfileInstances Id="fb930649-1798-4ffd-80ac-f8bbd01ad631">
+        <profileInstance Id="a70d3646-84ac-42cf-88e9-75cc59f9d4a8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="77641058-27af-486d-b92c-1e03db81b083">
+        <profileInstance Id="2eadfef7-db95-43a7-ba0d-ecf9aa8cb92b" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
