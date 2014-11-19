@@ -44,7 +44,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -174,7 +174,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAACAAAAAAAAAAAAAAACAAABAAAAAAAA=</HashCode>
+      <HashCode>AAAAACAAACAAAACAAAAAAAAAAAAAAACAAABAAAAAAAA=</HashCode>
       <FileName>Unit.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -187,8 +187,8 @@
       <Path>
         <Point X="7" Y="5.239" />
         <Point X="7.574" Y="5.239" />
-        <Point X="7.574" Y="6.441" />
-        <Point X="9.5" Y="6.441" />
+        <Point X="7.574" Y="6.368" />
+        <Point X="9.5" Y="6.368" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -206,10 +206,10 @@
         <Point X="7.742" Y="7.132" />
         <Point X="7.742" Y="7.281" />
         <Point X="9.25" Y="7.281" />
-        <Point X="9.25" Y="7.875" />
-        <Point X="9.931" Y="7.875" Type="JumpStart" />
-        <Point X="10.097" Y="7.875" Type="JumpEnd" />
-        <Point X="11.5" Y="7.875" />
+        <Point X="9.25" Y="7.741" />
+        <Point X="9.931" Y="7.741" Type="JumpStart" />
+        <Point X="10.097" Y="7.741" Type="JumpEnd" />
+        <Point X="11.5" Y="7.741" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -228,8 +228,8 @@
         <Point X="10.014" Y="7.434" />
         <Point X="10.014" Y="8.457" />
         <Point X="11.566" Y="8.457" />
-        <Point X="11.566" Y="8.812" />
-        <Point X="15.5" Y="8.812" />
+        <Point X="11.566" Y="8.679" />
+        <Point X="15.5" Y="8.679" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>

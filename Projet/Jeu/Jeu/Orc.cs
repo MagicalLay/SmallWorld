@@ -7,13 +7,9 @@ namespace Jeu
 {
     public class Orc : People
     {
-        public Orc()
+        public Orc(int nbUnite) : base(nbUnite, "Orc")
         {
-            throw new System.NotImplementedException();
-        }
 
-        ~Orc()
-        {
             throw new System.NotImplementedException();
         }
     

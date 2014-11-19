@@ -8,11 +8,6 @@ namespace Jeu
             throw new System.NotImplementedException();
         }
     
-        ~Unit()
-        {
-            throw new System.NotImplementedException();
-        }
-    
         public Space Space
         {
             get
@@ -46,6 +41,11 @@ namespace Jeu
         }
 
         public void move()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void die()
         {
             throw new System.NotImplementedException();
         }

@@ -7,12 +7,7 @@ namespace Jeu
 {
     public class Elf : People
     {
-        public Elf()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        ~Elf()
+        public Elf(int nbUnite) : base(nbUnite, "Elf")
         {
             throw new System.NotImplementedException();
         }

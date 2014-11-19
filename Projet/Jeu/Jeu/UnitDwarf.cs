@@ -12,11 +12,6 @@ namespace Jeu
             throw new System.NotImplementedException();
         }
 
-        ~UnitDwarf()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public void move()
         {
             throw new System.NotImplementedException();

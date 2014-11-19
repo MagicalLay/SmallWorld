@@ -12,11 +12,6 @@ namespace Jeu
             throw new System.NotImplementedException();
         }
 
-        ~UnitOrc()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public int points
         {
             get
