@@ -5,56 +5,49 @@ using System.Text;
 
 namespace Jeu
 {
+    public enum MapSize{Small, Medium, Large}
     public class Map
     {
 
-        public Map(int choose)
+        Space[,] spaces;
+
+        public Map(MapSize mapSize)
         {
 
-            switch (choose)
+            switch (mapSize)
             {
-                case 1 :
-                    size = 6;
+                case MapSize.Small:
+                    Size = 6;
+                    spaces[6, 6];
                     break;
-
-                case 2 :
-                    size = 10;
+                case MapSize.Medium:
+                    Size = 10;
                     break;
-
-                case 3 :
-                    size = 14;
+                case MapSize.Large:
+                    Size = 14;
                     break;
-
                 default:
-                    //printf("Erreur de sélection de taille, taille invalide !")
+                    //printf("Invalid size !")
                     break;
             }
-
-            throw new System.NotImplementedException();
         }
 
-        public System.Collections.Generic.IEnumerable<Jeu.Space> Space
+        public Jeu.Space this[int x, int y]
         {
             get
             {
-                return Space;
+                return spaces[x,y];
             }
-            set
+            private set
             {
+
             }
         }
 
-        public int size
+        public int Size
         {
-            get
-            {
-                return size;
-                //throw new System.NotImplementedException();
-            }
-            set
-            {
-                size = value;
-            }
+            get;
+            private set;
         }
     }
 }

@@ -38,17 +38,17 @@
   </Class>
   <Class Name="Jeu.Map">
     <Position X="2" Y="3.25" Width="3" />
-    <AssociationLine Name="Space" Type="Jeu.Space">
+    <AssociationLine Name="this[System.Int32, System.Int32]" Type="Jeu.Space">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.702" Y="0.126" />
+        <Position X="0.163" Y="0.563" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAggAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="Space" />
+      <Property Name="this[System.Int32, System.Int32]" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Jeu.People">

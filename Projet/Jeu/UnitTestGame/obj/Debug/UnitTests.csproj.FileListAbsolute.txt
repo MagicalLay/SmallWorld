@@ -1,0 +1,7 @@
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\UnitTestGame.dll
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\UnitTestGame.pdb
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Jeu.dll
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Jeu.pdb
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTestGame.dll
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTestGame.pdb
