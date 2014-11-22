@@ -9,10 +9,36 @@ namespace Jeu
     {
         public Game()
         {
-            throw new System.NotImplementedException();
+            GameOnGoing = true;
+            //NbAlive = People.nbUnits * 2;
+            Turn = new Turn(0);
         }
-    
+
         public Turn Turn
+        {
+            get;
+            private set;
+        }
+
+        public int NbTurnsLeft
+        {
+            get;
+            private set;
+        }
+
+        public Boolean GameOnGoing
+        {
+            get;
+            private set;
+        }
+
+        public int NbAlive
+        {
+            get;
+            private set;
+        }
+
+        public System.Collections.Generic.IEnumerable<Jeu.People> Peoples
         {
             get
             {
@@ -24,50 +50,6 @@ namespace Jeu
         }
 
         public Map Map
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public int NbTurnsLeft
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Boolean GameOnGoing
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public int NbAlive
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public System.Collections.Generic.IEnumerable<Jeu.People> People
         {
             get
             {

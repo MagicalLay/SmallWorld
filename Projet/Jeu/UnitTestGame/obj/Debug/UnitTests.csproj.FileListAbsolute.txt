@@ -5,3 +5,10 @@ C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Je
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTestGame.dll
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTestGame.pdb
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTestGame.dll
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\UnitTestGame.dll
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\UnitTestGame.pdb
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Jeu.dll
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Jeu.pdb
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTestGame.pdb

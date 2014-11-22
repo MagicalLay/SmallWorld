@@ -9,7 +9,6 @@ namespace Jeu
     {
         public Orc(int nbUnite) : base(nbUnite, "Orc")
         {
-
             throw new System.NotImplementedException();
         }
     

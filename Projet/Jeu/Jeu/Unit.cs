@@ -5,29 +5,20 @@ namespace Jeu
     {
         public Unit()
         {
-            throw new System.NotImplementedException();
+            hp = 5;
+            //Space = Game.Map[0,0];
         }
-    
+
         public Space Space
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         public int hp
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         public void attack()

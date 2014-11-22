@@ -5,17 +5,13 @@
     <AssociationLine Name="Turn" Type="Jeu.Turn" ManuallyRouted="true" FixedToPoint="true">
       <Path>
         <Point X="5" Y="1.25" />
+        <Point X="7.125" Y="1.25" />
+        <Point X="7.125" Y="1.25" />
         <Point X="9.25" Y="1.25" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="Map" Type="Jeu.Map" FixedFromPoint="true">
-      <Path>
-        <Point X="3.5" Y="2.824" />
-        <Point X="3.5" Y="3.25" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAJCAAAABCAACAAAAAAAAAAAAABAAAAAAEAA=</HashCode>
+      <HashCode>AAAAAABAABCAAAABCAACAAAAAAAAAAAAABAAAAAAEAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -23,7 +19,7 @@
       <Property Name="Map" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="People" />
+      <Property Name="Peoples" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Jeu.Turn">
@@ -38,18 +34,10 @@
   </Class>
   <Class Name="Jeu.Map">
     <Position X="2" Y="3.25" Width="3" />
-    <AssociationLine Name="this[System.Int32, System.Int32]" Type="Jeu.Space">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.163" Y="0.563" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAggAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="this[System.Int32, System.Int32]" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Jeu.People">
     <Position X="6" Y="1.5" Width="2.5" />

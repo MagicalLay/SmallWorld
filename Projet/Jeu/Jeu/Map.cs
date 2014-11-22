@@ -8,26 +8,26 @@ namespace Jeu
     public enum MapSize{Small, Medium, Large}
     public class Map
     {
-
-        Space[,] spaces;
+        private Space[,] spaces;
 
         public Map(MapSize mapSize)
         {
-
             switch (mapSize)
             {
                 case MapSize.Small:
                     Size = 6;
-                    spaces[6, 6];
+                    spaces = new Space[6, 6];
                     break;
                 case MapSize.Medium:
                     Size = 10;
+                    spaces = new Space[10, 10];
                     break;
                 case MapSize.Large:
                     Size = 14;
+                    spaces = new Space[14, 14];
                     break;
                 default:
-                    //printf("Invalid size !")
+                    Console.WriteLine("Invalid size !");
                     break;
             }
         }
@@ -40,7 +40,7 @@ namespace Jeu
             }
             private set
             {
-
+            spaces[x,y] = value;
             }
         }
 

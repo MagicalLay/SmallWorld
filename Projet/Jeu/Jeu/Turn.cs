@@ -9,18 +9,13 @@ namespace Jeu
     {
         public Turn(int num)
         {
-            throw new System.NotImplementedException();
+            numTurn = num;
         }
 
         public int numTurn
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         public People People

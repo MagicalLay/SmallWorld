@@ -4,3 +4,8 @@ C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Jeu.dll
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Jeu.pdb
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\obj\Debug\Jeu.dll
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\obj\Debug\Jeu.pdb
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\obj\Debug\Jeu.csprojResolveAssemblyReference.cache
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\obj\Debug\Jeu.dll
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\obj\Debug\Jeu.pdb
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Jeu.dll
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Jeu.pdb

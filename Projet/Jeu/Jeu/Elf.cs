@@ -7,12 +7,12 @@ namespace Jeu
 {
     public class Elf : People
     {
-        public Elf(int nbUnite) : base(nbUnite, "Elf")
+        public Elf(int nbUnits) : base(nbUnits, "Elf")
         {
             throw new System.NotImplementedException();
         }
     
-        public System.Collections.Generic.IEnumerable<Jeu.UnitElf> UnitElf
+        public System.Collections.Generic.IEnumerable<Jeu.UnitElf> UnitsElf
         {
             get
             {

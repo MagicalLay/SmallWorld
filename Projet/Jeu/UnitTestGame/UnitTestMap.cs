@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Jeu;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Jeu;
+using System;
 
 namespace UnitTests
 {
