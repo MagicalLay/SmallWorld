@@ -7,14 +7,6 @@ namespace Jeu
 {
     public class UnitDwarf : Unit
     {
-        public UnitDwarf()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void move()
-        {
-            throw new System.NotImplementedException();
-        }
+        public UnitDwarf() : base() { }
     }
 }

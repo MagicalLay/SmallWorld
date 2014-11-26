@@ -7,9 +7,6 @@ namespace Jeu
 {
     public class Desert : Space
     {
-        public Desert()
-        {
-            throw new System.NotImplementedException();
-        }
+        public Desert() { }
     }
 }

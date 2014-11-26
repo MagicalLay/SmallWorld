@@ -7,9 +7,6 @@ namespace Jeu
 {
     public class Mountain : Space
     {
-        public Mountain()
-        {
-            throw new System.NotImplementedException();
-        }
+        public Mountain() { }
     }
 }

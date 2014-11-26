@@ -8,7 +8,5 @@ namespace Jeu
     public interface IBuilderGame
     {
         Game createGame();
-
-        Map createMap();
     }
 }

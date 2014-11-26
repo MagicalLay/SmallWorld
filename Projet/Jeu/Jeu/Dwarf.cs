@@ -7,20 +7,12 @@ namespace Jeu
 {
     public class Dwarf : People
     {
-        public Dwarf(int nbUnits) : base(nbUnits, Species.Dwarf)
-        {
-            throw new System.NotImplementedException();
-        }
+        public Dwarf(int nbUnits) : base(nbUnits, Species.Dwarf) { }
 
         public System.Collections.Generic.IEnumerable<Jeu.UnitDwarf> UnitsDwarf
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
     }
 }

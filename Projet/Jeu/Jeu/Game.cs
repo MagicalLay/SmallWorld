@@ -10,8 +10,9 @@ namespace Jeu
         public Game()
         {
             GameOnGoing = true;
-            //NbAlive = People.nbUnits * 2;
+            NbAlive = People.nbUnits * 2;
             Turn = new Turn(0);
+            Peoples = new People[2];
         }
 
         public Turn Turn
@@ -20,13 +21,13 @@ namespace Jeu
             private set;
         }
 
-        public int NbTurnsLeft
+        public static int NbTurnsLeft
         {
             get;
             private set;
         }
 
-        public Boolean GameOnGoing
+        public static Boolean GameOnGoing
         {
             get;
             private set;
@@ -38,26 +39,22 @@ namespace Jeu
             private set;
         }
 
-        public System.Collections.Generic.IEnumerable<Jeu.People> Peoples
+        //public System.Collections.Generic.IEnumerable<Jeu.People> Peoples
+        //{
+        //    get;
+        //    private set;
+        //}
+
+        public static People[] Peoples 
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         public Map Map
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         public bool save()
@@ -65,9 +62,10 @@ namespace Jeu
             throw new System.NotImplementedException();
         }
 
-        public void endGame()
+        public static void endGame()
         {
-            throw new System.NotImplementedException();
+            GameOnGoing = false;
+            Console.WriteLine("End of the game !");
         }
     }
 }

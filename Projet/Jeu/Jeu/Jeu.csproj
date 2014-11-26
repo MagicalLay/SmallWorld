@@ -70,15 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
-    <None Include="endGame.sequencediagram" />
     <None Include="SequenceDiagram1.sequencediagram" />
     <None Include="SequenceDiagram2.sequencediagram" />
     <None Include="SequenceDiagram3.sequencediagram" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="endGame.sequencediagram.layout">
-      <DependentUpon>endGame.sequencediagram</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SequenceDiagram1.sequencediagram.layout">
       <DependentUpon>SequenceDiagram1.sequencediagram</DependentUpon>
     </EmbeddedResource>

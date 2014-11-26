@@ -7,9 +7,6 @@ namespace Jeu
 {
     public class Field : Space
     {
-        public Field()
-        {
-            throw new System.NotImplementedException();
-        }
+        public Field() { }
     }
 }

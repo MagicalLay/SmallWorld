@@ -7,9 +7,6 @@ namespace Jeu
 {
     public class Forest : Space
     {
-        public Forest()
-        {
-            throw new System.NotImplementedException();
-        }
+        public Forest() { }
     }
 }

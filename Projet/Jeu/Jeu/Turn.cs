@@ -20,18 +20,22 @@ namespace Jeu
 
         public People People
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         public bool endTurn()
         {
-            throw new System.NotImplementedException();
+            numTurn++;
+            if(numTurn < Game.NbTurnsLeft) 
+            {
+                return true;
+            }
+            else
+            {
+                Game.endGame();
+                return false;
+            }
         }
 
         public void followingUnit()

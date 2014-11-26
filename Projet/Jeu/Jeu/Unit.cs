@@ -6,6 +6,7 @@ namespace Jeu
         public Unit()
         {
             hp = 5;
+            movePoints = 1;
         }
 
         public Space Space
@@ -14,7 +15,13 @@ namespace Jeu
             private set;
         }
 
-        public int hp
+        public static int hp
+        {
+            get;
+            private set;
+        }
+
+        public static int movePoints
         {
             get;
             private set;
@@ -22,22 +29,35 @@ namespace Jeu
 
         public void attack()
         {
-            throw new System.NotImplementedException();
+            if (hp == 0)
+            {
+                die();
+            }
         }
 
         public void defend()
         {
-            throw new System.NotImplementedException();
+            if (hp == 0)
+            {
+                die();
+            }
         }
 
-        public void move()
+        public void move(int x, int y)
         {
-            throw new System.NotImplementedException();
+            if (movePoints == 0)
+            {
+                Console.WriteLine("Not enough points to move !");
+            }
+            else
+            {
+                movePoints--;
+            }
         }
 
         public void die()
         {
-            hp = 0;
+            Console.WriteLine("Dead unit !");
         }
     }
 }

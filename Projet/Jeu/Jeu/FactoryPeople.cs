@@ -19,11 +19,11 @@ namespace Jeu
             switch (race)
             {
                 case Species.Elf:
-                    //return new Elf();
+                    return new Elf(People.nbUnits);
                 case Species.Dwarf:
-                    //return new Dwarf();
+                    return new Dwarf(People.nbUnits);
                 case Species.Orc:
-                    //return new Orc();
+                    return new Orc(People.nbUnits);
                 default:
                     Console.WriteLine("Unknown race !");
                     return null;

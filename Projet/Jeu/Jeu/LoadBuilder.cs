@@ -11,13 +11,8 @@ namespace Jeu
         {
             throw new System.NotImplementedException();
         }
-    
-        public Game createGame()
-        {
-            throw new System.NotImplementedException();
-        }
 
-        public Map createMap()
+        public Game createGame()
         {
             throw new System.NotImplementedException();
         }
