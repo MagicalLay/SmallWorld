@@ -39,13 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPeople.cs" />
+    <Compile Include="ISpace.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="CreateBuilder.cs" />
     <Compile Include="Desert.cs" />
     <Compile Include="Mountain.cs" />
     <Compile Include="Elf.cs" />
-    <Compile Include="FactorySpace.cs" />
-    <Compile Include="FactoryUnits.cs" />
+    <Compile Include="FlyweightSpace.cs" />
+    <Compile Include="FactoryPeople.cs" />
     <Compile Include="Forest.cs" />
     <Compile Include="Space.cs" />
     <Compile Include="IStrategy.cs" />

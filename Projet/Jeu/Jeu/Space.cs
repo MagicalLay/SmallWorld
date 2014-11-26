@@ -7,5 +7,6 @@ namespace Jeu
 {
     public abstract class Space
     {
+        
     }
 }

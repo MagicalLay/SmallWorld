@@ -7,10 +7,11 @@ namespace Jeu
 {
     public class Orc : People
     {
-        public Orc(int nbUnite) : base(nbUnite, "Orc")
+        public Orc(int nbUnits) : base(nbUnits, Species.Orc)
         {
             throw new System.NotImplementedException();
         }
+
     
         public System.Collections.Generic.IEnumerable<Jeu.UnitOrc> UnitOrc
         {

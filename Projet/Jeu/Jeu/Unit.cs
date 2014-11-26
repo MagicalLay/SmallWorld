@@ -6,7 +6,6 @@ namespace Jeu
         public Unit()
         {
             hp = 5;
-            //Space = Game.Map[0,0];
         }
 
         public Space Space
@@ -38,7 +37,7 @@ namespace Jeu
 
         public void die()
         {
-            throw new System.NotImplementedException();
+            hp = 0;
         }
     }
 }
