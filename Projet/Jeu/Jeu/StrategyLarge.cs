@@ -7,14 +7,11 @@ namespace Jeu
 {
     public class StrategyLarge : IStrategy
     {
-        public StrategyLarge()
-        {
-            throw new System.NotImplementedException();
-        }
-    
+        public StrategyLarge() { }
         public Map instantiate()
         {
-            throw new System.NotImplementedException();
+            Map mapLarge = new Map(MapSize.Large);
+            return mapLarge;
         }
     }
 }

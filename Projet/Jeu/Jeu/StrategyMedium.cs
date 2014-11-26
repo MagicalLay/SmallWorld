@@ -7,14 +7,12 @@ namespace Jeu
 {
     public class StrategyMedium : IStrategy
     {
-        public StrategyMedium()
-        {
-            throw new System.NotImplementedException();
-        }
+        public StrategyMedium() {}
     
         public Map instantiate()
         {
-            throw new System.NotImplementedException();
+            Map mapMedium = new Map(MapSize.Medium);
+            return mapMedium;
         }
     }
 }
