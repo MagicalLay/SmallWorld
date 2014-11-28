@@ -7,12 +7,14 @@ namespace Jeu
 {
     public class Game
     {
-        public Game()
+        public Game(Map m, People p1, People p2)
         {
+            Map = m;
+            Peoples[0] = p1;
+            Peoples[1] = p2;
             GameOnGoing = true;
             NbAlive = People.nbUnits * 2;
             Turn = new Turn(0);
-            Peoples = new People[2];
         }
 
         public Turn Turn

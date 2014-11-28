@@ -7,10 +7,10 @@ namespace Jeu
 {
     public abstract class People
     {
-        public People(int nb, Species race)
+        public People(Species race, int nb)
         {
-            nbUnits = nb;
-            nbPoints = 0;
+            throw new System.NotImplementedException();
+            //nbPoints = 0;
         }
         public static int nbUnits
         {
