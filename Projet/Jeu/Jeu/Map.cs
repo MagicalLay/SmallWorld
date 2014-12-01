@@ -12,6 +12,7 @@ namespace Jeu
 
         public Map(MapSize mapSize)
         {
+            size = mapSize;
             FlyweightSpace primarySpaces = new FlyweightSpace();
             Random rnd = new Random();
             int nbDesert, nbMountain, nbField, nbForest, nbEmptySpaces;

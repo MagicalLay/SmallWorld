@@ -7,11 +7,17 @@ namespace Jeu
 {
     public abstract class People
     {
-        public People(Species race, int nb)
+        public People(int nb, Species race)
         {
             throw new System.NotImplementedException();
             //nbPoints = 0;
         }
+
+        public void placerUnits(int rnd)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public static int nbUnits
         {
             get;

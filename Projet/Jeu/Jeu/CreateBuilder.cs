@@ -7,12 +7,11 @@ namespace Jeu
 {
     public class CreateBuilder : IBuilderGame
     {
-        public CreateBuilder(MapSize size, String people1, String people2)
+        public CreateBuilder(MapSize size, Species people1, Species people2)
         {
             Map map = createMap(size);
-            People p1 = createPeople(people1, map);
-            People p2 = createPeople(people2, map);
-            Game game = createGame(map, p1, p2);
+            People[] p = createPeoples(people1, people2, map);
+            Game game = createGame(map, p[0], p[1]);
         }
 
         public Game createGame(Map map, People p1, People p2)
@@ -20,9 +19,12 @@ namespace Jeu
             return new Game(map, p1, p2);
         }
 
-        public People createPeople(String People, Map m)
+        public People[] createPeoples(Species people1, Species people2, Map m)
         {
-            throw new System.NotImplementedException();
+            FactoryPeople fp = new FactoryPeople();
+            People[] p = new People[2];
+            p = fp.makePeoples(people1, people2, m);
+            return p;
         }
 
         public Map createMap(MapSize size)
