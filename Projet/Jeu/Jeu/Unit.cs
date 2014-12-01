@@ -29,7 +29,7 @@ namespace Jeu
             private set;
         }
 
-        public static int attackPoints
+        public int attackPoints
         {
             get;
             private set;
@@ -42,15 +42,16 @@ namespace Jeu
 
         public Boolean attack(Unit attacked)
         {
+            Boolean b;
             if (attacked.Space.axis < 0 || attacked.Space.axis > Game.Map.Size - 1 || attacked.Space.ordinate < 0 || attacked.Space.ordinate > Game.Map.Size - 1)
             {
                 Console.WriteLine("Attacked space does not exist !");
-                return false;
+                b = false;
             }
             else if (!this.Space.isNeighbour(Game.Map[attacked.Space.axis, attacked.Space.ordinate]))
             {
-                Console.WriteLine("You can't attack that space !");
-                return false;
+                Console.WriteLine("You can't attack this space !");
+                b = false;
             }
             else
             {
@@ -72,57 +73,83 @@ namespace Jeu
                 /* what happens during the attack */
                 if (nbFights != 0)
                 {
+                    nbFights--;
                     if (hp == 0)
                     {
                         die();
-                        Console.WriteLine("End of fight");
-                        return true;
+                        Console.WriteLine("End of fight - defender wins !");
+                        b = true;
                     }
                     else if (attacked.hp == 0)
                     {
                         attacked.die();
-                        Console.WriteLine("End of fight");
-                        return true;
-                    }
-                    else if (attacked.defencePoints == 0)
-                    {
-                        Console.WriteLine("End of fight");
-                        attacked.hp--;
-                        return true;
+                        Console.WriteLine("End of fight - attacker wins !");
+                        move(attacked.Space.axis, attacked.Space.ordinate);
+                        b = true;
                     }
                     else
                     {
-                        attacked.defend(this);
-                        return true;
+                        Console.WriteLine("Defender turn");
+                        attacked.defend(this, nbFights);
+                        b = true;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("End of fight");
-                    move(attacked.Space.axis, attacked.Space.ordinate);
-                    return true;
+                    Console.WriteLine("End of fight - no turns left");
+                    b = true;
                 }
             }
+            return b;
         }
 
-        public void defend(Unit attacker)
+        public Boolean defend(Unit attacker, int nbFights)
         {
-            if (hp == 0)
+            Boolean b;
+            if (attacker.hp == 0)
+            {
+                attacker.die();
+                Console.WriteLine("End of fight - defender wins !");
+                b = true;
+            }
+            else if (hp == 0)
             {
                 die();
-            }
-        }
-
-        public void move(int x, int y)
-        {
-            if (movePoints == 0)
-            {
-                Console.WriteLine("Not enough points to move !");
+                Console.WriteLine("End of fight - attacker wins !");
+                b = true;
             }
             else
             {
-                movePoints--;
+                b = false;
             }
+            return b;
+        }
+
+        public Boolean move(int x, int y)
+        {
+            Boolean b;
+            if (movePoints == 0)
+            {
+                Console.WriteLine("Not enough points to move !");
+                b = false;
+            }
+            else if (x < 0 || x > Game.Map.Size || y < 0 || y > Game.Map.Size)
+            {
+                Console.WriteLine("Space does not exist");
+                b = false;
+            }
+            else if (!Space.isNeighbour(Game.Map[x, y]))
+            {
+                Console.WriteLine("Impossible move to this space");
+                b = false;
+            }
+            else
+            {
+                Space = Game.Map[x, y];
+                movePoints--;
+                b = true;
+            }
+            return b;
         }
 
         public void die()
