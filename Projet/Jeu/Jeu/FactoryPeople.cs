@@ -14,29 +14,30 @@ namespace Jeu
 
         private static FactoryPeople instance_FactPeople;
 
-        public People[] makePeoples(Species race, Species race2, Map map)
+        public People[] makePeoples(Species race1, Species race2, Map m)
         {
-            if (race == race2) Console.WriteLine("race1 must be different from race2 !");
+            if (race1 == race2) Console.WriteLine("Race1 must be different from race2 !");
 
             People[] p = new People[2];
             int nbUnits;
-            switch (map.Size)
-            {
-                case 6:
-                    nbUnits = 4;
-                    break;
-                case 10:
-                    nbUnits = 6;
-                    break;
-                case 14:
-                    nbUnits = 8;
-                    break;
-                default:
-                    Console.WriteLine("taille de carte incorrecte");
-                    throw new System.NotImplementedException();
-            }
 
-            switch (race)
+            do
+            {
+                if (m.Size == 6)
+                {
+                    nbUnits = 4;
+                }
+                else if (m.Size == 10)
+                {
+                    nbUnits = 6;
+                }
+                else
+                {
+                    nbUnits = 8;
+                }
+            } while (m.Size == 4 || m.Size == 10 || m.Size == 14);
+
+            switch (race1)
             {
                 case Species.Elf:
                     p[0] = new Elf(nbUnits);
@@ -49,9 +50,8 @@ namespace Jeu
                     break;
                 default:
                     Console.WriteLine("Unknown race !");
-                    throw new System.NotImplementedException();
+                    break;
             }
-
             switch (race2)
             {
                 case Species.Elf:
@@ -65,12 +65,12 @@ namespace Jeu
                     break;
                 default:
                     Console.WriteLine("Unknown race !");
-                    throw new System.NotImplementedException();
+                    break;
             }
 
             Random rnd = new Random();
 
-            int nbcases = map.Size * map.Size;
+            int nbcases = m.Size * m.Size;
             int placement = rnd.Next(nbcases);
             p[1].placerUnits(placement);
 

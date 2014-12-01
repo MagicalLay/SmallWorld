@@ -13,7 +13,6 @@ namespace Jeu
 
         unsafe public Map(MapSize mapSize)
         {
-            size = mapSize;
             FlyweightSpace primarySpaces = new FlyweightSpace();
             WrapperAlgo algo = new WrapperAlgo();
 
@@ -21,7 +20,6 @@ namespace Jeu
             {
                 case MapSize.Small:
                     Size = 6;
-
                     break;
                 case MapSize.Medium:
                     Size = 10;
@@ -40,10 +38,22 @@ namespace Jeu
             {
                 for (int j = 0; j < Size; j++)
                 {
-                /*    if (map[i,j] == 0)
+                    if (map[i][j] == 0)
                     {
                         spaces[i, j] = primarySpaces.getDesert();
-                    } */
+                    }
+                    else if (map[i][j] == 1)
+                    {
+                        spaces[i, j] = primarySpaces.getField();
+                    }
+                    else if (map[i][j] == 2)
+                    {
+                        spaces[i, j] = primarySpaces.getForest();
+                    }
+                    else
+                    {
+                        spaces[i, j] = primarySpaces.getMountain();
+                    } 
                 }
             }
         }

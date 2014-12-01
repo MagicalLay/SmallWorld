@@ -7,6 +7,6 @@ namespace Jeu
 {
     interface IPeople
     {
-        People makePeople(Jeu.Species race);
+        People[] makePeoples(Jeu.Species race1, Jeu.Species race2, Map m);
     }
 }

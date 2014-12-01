@@ -53,7 +53,7 @@ namespace Jeu
             private set;
         }
 
-        public Map Map
+        public static Map Map
         {
             get;
             private set;
