@@ -45,5 +45,10 @@ namespace Jeu
             }
 
         }
+
+        public Game createGame()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
