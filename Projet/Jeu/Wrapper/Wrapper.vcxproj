@@ -75,6 +75,11 @@
   <ItemGroup>
     <ClCompile Include="Wrapper.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Library.vcxproj">
+      <Project>{ccd46538-7206-48dd-b835-fc4ed88d1313}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

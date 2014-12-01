@@ -11,4 +11,5 @@ Class Wrapper.WrapperAlgo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.IDisposable
   Methods:
     computeFoo(): PrivateScope, Public, HideBySig
+    fillMap(Int32): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
