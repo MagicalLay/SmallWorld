@@ -16,3 +16,5 @@ C:\Users\mleray\Documents\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Jeu.pdb
 C:\Users\mleray\Documents\SmallWorld\Projet\Jeu\Jeu\obj\Debug\Jeu.pdb
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Wrapper.dll
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Wrapper.pdb
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Wrapper.dll
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Wrapper.pdb
