@@ -46,13 +46,13 @@ namespace Graphics
                         /* calculate coordinates on the map */
                         if (y % 2 == 0)
                         {
-                            rectxy = new Rect(1 + x * 69, 1 + y * 69, 69, 79);
+                            rectxy = new Rect(1 + x * 69, 1 + y * 59.74, 69, 79);
                             mapSpaces[x, y] = fw.getField();
                         }
                         else
                         {
                             mapSpaces[x, y] = fw.getDesert();
-                            rectxy = new Rect(34.5 + x * 69, y * 59.74, 69, 79);
+                            rectxy = new Rect(34.5 + x * 69, 59.74 + (y - 1) * 59.74, 69, 79);
                         }
                         /* get the type of space */
                         Space sp = mapSpaces[x, y];
