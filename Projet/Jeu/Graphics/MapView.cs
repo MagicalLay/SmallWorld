@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Jeu;
 
 namespace Graphics
 {
@@ -31,14 +32,48 @@ namespace Graphics
             bi_mountain.BeginInit();
             bi_mountain.UriSource = new Uri(@"textures/ocean.png", UriKind.RelativeOrAbsolute);
             bi_mountain.EndInit();
-            Rect rect = new Rect(1, 1, 69, 79);
-            Rect rect2 = new Rect(70, 1, 69, 79);
-            Rect rect3 = new Rect(70+34.5, 59.74, 69, 79);
-            Rect rect4 = new Rect(70+69, 1, 69, 79);
-            dc.DrawImage(bi_forest, rect);
-            dc.DrawImage(bi_field, rect2);
-            dc.DrawImage(bi_desert, rect3);
-            dc.DrawImage(bi_mountain, rect4);
+
+            //Space[,] mapSpaces = Game.Map.spaces;
+            //int sizeMap = Game.Map.Size;
+            Rect rectxy;
+            int size = 6;
+            FlyweightSpace fw = new FlyweightSpace();
+            Space[,] mapSpaces = new Space[size,size];
+                for (int x = 0; x < size; x++)
+                {
+                    for (int y = 0; y < size; y++)
+                    {
+                        /* calculate coordinates on the map */
+                        if (y % 2 == 0)
+                        {
+                            rectxy = new Rect(1 + x * 69, 1 + y * 69, 69, 79);
+                            mapSpaces[x, y] = fw.getField();
+                        }
+                        else
+                        {
+                            mapSpaces[x, y] = fw.getDesert();
+                            rectxy = new Rect(34.5 + x * 69, y * 59.74, 69, 79);
+                        }
+                        /* get the type of space */
+                        Space sp = mapSpaces[x, y];
+                        if (sp.Equals(fw.getDesert()))
+                        {
+                            dc.DrawImage(bi_desert, rectxy);
+                        }
+                        else if (sp.Equals(fw.getField()))
+                        {
+                            dc.DrawImage(bi_field, rectxy);
+                        }
+                        else if (sp.Equals(fw.getForest()))
+                        {
+                            dc.DrawImage(bi_forest, rectxy);
+                        }
+                        else
+                        {
+                            dc.DrawImage(bi_mountain, rectxy);
+                        }
+                    }
+                }
         }
     }
 }

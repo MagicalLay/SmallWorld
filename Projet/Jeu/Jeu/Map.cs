@@ -9,7 +9,11 @@ namespace Jeu
     public enum MapSize{Small, Medium, Large}
     public class Map
     {
-        private Space[,] spaces;
+        public Space[,] spaces
+        {
+            get;
+            private set;
+        }
 
         unsafe public Map(MapSize mapSize)
         {

@@ -18,3 +18,7 @@ C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textur
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics_Content.g.cs
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics_MarkupCompile.lref
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\Jeu.dll
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\Wrapper.dll
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\Jeu.pdb
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\Wrapper.pdb

@@ -11,7 +11,6 @@ namespace Wrapper {
 	public:
 		WrapperAlgo(){ algo = new Algo(); }
 		~WrapperAlgo(){ delete(algo); }
-		int computeFoo() { return algo->computeFoo(); }
 		int** fillMap(int size) { return algo->fillMap(size); }
 	};
 }

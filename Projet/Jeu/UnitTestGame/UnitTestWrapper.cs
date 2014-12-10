@@ -13,12 +13,5 @@ namespace UnitTests
     public class UnitTestWrapper
     {
 
-        [TestMethod]
-        public void TestWrapper()
-        {
-            WrapperAlgo algo = new WrapperAlgo();
-            int a = algo.computeFoo();
-            Assert.AreEqual(a, 1);
-        }
     }
 }

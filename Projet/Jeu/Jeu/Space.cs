@@ -20,12 +20,16 @@ namespace Jeu
 
         public Boolean isNeighbour(Space sp)
         {
-            if (this.axis != sp.axis - 1 && this.axis != sp.axis + 1 && ordinate != sp.ordinate - 1 && ordinate != sp.ordinate + 1)
+            if (this.axis == sp.axis + 69 && this.ordinate == sp.ordinate ||
+                this.axis == sp.axis - 69 && this.ordinate == sp.ordinate ||
+                this.axis == sp.axis + 34.5 && this.ordinate == sp.ordinate + 59.74 ||
+                this.axis == sp.axis + 34.5 && this.ordinate == sp.ordinate - 59.74 ||
+                this.axis == sp.axis - 34.5 && this.ordinate == sp.ordinate + 59.74 ||
+                this.axis == sp.axis - 34.5 && this.ordinate == sp.ordinate - 59.74)
             {
-                return false;
+                return true;
             }
-            else { return true; }
-        }
-        
-        }
+            else { return false; }
+        } 
+    }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Jeu
 {
     public abstract class Unit
@@ -40,7 +41,7 @@ namespace Jeu
             private set;
         }
 
-        public Boolean attack(Unit attacked)
+        public Boolean init_attack(Unit attacked)
         {
             Boolean b;
             if (attacked.Space.axis < 0 || attacked.Space.axis > Game.Map.Size - 1 || attacked.Space.ordinate < 0 || attacked.Space.ordinate > Game.Map.Size - 1)
@@ -67,70 +68,87 @@ namespace Jeu
                     nbFights = rnd.Next(3, attacked.hp + 3);
                 }
 
-                /* chances of winning for the attacker */
-                double chancesOfWin = 0.5 + 0.5 * (attackPoints / (attacked.defencePoints));
+                /* chances of losing hp for the attacker */
+                double attackerChancesOfLosingHp = 0.5 + 0.5 * (attackPoints / (attacked.defencePoints));
                 
-                /* what happens during the attack */
-                if (nbFights != 0)
+                /* probabilities for attacker and defender */
+                double probabilityAttacker = (this.hp / 5) * this.attackPoints;
+                double probabilityDefender = (attacked.hp / 5) * attacked.attackPoints;
+
+                /* Attack begins */
+                this.attack(attacked, nbFights);
+                b = true;
+            }
+            return b;
+        }
+
+        public Boolean attack(Unit attacked, int nbFights)
+        {
+            Boolean b;
+            if (nbFights != 0)
+            {
+                nbFights--;
+                if (attacked.hp == 0)
                 {
-                    nbFights--;
-                    if (hp == 0)
-                    {
-                        die();
-                        Console.WriteLine("End of fight - defender wins !");
-                        b = true;
-                    }
-                    else if (attacked.hp == 0)
-                    {
-                        attacked.die();
-                        Console.WriteLine("End of fight - attacker wins !");
-                        move(attacked.Space.axis, attacked.Space.ordinate);
-                        b = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Defender turn");
-                        attacked.defend(this, nbFights);
-                        b = true;
-                    }
+                    attacked.die();
+                    Console.WriteLine("End of fight - defender wins !");
+                    b = true;
+                    this.move(attacked.Space.axis, attacked.Space.ordinate);
+                }
+                else if (hp == 0)
+                {
+                    die();
+                    Console.WriteLine("End of fight - attacker wins !");
+                    b = true;
                 }
                 else
                 {
-                    Console.WriteLine("End of fight - no turns left");
-                    b = true;
+                    b = false;
                 }
+            }
+            else 
+            {
+                Console.WriteLine("End of fight !");
+                b = true; 
             }
             return b;
         }
-
         public Boolean defend(Unit attacker, int nbFights)
         {
             Boolean b;
-            if (attacker.hp == 0)
+            if (nbFights != 0)
             {
-                attacker.die();
-                Console.WriteLine("End of fight - defender wins !");
-                b = true;
+                nbFights--;
+                if (attacker.hp == 0)
+                {
+                    attacker.die();
+                    Console.WriteLine("End of fight - defender wins !");
+                    b = true;
+                }
+                else if (hp == 0)
+                {
+                    die();
+                    Console.WriteLine("End of fight - attacker wins !");
+                    b = true;
+                }
+                else
+                {
+                    b = false;
+                }
             }
-            else if (hp == 0)
+            else 
             {
-                die();
-                Console.WriteLine("End of fight - attacker wins !");
-                b = true;
-            }
-            else
-            {
-                b = false;
+                Console.WriteLine("End of fight");
+                b = true; 
             }
             return b;
         }
-
         public Boolean move(int x, int y)
         {
             Boolean b;
             if (movePoints == 0)
             {
-                Console.WriteLine("Not enough points to move !");
+                Console.WriteLine("Not enough points to move");
                 b = false;
             }
             else if (x < 0 || x > Game.Map.Size || y < 0 || y > Game.Map.Size)
@@ -145,16 +163,17 @@ namespace Jeu
             }
             else
             {
-                Space = Game.Map[x, y];
+                this.Space = Game.Map[x, y];
                 movePoints--;
                 b = true;
+                Console.WriteLine("Movement achieved");
             }
             return b;
         }
 
         public void die()
         {
-            Console.WriteLine("Dead unit !");
+            Console.WriteLine("Dead unit");
         }
     }
 }

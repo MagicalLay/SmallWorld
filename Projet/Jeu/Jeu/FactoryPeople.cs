@@ -72,7 +72,7 @@ namespace Jeu
 
             int nbcases = m.Size * m.Size;
             int placement = rnd.Next(nbcases);
-            p[1].placerUnits(placement);
+            p[1].placeUnits(placement);
 
             int p1 = rnd.Next(nbcases);
             int p2 = rnd.Next(nbcases);

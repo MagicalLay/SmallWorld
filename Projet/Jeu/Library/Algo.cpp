@@ -9,15 +9,10 @@
 #define SPACE_FOREST 2
 #define SPACE_MOUNTAIN 3
 
-int Algo::computeFoo() 
-{ 
-	return 1; 
-}
-
-/* will fill the map with the right types of spaces in a random way */
+/* fill the map with the right spaces in a random way */
 int** Algo::fillMap(int size)
 {
-	/* initialize random seed: */
+	/* initialize random seed */
 	srand((unsigned int)time(NULL));
 
 	/* number of spaces of each type */
