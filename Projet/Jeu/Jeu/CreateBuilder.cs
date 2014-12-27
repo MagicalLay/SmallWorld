@@ -41,7 +41,7 @@ namespace Jeu
                     StrategyLarge stl = new StrategyLarge();
                     return stl.instantiate();
                 default:
-                    throw new System.NotImplementedException("Erreur dans la taille de la carte !!");
+                    throw new System.NotImplementedException("Erreur dans la taille de la carte !");
             }
 
         }

@@ -11,13 +11,14 @@ namespace Jeu
         {
             nbUnits = nb;
             nbPoints = 0;
+            units = new Unit[nb];
         }
 
-        public void placeUnits(int rnd)
+        public Unit[] units
         {
-            throw new System.NotImplementedException();
+            get;
+            private set;
         }
-
         public static int nbUnits
         {
             get;

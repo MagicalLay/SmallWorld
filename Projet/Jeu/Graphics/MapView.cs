@@ -33,6 +33,19 @@ namespace Graphics
             bi_mountain.UriSource = new Uri(@"textures/ocean.png", UriKind.RelativeOrAbsolute);
             bi_mountain.EndInit();
 
+            // Creation of the bitmap images used to illustrate peoples
+            BitmapImage bi_dwarf = new BitmapImage();
+            bi_dwarf.BeginInit();
+            bi_dwarf.UriSource = new Uri(@"peoples/dwarf.png", UriKind.RelativeOrAbsolute);
+            bi_dwarf.EndInit();
+            BitmapImage bi_elf = new BitmapImage();
+            bi_elf.BeginInit();
+            bi_elf.UriSource = new Uri(@"peoples/elf.png", UriKind.RelativeOrAbsolute);
+            bi_elf.EndInit();
+            BitmapImage bi_orc = new BitmapImage();
+            bi_orc.BeginInit();
+            bi_orc.UriSource = new Uri(@"peoples/orc.png", UriKind.RelativeOrAbsolute);
+            bi_orc.EndInit();
             //Space[,] mapSpaces = Game.Map.spaces;
             //int sizeMap = Game.Map.Size;
             Rect rectxy;
@@ -56,6 +69,7 @@ namespace Graphics
                         }
                         /* get the type of space */
                         Space sp = mapSpaces[x, y];
+                        /* drawings of the images */
                         if (sp.Equals(fw.getDesert()))
                         {
                             dc.DrawImage(bi_desert, rectxy);

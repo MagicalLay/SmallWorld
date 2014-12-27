@@ -15,7 +15,7 @@ namespace Wrapper {
 		WrapperAlgo(){ algo = new Algo(); }
 		~WrapperAlgo(){ delete(algo); }
 		int** WrapperFillMap(int size){ return algo->fillMap(size); }
-		/*int* WrapperInitialCoord(int* map, int size) { return algo->initialCoord(map, size); }*/
+		int* WrapperInitialCoord(int* map, int size) { return algo->initialCoord(map, size); }
 	};
 }
 #endif

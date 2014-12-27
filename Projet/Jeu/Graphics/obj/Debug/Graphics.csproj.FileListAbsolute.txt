@@ -46,3 +46,6 @@ D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MainWindow.bam
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics.g.resources
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics.Properties.Resources.resources
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics.csproj.GenerateResource.Cache
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\peoples\dwarf.png
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\peoples\elf.png
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\peoples\orc.png

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Wrapper;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
@@ -12,12 +11,10 @@ namespace Jeu
     {
         public Game()
         {
-            Peoples = new List<People>();
+            Peoples = new People[2];
         }
         public Game(Map m, People p1, People p2)
         {
-            WrapperAlgo algo = new WrapperAlgo();
-
             /* initializations */
             Map = m;
             Peoples[0] = p1;
@@ -88,7 +85,7 @@ namespace Jeu
             private set;
         }
 
-        public static List<People> Peoples 
+        public static People[] Peoples 
         {
             get;
             private set;

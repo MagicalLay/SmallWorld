@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Wrapper;
 
 namespace Jeu
 {
@@ -14,7 +15,7 @@ namespace Jeu
 
         private static FactoryPeople instance_FactPeople;
 
-        public People[] makePeoples(Species race1, Species race2, Map m)
+        public unsafe People[] makePeoples(Species race1, Species race2, Map m)
         {
             if (race1 == race2) Console.WriteLine("Race1 must be different from race2 !");
 
@@ -67,25 +68,16 @@ namespace Jeu
                     Console.WriteLine("Unknown race !");
                     break;
             }
-
-            Random rnd = new Random();
-
-            int nbcases = m.Size * m.Size;
-            int placement = rnd.Next(nbcases);
-            p[1].placeUnits(placement);
-
-            int p1 = rnd.Next(nbcases);
-            int p2 = rnd.Next(nbcases);
-            int p3 = rnd.Next(nbcases);
-
-            int d1 = placement - p1;
-            int d2 = placement - p2;
-            int d3 = placement - p3;
-
-
-
+            /* puts all Units on their first space using the algo */
+            WrapperAlgo algo = new WrapperAlgo();
+            /*int* mapTmp = algo.WrapperInitialCoord(m.spaces,m.Size);
+            foreach (Unit u in p[0].units) {
+                u.move(mapTmp[0],mapTmp[1]);
+            }
+            foreach (Unit u in p[1].units) {
+                u.move(mapTmp[2],mapTmp[3]);
+            }*/
             return p;
-
         }
     }
 }

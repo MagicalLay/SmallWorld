@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("peoples/dwarf.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("peoples/elf.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("peoples/orc.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textures/desert.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textures/foret.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textures/ocean.png")]

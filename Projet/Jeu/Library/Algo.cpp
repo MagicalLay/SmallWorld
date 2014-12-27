@@ -40,8 +40,8 @@ int** Algo::fillMap(int size)
 }
 
 /* finds the initial coordinates for each player */
-int* initialCoord(int* map, int size){
-
+int* Algo::initialCoord(int* map, int size)
+{
 	/* initialize random seed */
 	srand((unsigned int)time(NULL));
 
