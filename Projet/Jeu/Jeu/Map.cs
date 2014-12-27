@@ -35,7 +35,7 @@ namespace Jeu
                     Console.WriteLine("Invalid size !");
                     break;
             }
-            int** map = algo.fillMap(Size);
+            int** map = algo.WrapperFillMap(Size);
             spaces = new Space[Size, Size];
             /* replaces ints by spaces */
             for (int i = 0; i < Size; i++)

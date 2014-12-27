@@ -10,6 +10,7 @@ namespace Jeu
         public Turn(int num)
         {
             numTurn = num;
+            People = Game.CurrentPlayer;
         }
 
         public int numTurn
@@ -22,20 +23,6 @@ namespace Jeu
         {
             get;
             private set;
-        }
-
-        public bool endTurn()
-        {
-            numTurn++;
-            if(numTurn < Game.NbTurnsLeft) 
-            {
-                return true;
-            }
-            else
-            {
-                Game.endGame();
-                return false;
-            }
         }
 
         public void followingUnit()
