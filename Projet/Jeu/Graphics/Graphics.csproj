@@ -107,13 +107,13 @@
     <Content Include="textures\desert.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\foret.png">
+    <Content Include="textures\field.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\ocean.png">
+    <Content Include="textures\forest.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\plaine.png">
+    <Content Include="textures\mountain.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

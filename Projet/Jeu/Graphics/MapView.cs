@@ -22,15 +22,15 @@ namespace Graphics
             bi_desert.EndInit();
             BitmapImage bi_field = new BitmapImage();
             bi_field.BeginInit();
-            bi_field.UriSource = new Uri(@"textures/plaine.png", UriKind.RelativeOrAbsolute);
+            bi_field.UriSource = new Uri(@"textures/field.png", UriKind.RelativeOrAbsolute);
             bi_field.EndInit();
             BitmapImage bi_forest = new BitmapImage();
             bi_forest.BeginInit();
-            bi_forest.UriSource = new Uri(@"textures/foret.png", UriKind.RelativeOrAbsolute);
+            bi_forest.UriSource = new Uri(@"textures/forest.png", UriKind.RelativeOrAbsolute);
             bi_forest.EndInit();
             BitmapImage bi_mountain = new BitmapImage();
             bi_mountain.BeginInit();
-            bi_mountain.UriSource = new Uri(@"textures/ocean.png", UriKind.RelativeOrAbsolute);
+            bi_mountain.UriSource = new Uri(@"textures/mountain.png", UriKind.RelativeOrAbsolute);
             bi_mountain.EndInit();
 
             // Creation of the bitmap images used to illustrate peoples
@@ -46,6 +46,7 @@ namespace Graphics
             bi_orc.BeginInit();
             bi_orc.UriSource = new Uri(@"peoples/orc.png", UriKind.RelativeOrAbsolute);
             bi_orc.EndInit();
+
             //Space[,] mapSpaces = Game.Map.spaces;
             //int sizeMap = Game.Map.Size;
             Rect rectxy;
@@ -56,20 +57,36 @@ namespace Graphics
                 {
                     for (int y = 0; y < size; y++)
                     {
-                        /* calculate coordinates on the map */
+                        // Coordinates on the map
                         if (y % 2 == 0)
                         {
-                            rectxy = new Rect(1 + x * 69, 1 + y * 59.74, 69, 79);
-                            mapSpaces[x, y] = fw.getField();
+                            rectxy = new Rect(1 + x * 69, 1 + y * 59.7, 69, 79);
+                            if (x % 2 == 0)
+                            {
+                                mapSpaces[x, y] = fw.getField();
+                            }
+                            else
+                            {
+                                mapSpaces[x, y] = fw.getDesert();
+                            }
                         }
                         else
                         {
-                            mapSpaces[x, y] = fw.getDesert();
-                            rectxy = new Rect(34.5 + x * 69, 59.74 + (y - 1) * 59.74, 69, 79);
+                            rectxy = new Rect(34.5 + x * 69, 59.7 + (y - 1) * 59.7, 69, 79);
+                            if (x % 2 == 0)
+                            {
+                                mapSpaces[x, y] = fw.getMountain();
+                            }
+                            else
+                            {
+                                mapSpaces[x, y] = fw.getForest();
+                            }
                         }
-                        /* get the type of space */
+
+                        // Type of space
                         Space sp = mapSpaces[x, y];
-                        /* drawings of the images */
+
+                        // Draws the images
                         if (sp.Equals(fw.getDesert()))
                         {
                             dc.DrawImage(bi_desert, rectxy);

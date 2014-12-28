@@ -12,8 +12,8 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("peoples/elf.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("peoples/orc.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textures/desert.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textures/foret.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textures/ocean.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textures/plaine.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textures/field.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textures/forest.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textures/mountain.png")]
 
 

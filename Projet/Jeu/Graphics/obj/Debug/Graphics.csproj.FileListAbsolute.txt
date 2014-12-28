@@ -26,9 +26,6 @@ D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\Graphics.exe.c
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics.exe
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics.pdb
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\desert.png
-D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\foret.png
-D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\ocean.png
-D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\plaine.png
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\Graphics.exe
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\Graphics.pdb
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\Jeu.dll
@@ -49,3 +46,6 @@ D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics.cspro
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\peoples\dwarf.png
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\peoples\elf.png
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\peoples\orc.png
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\field.png
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\forest.png
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\mountain.png
