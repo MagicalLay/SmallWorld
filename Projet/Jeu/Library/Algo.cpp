@@ -108,6 +108,7 @@ void Algo::initializeOrcMvt(int * map, int size, int x, int y, double * costs, i
 	costs[x*size + y] = movePoints;
 	orcPossibleMovement(map, size, x, y, moves, costs);
 }
+
 void Algo::orcPossibleMovement(int* map, int size, int x, int y, int* moves, double* costs)
 {
 	// Spaces above
