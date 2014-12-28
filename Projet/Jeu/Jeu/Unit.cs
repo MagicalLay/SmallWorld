@@ -24,7 +24,7 @@ namespace Jeu
             private set;
         }
 
-        public static int movePoints
+        public static double movePoints
         {
             get;
             private set;
