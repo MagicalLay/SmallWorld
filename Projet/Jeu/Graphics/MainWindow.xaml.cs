@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Jeu;
 
 namespace Graphics
 {
@@ -23,6 +24,29 @@ namespace Graphics
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ClickLoad(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Are you sure you want to quit this game ?", "Confirmation" , MessageBoxButton.OKCancel);
+            Jeu.Game.endGame();
+        }
+        private void ClickSave(object sender, RoutedEventArgs e)
+        {
+            if (Jeu.Game.SaveName != "")
+            {
+                //Jeu.Game.save();  --> pb static à régler
+                MessageBox.Show("Game successfully saved !");
+            }
+            else
+            {
+                //TODO
+            }
+        }
+        private void ClickNext(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Are sure you want to move to the next turn ?", "Confirmation", MessageBoxButton.OKCancel);
+            Jeu.Game.nextTurn();
         }
     }
 }

@@ -36,7 +36,6 @@ D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics.cspro
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MainWindow.g.cs
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\App.g.cs
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics_Content.g.cs
-D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics_MarkupCompile.cache
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics_MarkupCompile.lref
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MainWindow.baml
@@ -49,3 +48,4 @@ D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\peoples\orc.pn
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\field.png
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\forest.png
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\mountain.png
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\GeneratedInternalTypeHelper.g.cs

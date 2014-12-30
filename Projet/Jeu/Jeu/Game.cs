@@ -96,9 +96,13 @@ namespace Jeu
             get;
             private set;
         }
-        public void nextTurn()
+        public static void nextTurn()
         {
-            if (Turn.numTurn + 1 < NbTurns)
+            if (NbTurns == null) 
+            { 
+                Console.WriteLine("NbTurns not initialized"); 
+            }
+            else if (Turn.numTurn + 1 < NbTurns)
             {
                 changePlayer();
                 int newTurn = Turn.numTurn + 1;
@@ -111,7 +115,7 @@ namespace Jeu
             }
         }
 
-        public void changePlayer()
+        public static void changePlayer()
         {
             People p = CurrentPlayer;
             if (p.Equals(Peoples[0]))
