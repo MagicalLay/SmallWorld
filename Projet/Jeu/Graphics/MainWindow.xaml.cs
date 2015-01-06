@@ -48,5 +48,18 @@ namespace Graphics
             MessageBox.Show("Are sure you want to move to the next turn ?", "Confirmation", MessageBoxButton.OKCancel);
             Jeu.Game.nextTurn();
         }
+
+        private void ClickNewGame(object sender, RoutedEventArgs e)
+        {
+            ecranAccueil fenetre = new ecranAccueil();
+            fenetre.Show();
+            //this.Close();
+        }
+
+        private void ClickLoadGame(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
     }
 }

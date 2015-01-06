@@ -1,0 +1,10 @@
+﻿<Window x:Class="Graphics.SelectionPeuple"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SelectionPeuple" Height="300" Width="300">
+    <Grid>
+        <ComboBox HorizontalAlignment="Left" Margin="25,96,0,0" VerticalAlignment="Top" Width="94"/>
+        <ComboBox HorizontalAlignment="Left" Margin="176,96,0,0" VerticalAlignment="Top" Width="94"/>
+
+    </Grid>
+</Window>
