@@ -9,11 +9,30 @@ namespace Jeu
     public enum Species { Elf, Dwarf, Orc };
     public class FactoryPeople : IPeople
     {
-        private UnitElf elf;
-        private UnitDwarf dwarf;
-        private UnitOrc orc;
-
         private static FactoryPeople instance_FactPeople;
+
+        private Elf elves;
+        private Dwarf dwarves;
+        private Orc orcs;
+
+        public FactoryPeople()
+        {
+            int nb = Jeu.People.nbUnits;
+            elves = new Elf(nb);
+            dwarves = new Dwarf(nb);
+            orcs = new Orc(nb);
+        }
+        public static FactoryPeople Instance_FactPeople
+        {
+            get
+            {
+                if (instance_FactPeople == null)
+                {
+                    instance_FactPeople = new FactoryPeople();
+                }
+                return instance_FactPeople;
+            }
+        }
 
         public unsafe People[] makePeoples(Species race1, Species race2, Map m)
         {
@@ -68,15 +87,6 @@ namespace Jeu
                     Console.WriteLine("Unknown race !");
                     break;
             }
-            /* puts all Units on their first space using the algo */
-            WrapperAlgo algo = new WrapperAlgo();
-            /*int* mapTmp = algo.WrapperInitialCoord(m.spaces,m.Size);
-            foreach (Unit u in p[0].units) {
-                u.move(mapTmp[0],mapTmp[1]);
-            }
-            foreach (Unit u in p[1].units) {
-                u.move(mapTmp[2],mapTmp[3]);
-            }*/
             return p;
         }
     }

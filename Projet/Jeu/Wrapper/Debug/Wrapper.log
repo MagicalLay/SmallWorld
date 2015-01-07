@@ -1,9 +1,18 @@
-﻿La génération a démarré 05/01/2015 20:25:36.
-     1>Projet "D:\Github\SmallWorld\Projet\Jeu\Wrapper\Wrapper.vcxproj" sur le nœud 2 (Build cible(s)).
-     1>Link:
-         Wrapper.vcxproj -> D:\Github\SmallWorld\Projet\Jeu\Debug\Wrapper.dll
-     1>Génération du projet "D:\Github\SmallWorld\Projet\Jeu\Wrapper\Wrapper.vcxproj" terminée (Build cible(s)).
+﻿La génération a démarré 07/01/2015 09:35:10.
+     1>Projet "C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Wrapper\Wrapper.vcxproj" sur le nœud 2 (Rebuild cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib Wrapper.cpp
+         Wrapper.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /analyze- /errorReport:prompt "C:\Users\mleray\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.5.AssemblyAttributes.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Debug\Wrapper.dll" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Debug\Wrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\Wrapper.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Debug\Library.lib
+     1>Library.lib(Algo.obj) : warning LNK4075: ' /EDITANDCONTINUE' ignorÚ Ó cause de la spÚcification '/OPT:LBR'
+         Wrapper.vcxproj -> C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Debug\Wrapper.dll
+     1>Génération du projet "C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Wrapper\Wrapper.vcxproj" terminée (Rebuild cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:00.08
+Temps écoulé 00:00:00.74

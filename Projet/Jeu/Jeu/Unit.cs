@@ -24,7 +24,7 @@ namespace Jeu
             private set;
         }
 
-        public static double movePoints
+        public double movePoints
         {
             get;
             private set;
@@ -56,7 +56,7 @@ namespace Jeu
             }
             else
             {
-                /* number of fights */
+                // number of fights
                 int nbFights;
                 Random rnd = new Random();
                 if (hp > attacked.hp)
@@ -68,14 +68,13 @@ namespace Jeu
                     nbFights = rnd.Next(3, attacked.hp + 3);
                 }
 
-                /* chances of losing hp for the attacker */
+                // chances of losing hp for the attacker
                 double attackerChancesOfLosingHp = 0.5 + 0.5 * (attackPoints / (attacked.defencePoints));
                 
-                /* probabilities for attacker and defender */
+                // probabilities for attacker and defender
                 double probabilityAttacker = (this.hp / 5) * this.attackPoints;
                 double probabilityDefender = (attacked.hp / 5) * attacked.attackPoints;
 
-                /* Attack begins */
                 this.attack(attacked, nbFights);
                 b = true;
             }

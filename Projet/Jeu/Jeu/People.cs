@@ -13,7 +13,6 @@ namespace Jeu
             nbPoints = 0;
             units = new Unit[nb];
         }
-
         public Unit[] units
         {
             get;

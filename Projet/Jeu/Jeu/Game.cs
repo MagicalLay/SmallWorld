@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using Wrapper;
 
 namespace Jeu
 {
@@ -15,7 +16,7 @@ namespace Jeu
         }
         public Game(Map m, People p1, People p2)
         {
-            /* initializations */
+            // initializations
             Map = m;
             Peoples[0] = p1;
             Peoples[1] = p2;
@@ -39,10 +40,13 @@ namespace Jeu
             NbTurnsLeft = NbTurns;
             SaveName = "";
 
-            /* defines the first player */
+            // initial position of peoples
+            initialPosPeople(p1, p2);
+
+            // defines the first player
             Random rnd = new Random();
             int player = rnd.Next(2);
-            CurrentPlayer = Peoples[player]; // First player
+            CurrentPlayer = Peoples[player]; // First player = current player
         }
 
         public static Turn Turn
@@ -98,11 +102,7 @@ namespace Jeu
         }
         public static void nextTurn()
         {
-            if (NbTurns == null) 
-            { 
-                Console.WriteLine("NbTurns not initialized"); 
-            }
-            else if (Turn.numTurn + 1 < NbTurns)
+            if (Turn.numTurn + 1 < NbTurns)
             {
                 changePlayer();
                 int newTurn = Turn.numTurn + 1;
@@ -133,6 +133,22 @@ namespace Jeu
             GameOnGoing = false;
             Console.WriteLine("End of the game !");
         }
+
+        public unsafe void initialPosPeople(People p1, People p2)
+        {
+            WrapperAlgo algo = new WrapperAlgo();
+            int* pos = algo.WrapperInitialCoord(Map.toInt(), Map.Size);
+            foreach (Unit u in p1.units)
+            {
+                u.move(pos[0], pos[1]);
+
+            }
+            foreach (Unit u in p2.units)
+            {
+                u.move(pos[2], pos[3]);
+
+            }
+        } 
 
         /* the 3 following functions are used to save or load a game */
         public bool save()
