@@ -3,8 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="SelectionPeuple" Height="300" Width="300">
     <Grid>
-        <ComboBox HorizontalAlignment="Left" Margin="25,96,0,0" VerticalAlignment="Top" Width="94"/>
-        <ComboBox HorizontalAlignment="Left" Margin="176,96,0,0" VerticalAlignment="Top" Width="94"/>
-
+        <ComboBox Name="Peuple1" HorizontalAlignment="Left" Margin="28,139,0,0" VerticalAlignment="Top" Width="94">
+            <ComboBoxItem IsSelected="True" Name="Elfe">Elfe</ComboBoxItem>
+            <ComboBoxItem Name="Orc">Orc</ComboBoxItem>
+            <ComboBoxItem Name="Nain">Nain</ComboBoxItem>
+        </ComboBox>
+        <ComboBox Name="Peuple2" HorizontalAlignment="Left" Margin="176,139,0,0" VerticalAlignment="Top" Width="94">
+            <ComboBoxItem Name="Elfe2">Elfe</ComboBoxItem>
+            <ComboBoxItem IsSelected="True" Name="Orc2">Orc</ComboBoxItem>
+            <ComboBoxItem Name="Nain2">Nain</ComboBoxItem>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="43,106,0,0" TextWrapping="Wrap" Text="Peuple1" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="201,106,0,0" TextWrapping="Wrap" Text="Peuple2" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,10,0,0" TextWrapping="Wrap" Text="Selectionnez les peuples du joueur 1 et du joueur 2" VerticalAlignment="Top" FontSize="20" TextAlignment="Center" FontWeight="Bold" TextDecorations="Underline"/>
+        <Button Content="Valider" HorizontalAlignment="Left" Margin="47,205,0,0" VerticalAlignment="Top" Width="75" Click="ClickValidate"/>
+        <Button Content="Annuler" HorizontalAlignment="Left" Margin="176,205,0,0" VerticalAlignment="Top" Width="75" Click="ClickAnnuler"/>
     </Grid>
 </Window>

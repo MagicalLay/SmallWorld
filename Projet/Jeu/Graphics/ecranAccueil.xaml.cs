@@ -24,8 +24,20 @@ namespace Graphics
             InitializeComponent();
         }
 
+        public static int size;
         private void ClickValidate(object sender, RoutedEventArgs e)
         {
+            if(comboBoxTaille.SelectedItem==comboBoxTaille.Items[0]) {
+                size = 0;
+            }
+            else if (comboBoxTaille.SelectedItem == comboBoxTaille.Items[1])
+            {
+                size = 1;
+            }
+            else if (comboBoxTaille.SelectedItem == comboBoxTaille.Items[2])
+            {
+                size = 2;
+            }
             SelectionPeuple peuples = new SelectionPeuple();
             peuples.Show();
             this.Close();

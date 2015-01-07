@@ -4,10 +4,10 @@
         Title="ecranAccueil" Height="300" Width="300" Background="White" BorderBrush="#FFFFFCFC" Foreground="Black">
     <Grid>
         <TextBlock Text="Selectionnez la taille de la carte : " Margin="59,76,59,165" />
-        <ComboBox HorizontalAlignment="Left" Margin="86,122,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem IsSelected="True">petite</ComboBoxItem>
-            <ComboBoxItem>moyenne</ComboBoxItem>
-            <ComboBoxItem>grande</ComboBoxItem>
+        <ComboBox Name="comboBoxTaille" HorizontalAlignment="Left" Margin="86,122,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem IsSelected="True">petite (6x6)</ComboBoxItem>
+            <ComboBoxItem>moyenne (10x10)</ComboBoxItem>
+            <ComboBoxItem>grande (14x14)</ComboBoxItem>
         </ComboBox>
         <Button Content="Valider" HorizontalAlignment="Left" Margin="47,205,0,0" VerticalAlignment="Top" Width="75" Click="ClickValidate"/>
         <Button Content="Annuler" HorizontalAlignment="Left" Margin="170,205,0,0" VerticalAlignment="Top" Width="75" Click="ClickAnnuler"/>
