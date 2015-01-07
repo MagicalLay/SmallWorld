@@ -12,12 +12,8 @@ C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphi
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics.exe
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics.pdb
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\desert.png
-C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\foret.png
-C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\ocean.png
-C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\plaine.png
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics_Content.g.cs
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics_MarkupCompile.lref
-C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\Jeu.dll
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\Wrapper.dll
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\Jeu.pdb
@@ -79,3 +75,13 @@ D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\ecranAccueil.baml
 D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\ecranAccueil.g.cs
 D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\selectionPeuples.baml
 D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\selectionPeuples.g.cs
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\peoples\dwarf.png
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\peoples\elf.png
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\peoples\orc.png
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\field.png
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\forest.png
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\bin\Debug\textures\mountain.png
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\ecranAccueil.baml
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\selectionPeuples.baml
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\ecranAccueil.g.cs
+C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\selectionPeuples.g.cs

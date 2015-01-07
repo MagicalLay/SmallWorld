@@ -18,26 +18,23 @@
 
 int** Algo::fillMap(int size)
 {
-	// Initialize random seed 
 	srand((unsigned int)time(NULL));
 
-	// Number of spaces of each type
 	int nbSpaces = (size * size) / 4;
 
-	// Number of spaces empty for each type
 	int spacesLeft[] = { nbSpaces, nbSpaces, nbSpaces, nbSpaces };
 	int** result = (int**)malloc(size * sizeof(int *));
 	int typeOfSpace;
 	
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++){
-			// Random number between 0 and 3 included
+
 			typeOfSpace = rand() % 4;
 			while (spacesLeft[typeOfSpace] == 0)
 			{
 				typeOfSpace = rand() % 4;
 			}
-			// Fills the result tab
+
 			result[i][j] = typeOfSpace;
 			spacesLeft[typeOfSpace]--;
 		}
@@ -49,16 +46,14 @@ int** Algo::fillMap(int size)
 
 int* Algo::initialCoord(int* map, int size)
 {
-	// Initialize random seed
 	srand((unsigned int)time(NULL));
 
 	int* coord = (int*)malloc(4 * sizeof(int));
 
-	// Random number equal to 0 or 1
 	int pos = rand() % 2;
 
 	int i1, j1, i2, j2;
-	// Players must be far away from each other : 2 possibilities on the map
+
 	if (pos == 1){
 		i1 = rand() % 2;
 		j1 = size - rand() % 2;
@@ -72,6 +67,7 @@ int* Algo::initialCoord(int* map, int size)
 		i2 = size - rand() % 2;
 		j2 = size - rand() % 2;
 	}
+
 	// Coordinates for player 1
 	coord[0] = i1;
 	coord[1] = j1;
@@ -86,7 +82,7 @@ int* Algo::initialCoord(int* map, int size)
 
 void Algo::initializeOrcMvt(int * map, int size, int x, int y, double * costs, int * moves, double movePoints)
 {
-	// By default every space is initialized
+	// By default each space is initialized
 	int i, j;
 	for (i = 0; i < size; i++)
 	{
@@ -103,7 +99,7 @@ void Algo::initializeOrcMvt(int * map, int size, int x, int y, double * costs, i
 			moves[i*size + j] = 0;
 		}
 	}
-	// Initial space is authorized
+
 	moves[x*size + y] = INIT_SPACE;
 	costs[x*size + y] = movePoints;
 	orcPossibleMovement(map, size, x, y, moves, costs);
@@ -281,7 +277,7 @@ void Algo::initializeElfMvt(int * map, int size, int x, int y, double * costs, i
 			moves[i*size + j] = 0;
 		}
 	}
-	// Initial space is authorized
+
 	moves[x*size + y] = INIT_SPACE;
 	costs[x*size + y] = movePoints;
 	elfPossibleMovement(map, size, x, y, moves, costs);
@@ -423,7 +419,7 @@ void Algo::elfMovement(int* map, double* costs, int size, int x, int y, double m
 		}
 		break;
 	case DESERT_SPACE:
-		// I think it is impossible that mvt >= 2, anyway...
+
 		if (mvt >= 2){
 			mvt = mvt - 2;
 			moves[x*size + y] = POSSIBLE_SPACE;
@@ -443,6 +439,7 @@ void Algo::elfMovement(int* map, double* costs, int size, int x, int y, double m
 
 void Algo::initializeDwarfMvt(int * map, int size, int x, int y, double * costs, int * moves, double movePoints)
 {
+	// By default each space is initialized
 	int i, j;
 	for (i = 0; i < size; i++)
 	{
@@ -451,6 +448,8 @@ void Algo::initializeDwarfMvt(int * map, int size, int x, int y, double * costs,
 			moves[i*size + j] = INIT_SPACE;
 		}
 	}
+
+	// movePoints are set to zero
 	for (i = 0; i < size; i++)
 	{
 		for (j = 0; j < size; j++)
@@ -458,6 +457,7 @@ void Algo::initializeDwarfMvt(int * map, int size, int x, int y, double * costs,
 			moves[i*size + j] = 0;
 		}
 	}
+
 	moves[x*size + y] = INIT_SPACE;
 	costs[x*size + y] = movePoints;
 	dwarfPossibleMovement(map, size, x, y, moves, costs);

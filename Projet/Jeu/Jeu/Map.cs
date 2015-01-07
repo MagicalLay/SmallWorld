@@ -79,5 +79,36 @@ namespace Jeu
             get;
             private set;
         }
+
+        unsafe public int* toInt()
+        {
+            FlyweightSpace fw = new FlyweightSpace();
+            int i, j;
+            int* result = null;
+            for (i = 0; i < Size; i++)
+            {
+                for (j = 0; j < Size; j++)
+                {
+                    Space sp = this[i, j];
+                    if(sp.Equals(fw.getDesert())) 
+                    {
+                        result[i * Size + j] = 0;
+                    }
+                    else if (sp.Equals(fw.getField()))
+                    {
+                        result[i * Size + j] = 1;
+                    }
+                    else if (sp.Equals(fw.getForest()))
+                    {
+                        result[i * Size + j] = 2;
+                    }
+                    else
+                    {
+                        result[i * Size + j] = 3;
+                    }
+                }
+            }
+            return result;
+        }
     }
 }
