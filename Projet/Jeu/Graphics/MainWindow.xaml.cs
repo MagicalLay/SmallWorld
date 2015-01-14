@@ -53,7 +53,7 @@ namespace Graphics
         {
             ecranAccueil fenetre = new ecranAccueil();
             fenetre.Show();
-            //this.Close();
+            this.Close();
         }
 
         private void ClickLoadGame(object sender, RoutedEventArgs e)

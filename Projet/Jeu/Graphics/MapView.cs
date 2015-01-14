@@ -18,33 +18,33 @@ namespace Graphics
             // Creation of the bitmap images used on the map view
             BitmapImage bi_desert = new BitmapImage();
             bi_desert.BeginInit();
-            bi_desert.UriSource = new Uri(@"textures/desert.png", UriKind.RelativeOrAbsolute);
+            bi_desert.UriSource = new Uri("./textures/desert.png", UriKind.Relative);
             bi_desert.EndInit();
             BitmapImage bi_field = new BitmapImage();
             bi_field.BeginInit();
-            bi_field.UriSource = new Uri(@"textures/field.png", UriKind.RelativeOrAbsolute);
+            bi_field.UriSource = new Uri("./textures/field.png", UriKind.Relative);
             bi_field.EndInit();
             BitmapImage bi_forest = new BitmapImage();
             bi_forest.BeginInit();
-            bi_forest.UriSource = new Uri(@"textures/forest.png", UriKind.RelativeOrAbsolute);
+            bi_forest.UriSource = new Uri("./textures/forest.png", UriKind.Relative);
             bi_forest.EndInit();
             BitmapImage bi_mountain = new BitmapImage();
             bi_mountain.BeginInit();
-            bi_mountain.UriSource = new Uri(@"textures/mountain.png", UriKind.RelativeOrAbsolute);
+            bi_mountain.UriSource = new Uri("./textures/mountain.png", UriKind.Relative);
             bi_mountain.EndInit();
 
             // Creation of the bitmap images used to illustrate peoples
             BitmapImage bi_dwarf = new BitmapImage();
             bi_dwarf.BeginInit();
-            bi_dwarf.UriSource = new Uri(@"peoples/dwarf.png", UriKind.RelativeOrAbsolute);
+            bi_dwarf.UriSource = new Uri("./peoples/dwarf.png", UriKind.Relative);
             bi_dwarf.EndInit();
             BitmapImage bi_elf = new BitmapImage();
             bi_elf.BeginInit();
-            bi_elf.UriSource = new Uri(@"peoples/elf.png", UriKind.RelativeOrAbsolute);
+            bi_elf.UriSource = new Uri("./peoples/elf.png", UriKind.Relative);
             bi_elf.EndInit();
             BitmapImage bi_orc = new BitmapImage();
             bi_orc.BeginInit();
-            bi_orc.UriSource = new Uri(@"peoples/orc.png", UriKind.RelativeOrAbsolute);
+            bi_orc.UriSource = new Uri("./peoples/orc.png", UriKind.Relative);
             bi_orc.EndInit();
 
             //Space[,] mapSpaces = Game.Map.spaces;

@@ -10,16 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\App.xaml
-31423378273
+42081713527
 71327772052
-<<<<<<< HEAD
-12-1855297689
-14793359940
-=======
-12563915767
+13-220424836
 14-1238463659
->>>>>>> origin/master
-ecranAccueil.xaml;MainWindow.xaml;selectionPeuples.xaml;
+ecranAccueil.xaml;MainWindow.xaml;MapToPlay.xaml;selectionPeuples.xaml;
 
-True
+False
 

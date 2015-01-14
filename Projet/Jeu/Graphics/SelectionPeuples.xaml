@@ -15,7 +15,7 @@
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="43,106,0,0" TextWrapping="Wrap" Text="Peuple1" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="201,106,0,0" TextWrapping="Wrap" Text="Peuple2" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="12,10,0,0" TextWrapping="Wrap" Text="Selectionnez les peuples du joueur 1 et du joueur 2" VerticalAlignment="Top" FontSize="20" TextAlignment="Center" FontWeight="Bold" TextDecorations="Underline"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,10,0,0" TextWrapping="Wrap" Text="Sélectionnez les peuples du joueur 1 et du joueur 2" VerticalAlignment="Top" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
         <Button Content="Valider" HorizontalAlignment="Left" Margin="47,205,0,0" VerticalAlignment="Top" Width="75" Click="ClickValidate"/>
         <Button Content="Annuler" HorizontalAlignment="Left" Margin="176,205,0,0" VerticalAlignment="Top" Width="75" Click="ClickAnnuler"/>
     </Grid>
