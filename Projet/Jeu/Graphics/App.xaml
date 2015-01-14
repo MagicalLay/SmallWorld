@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <BitmapImage x:Key="FieldCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./textures/field.png"/>
+        <BitmapImage x:Key="MountainCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./textures/mountain.png"/>
+        <BitmapImage x:Key="DesertCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./textures/desert.png"/>
+        <BitmapImage x:Key="ForestCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./textures/forest.png"/>
     </Application.Resources>
 </Application>

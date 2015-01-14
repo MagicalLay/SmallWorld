@@ -87,9 +87,17 @@ C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToP
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics_MarkupCompile.lref
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToPlay.baml
+<<<<<<< HEAD
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\ecranAccueil.baml
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\selectionPeuples.baml
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\ecranAccueil.g.cs
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToPlay.g.cs
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\selectionPeuples.g.cs
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToPlay.baml
+=======
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToPlay.g.cs
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToPlay.baml
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\App.baml
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Cellule.baml
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Cellule.g.cs
+>>>>>>> origin/master

@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.5:PlatformToolSet=v120:EnableManagedIncrementalBuild=true:VCToolArchitecture=Native32Bit
+<<<<<<< HEAD
 Debug|Win32|D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\|
+=======
+Debug|Win32|D:\Github\SmallWorld\Projet\Jeu\|
+>>>>>>> origin/master
