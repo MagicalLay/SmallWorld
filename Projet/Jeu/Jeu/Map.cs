@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Wrapper;
+using System.Runtime.InteropServices;
 
 namespace Jeu
 {
@@ -35,28 +36,27 @@ namespace Jeu
                     Console.WriteLine("Invalid size !");
                     break;
             }
-            int** map = algo.WrapperFillMap(Size);
-            spaces = new Space[Size, Size];
+            int* map = algo.WrapperFillMap(Size);
             /* replaces ints by spaces */
             for (int i = 0; i < Size; i++)
             {
                 for (int j = 0; j < Size; j++)
                 {
-                    if (map[i][j] == 0)
+                    if (map[i*Size+j] == 0)
                     {
-                        spaces[i, j] = primarySpaces.getDesert();
+                        this[i,j] = primarySpaces.getDesert();
                     }
-                    else if (map[i][j] == 1)
+                    else if (map[i*Size+j] == 1)
                     {
-                        spaces[i, j] = primarySpaces.getField();
+                        this[i, j] = primarySpaces.getField();
                     }
-                    else if (map[i][j] == 2)
+                    else if (map[i*Size+j] == 2)
                     {
-                        spaces[i, j] = primarySpaces.getForest();
+                        this[i, j] = primarySpaces.getForest();
                     }
                     else
                     {
-                        spaces[i, j] = primarySpaces.getMountain();
+                        this[i,j] = primarySpaces.getMountain();
                     } 
                 }
             }
@@ -82,9 +82,10 @@ namespace Jeu
 
         unsafe public int* toInt()
         {
+            IntPtr pNative = IntPtr.Zero;
             FlyweightSpace fw = new FlyweightSpace();
             int i, j;
-            int* result = null;
+            int* result = stackalloc int[Size*Size + 1];
             for (i = 0; i < Size; i++)
             {
                 for (j = 0; j < Size; j++)

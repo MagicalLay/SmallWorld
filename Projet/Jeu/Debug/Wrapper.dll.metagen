@@ -12,7 +12,4 @@ Class Wrapper.WrapperAlgo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   Methods:
     WrapperFillMap(Int32): PrivateScope, Public, HideBySig
     WrapperInitialCoord(Int32*, Int32): PrivateScope, Public, HideBySig
-    WrapperOrcMvt(Int32*, Int32, Int32, Int32, Double*, Int32*, Double): PrivateScope, Public, HideBySig
-    WrapperElfMvt(Int32*, Int32, Int32, Int32, Double*, Int32*, Double): PrivateScope, Public, HideBySig
-    WrapperDwarfMvt(Int32*, Int32, Int32, Int32, Double*, Int32*, Double): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig

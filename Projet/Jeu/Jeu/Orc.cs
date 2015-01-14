@@ -15,16 +15,15 @@ namespace Jeu
             private set;
         }
 
-        unsafe public void move(int x, int y)
+        public void move(int x, int y)
         {
             WrapperAlgo algo = new WrapperAlgo();
             foreach (UnitOrc u in UnitsOrcs)
             {
-                Map m = Jeu.Game.Map;
-                double* costs = null;
-                int* moves = null;
-                double mp = u.movePoints;
-                algo.WrapperOrcMvt(m.toInt(), m.Size, x, y, costs, moves, mp);
+                if (u.Space.isNeighbour(Game.Map[x, y]))
+                {
+                    u.Space = Game.Map[x, y];
+                }
             }
         }
     }

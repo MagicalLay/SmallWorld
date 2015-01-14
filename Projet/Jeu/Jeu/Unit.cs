@@ -15,7 +15,7 @@ namespace Jeu
         public Space Space
         {
             get;
-            private set;
+            set;
         }
 
         public int hp

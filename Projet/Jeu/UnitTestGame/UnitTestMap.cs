@@ -7,14 +7,12 @@ namespace UnitTests
     [TestClass]
     public class UnitTestMap
     {
-
         [TestMethod]
         public void TestMapSize()
         {
             StrategySmall sts = new StrategySmall();
             StrategyMedium stm = new StrategyMedium();
             StrategyLarge stl = new StrategyLarge();
-
 
             Map m1 = sts.instantiate();
             Object o1 = m1.Size;
@@ -31,6 +29,5 @@ namespace UnitTests
             Assert.IsInstanceOfType(o3, typeof(int));
             Assert.AreEqual(o3, 14);
         }
-        
     }
 }

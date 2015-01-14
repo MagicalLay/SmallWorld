@@ -20,11 +20,10 @@ namespace Jeu
             WrapperAlgo algo = new WrapperAlgo();
             foreach (UnitElf u in UnitsElves)
             {
-                Map m = Jeu.Game.Map;
-                double* costs = null;
-                int* moves = null;
-                double mp = u.movePoints;
-                algo.WrapperElfMvt(m.toInt(), m.Size, x, y, costs, moves, mp);
+                if (u.Space.isNeighbour(Game.Map[x, y]))
+                {
+                    u.Space = Game.Map[x, y];
+                }
             }
         }
     }
