@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Jeu;
 
 namespace Graphics
 {
@@ -38,19 +39,23 @@ namespace Graphics
                 String tailleSt;
                 String peuple1St;
                 String peuple2St;
-                if (ecranAccueil.size == 0) tailleSt = "petite (6x6)";
-                else if (ecranAccueil.size == 1) tailleSt = "moyenne (10x10)";
-                else tailleSt = "grande (14x14)";
+                MapSize t;
+                if (ecranAccueil.size == 0) {tailleSt = "petite (6x6)"; t=MapSize.Small; }
+                else if (ecranAccueil.size == 1) { tailleSt = "moyenne (10x10)"; t = MapSize.Medium; }
+                else {tailleSt = "grande (14x14)"; t=MapSize.Large;}
 
-                if (Peuple1.SelectedItem==Peuple1.Items[0]) peuple1St = "Elfe";
-                else if (Peuple1.SelectedItem==Peuple1.Items[1]) peuple1St = "Orc";
-                else peuple1St = "Nain";
+                Species s1;
+                if (Peuple1.SelectedItem==Peuple1.Items[0]) {peuple1St = "Elfe"; s1=Species.Elf;}
+                else if (Peuple1.SelectedItem==Peuple1.Items[1]) {peuple1St = "Orc"; s1=Species.Orc;}
+                else { peuple1St = "Nain"; s1 = Species.Dwarf; }
 
-                if (Peuple2.SelectedItem==Peuple2.Items[0]) peuple2St = "Elfe";
-                else if (Peuple2.SelectedItem==Peuple2.Items[1]) peuple2St = "Orc";
-                else peuple2St = "Nain";
+                Species s2;
+                if (Peuple2.SelectedItem==Peuple2.Items[0]) {peuple2St = "Elfe"; s2=Species.Elf;}
+                else if (Peuple2.SelectedItem == Peuple2.Items[1]) { peuple2St = "Orc"; s2 = Species.Orc; }
+                else { peuple2St = "Nain"; s2 = Species.Dwarf; }
                 MessageBox.Show("La sélection suivante vous convient-elle ? \n taille : " + tailleSt + "\n peuple1 : " + peuple1St + "\n peuple2 : " + peuple2St, "Confirmation", MessageBoxButton.OKCancel);
-                MapToPlay carte = new MapToPlay();
+                CreateBuilder cB = new CreateBuilder(t, s1, s2);
+                MapToPlay carte = new MapToPlay(cB.map);
                 Close();
                 carte.Show();
                 this.Close();

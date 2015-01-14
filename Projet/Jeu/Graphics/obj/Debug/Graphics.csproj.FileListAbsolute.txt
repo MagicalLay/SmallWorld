@@ -90,3 +90,6 @@ C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphi
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToPlay.baml
 D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToPlay.g.cs
 D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToPlay.baml
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\App.baml
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Cellule.baml
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Cellule.g.cs

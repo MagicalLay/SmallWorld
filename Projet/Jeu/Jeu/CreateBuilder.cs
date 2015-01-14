@@ -7,11 +7,29 @@ namespace Jeu
 {
     public class CreateBuilder : IBuilderGame
     {
+        public Game game
+        {
+            get;
+            private set;
+        }
+
+        public People[] p
+        {
+            get;
+            private set;
+        }
+
+        public Map map
+        {
+            get;
+            private set;
+        }
+        
         public CreateBuilder(MapSize size, Species people1, Species people2)
         {
-            Map map = createMap(size);
-            People[] p = createPeoples(people1, people2, map);
-            Game game = createGame(map, p[0], p[1]);
+            map = createMap(size);
+            p = createPeoples(people1, people2, map);
+            game = createGame(map, p[0], p[1]);
         }
 
         public Game createGame(Map map, People p1, People p2)

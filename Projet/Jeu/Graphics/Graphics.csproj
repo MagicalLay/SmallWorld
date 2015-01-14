@@ -54,12 +54,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Cellule.xaml.cs">
+      <DependentUpon>Cellule.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MapToPlay.xaml.cs">
       <DependentUpon>MapToPlay.xaml</DependentUpon>
     </Compile>
     <Compile Include="selectionPeuples.xaml.cs">
       <DependentUpon>selectionPeuples.xaml</DependentUpon>
     </Compile>
+    <Page Include="Cellule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ecranAccueil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
