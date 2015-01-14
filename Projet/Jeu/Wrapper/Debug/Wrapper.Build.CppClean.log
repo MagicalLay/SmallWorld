@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+d:\github\smallworld\projet\jeu\wrapper\debug\vc120.pdb
+d:\github\smallworld\projet\jeu\wrapper\debug\wrapper.obj
+d:\github\smallworld\projet\jeu\wrapper\debug\.netframework,version=v4.5.assemblyattributes.obj
+d:\github\smallworld\projet\jeu\debug\wrapper.dll
+d:\github\smallworld\projet\jeu\debug\wrapper.pdb
+d:\github\smallworld\projet\jeu\wrapper\debug\wrapper.vcxprojresolveassemblyreference.cache
+d:\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\cl.command.1.tlog
+d:\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\cl.read.1.tlog
+d:\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\cl.write.1.tlog
+d:\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\link.command.1.tlog
+d:\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\link.read.1.tlog
+d:\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\link.write.1.tlog
+d:\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\metagen.read.1.tlog
+d:\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\metagen.write.1.tlog
+d:\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\tzres.dll.bi
+=======
 d:\maud\documents\github\smallworld\projet\jeu\wrapper\debug\vc120.pdb
 d:\maud\documents\github\smallworld\projet\jeu\wrapper\debug\wrapper.obj
 d:\maud\documents\github\smallworld\projet\jeu\wrapper\debug\.netframework,version=v4.5.assemblyattributes.obj
@@ -13,3 +30,4 @@ d:\maud\documents\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\link.w
 d:\maud\documents\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\metagen.read.1.tlog
 d:\maud\documents\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\metagen.write.1.tlog
 d:\maud\documents\github\smallworld\projet\jeu\wrapper\debug\wrapper.tlog\tzres.dll.bi
+>>>>>>> origin/master
