@@ -10,7 +10,7 @@ namespace Jeu
     public enum MapSize{Small, Medium, Large}
     public class Map
     {
-        public Space[,] spaces
+        public Space[,] Spaces
         {
             get;
             private set;
@@ -38,6 +38,7 @@ namespace Jeu
             }
             int* map = algo.WrapperFillMap(Size);
             /* replaces ints by spaces */
+            Spaces = new Jeu.Space[Size,Size];
             for (int i = 0; i < Size; i++)
             {
                 for (int j = 0; j < Size; j++)
@@ -66,11 +67,11 @@ namespace Jeu
         {
             get
             {
-                return spaces[x,y];
+                return Spaces[x,y];
             }
             private set
             {
-                spaces[x,y] = value;
+                Spaces[x,y] = value;
             }
         }
 
