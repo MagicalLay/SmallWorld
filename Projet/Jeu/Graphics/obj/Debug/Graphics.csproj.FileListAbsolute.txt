@@ -88,3 +88,5 @@ C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToP
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Graphics_MarkupCompile.lref
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToPlay.baml
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToPlay.g.cs
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\MapToPlay.baml

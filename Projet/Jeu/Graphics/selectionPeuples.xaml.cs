@@ -49,7 +49,7 @@ namespace Graphics
                 if (Peuple2.SelectedItem==Peuple2.Items[0]) peuple2St = "Elfe";
                 else if (Peuple2.SelectedItem==Peuple2.Items[1]) peuple2St = "Orc";
                 else peuple2St = "Nain";
-                MessageBox.Show("La sélection suivante vous convient-elle ? \n taille : "+tailleSt+"\n peuple1 : "+peuple1St+"\n peuple2 : "+peuple2St, "Confirmation", MessageBoxButton.OKCancel);
+                MessageBox.Show("La sélection suivante vous convient-elle ? \n taille : " + tailleSt + "\n peuple1 : " + peuple1St + "\n peuple2 : " + peuple2St, "Confirmation", MessageBoxButton.OKCancel);
                 MapToPlay carte = new MapToPlay();
                 Close();
                 carte.Show();

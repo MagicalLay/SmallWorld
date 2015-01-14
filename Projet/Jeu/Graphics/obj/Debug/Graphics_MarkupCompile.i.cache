@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\
 Graphics
 none
 false
 DEBUG;TRACE
-C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\App.xaml
+D:\Github\SmallWorld\Projet\Jeu\Graphics\App.xaml
 42081713527
 71327772052
-13-220424836
-14-1238463659
+131655329004
+14793359940
 ecranAccueil.xaml;MainWindow.xaml;MapToPlay.xaml;selectionPeuples.xaml;
 
-False
+True
 
