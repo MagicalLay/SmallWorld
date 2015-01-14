@@ -30,7 +30,7 @@ namespace Graphics
 			{
 				for (int x = 0; x < _map.Size; x++)
 				{
-					Cellule cell = new Cellule(_map.spaces[x,y],x,y);
+					Cellule cell = new Cellule(_map.Spaces[x,y],x,y);
 					GridMap.Children.Add(cell);
 				}
 			}
