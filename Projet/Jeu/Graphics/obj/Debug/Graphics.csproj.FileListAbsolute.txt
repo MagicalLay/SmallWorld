@@ -101,3 +101,6 @@ D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\App.baml
 D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Cellule.baml
 D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Cellule.g.cs
 >>>>>>> origin/master
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Cellule.baml
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\App.baml
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\Cellule.g.cs
