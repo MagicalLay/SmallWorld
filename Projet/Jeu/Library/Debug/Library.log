@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-﻿La génération a démarré 14/01/2015 23:26:49.
-     1>Projet "D:\Github\SmallWorld\Projet\Jeu\Library\Library.vcxproj" sur le nœud 2 (Build cible(s)).
-     1>ClCompile:
-         D:\Visual Studio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Algo.cpp
-         Algo.cpp
-       Lib:
-         D:\Visual Studio\VC\bin\Lib.exe /OUT:"D:\Github\SmallWorld\Projet\Jeu\Debug\Library.lib" /NOLOGO Debug\Algo.obj
-         Library.vcxproj -> D:\Github\SmallWorld\Projet\Jeu\Debug\Library.lib
-     1>Génération du projet "D:\Github\SmallWorld\Projet\Jeu\Library\Library.vcxproj" terminée (Build cible(s)).
+﻿La génération a démarré 14/01/2015 23:58:56.
 
 La génération a réussi.
 
-Temps écoulé 00:00:04.97
-=======
-﻿La génération a démarré 14/01/2015 23:25:35.
-     1>Projet "D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Library\Library.vcxproj" sur le nœud 2 (Build cible(s)).
-     1>Lib:
-         Library.vcxproj -> D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Debug\Library.lib
-     1>Génération du projet "D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Library\Library.vcxproj" terminée (Build cible(s)).
-
-La génération a réussi.
-
-Temps écoulé 00:00:00.40
->>>>>>> origin/master
+Temps écoulé 00:00:00.04
