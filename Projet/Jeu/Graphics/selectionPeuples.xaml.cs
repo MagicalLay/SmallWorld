@@ -55,9 +55,9 @@ namespace Graphics
                 else { peuple2St = "Nain"; s2 = Species.Dwarf; }
                 MessageBox.Show("La sélection suivante vous convient-elle ? \n taille : " + tailleSt + "\n peuple1 : " + peuple1St + "\n peuple2 : " + peuple2St, "Confirmation", MessageBoxButton.OKCancel);
                 CreateBuilder cB = new CreateBuilder(t, s1, s2);
-                MapToPlay carte = new MapToPlay(cB.map);
+                gameWindow partieWindow = new gameWindow(cB);
                 Close();
-                carte.Show();
+                partieWindow.Show();
                 this.Close();
             }
         }

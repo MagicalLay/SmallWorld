@@ -116,5 +116,19 @@ namespace Jeu
             }
             return result;
         }
+
+        public int getIndexFromCoodinates(int x, int y)
+        {
+            if (ValidCoordinates(x, y))
+                return x + Size * y;
+            else
+                throw new Exception();
+        }
+
+        public bool ValidCoordinates(int x, int y)
+        {
+            return x >= 0 && y >= 0 && x <= Size && y <= Size;
+        }
+
     }
 }
