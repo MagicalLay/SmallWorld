@@ -9,7 +9,7 @@ namespace Jeu
     {
         public Field() { }
 
-        public Type getType()
+        public override Type getType()
         {
             return Type.Field;
         }

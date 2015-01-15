@@ -9,8 +9,8 @@ namespace Jeu
     {
         public Space() { }
         public enum Type{ Desert, Field, Forest, Mountain, Space};
-
-        public Type getType()
+        
+        virtual public Type getType()
         {
             return Type.Space;
         }
