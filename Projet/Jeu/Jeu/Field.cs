@@ -8,5 +8,10 @@ namespace Jeu
     public class Field : Space
     {
         public Field() { }
+
+        public Type getType()
+        {
+            return Type.Field;
+        }
     }
 }

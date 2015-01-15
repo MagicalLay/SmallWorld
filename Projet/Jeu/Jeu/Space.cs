@@ -18,6 +18,12 @@ namespace Jeu
             private set;
         }
 
+        public enum Type{ Desert, Field, Forest, Mountain, Space};
+
+        public Type getType(){
+            return Type.Space;
+        }
+
         public Boolean isNeighbour(Space sp)
         {
             return 

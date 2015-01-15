@@ -8,5 +8,10 @@ namespace Jeu
     public class Mountain : Space
     {
         public Mountain() { }
+
+        public Type getType()
+        {
+            return Type.Mountain;
+        }
     }
 }

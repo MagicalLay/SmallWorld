@@ -8,5 +8,10 @@ namespace Jeu
     public class Desert : Space
     {
         public Desert() { }
+
+        public Type getType()
+        {
+            return Type.Desert;
+        }
     }
 }
