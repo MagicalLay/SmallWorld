@@ -20,7 +20,6 @@ namespace UnitTests
             int x = u1.Space.axis;
             int y = u1.Space.ordinate;
             Space sp = c.game.getSpace(0,0);
-            Assert.IsInstanceOfType(u1.Space, typeof(Space));
             Boolean b = sp.isNeighbour(c.game.getSpace(1,0));
             Assert.AreEqual(true, b);
             //Boolean b = u1.move(x+1, y, c.game);

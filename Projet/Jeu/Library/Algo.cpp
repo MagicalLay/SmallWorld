@@ -55,16 +55,16 @@ int* Algo::initialCoord(int* map, int size)
 
 	if (pos == 1){
 		i1 = rand() % 2;
-		j1 = size - rand() % 2;
-		i2 = size - rand() % 2;
+		j1 = size - 1 - rand() % 2;
+		i2 = size - 1 - rand() % 2;
 		j2 = rand() % 2;
 	}
 	else
 	{
 		i1 = rand() % 2;
 		j1 = rand() % 2;
-		i2 = size - rand() % 2;
-		j2 = size - rand() % 2;
+		i2 = size - 1 - rand() % 2;
+		j2 = size - 1 - rand() % 2;
 	}
 
 	// Coordinates for player 1

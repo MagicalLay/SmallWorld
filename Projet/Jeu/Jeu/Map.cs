@@ -67,7 +67,7 @@ namespace Jeu
             }
         }
 
-        public Jeu.Space this[int x, int y]
+        public Space this[int x, int y]
         {
             get
             {
