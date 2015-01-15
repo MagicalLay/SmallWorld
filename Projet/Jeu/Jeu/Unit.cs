@@ -7,60 +7,122 @@ namespace Jeu
         public Unit()
         {
             hp = 5;
-            movePoints = 1;
-            attackPoints = 2;
+            movePoints = 2; // initialisé à 2 pour pouvoir décrémenter de 2 quand un Elf va sur une case Desert 
+            attackPoints = 2;  
             defencePoints = 1;
         }
-
-        public Space Space
+        public int axis
         {
             get;
-            private set;
+            protected set;
         }
-
-        public void placer(Space s) {
-            Space = s;
+        public int ordinate
+        {
+            get;
+            protected set;
+        } 
+        public void placer(int x, int y) {
+            axis = x;
+            ordinate = y;
         }
 
         public int hp
         {
             get;
-            private set;
+            protected set;
         }
 
         public double movePoints
         {
             get;
-            private set;
+            protected set;
         }
 
         public int attackPoints
         {
             get;
-            private set;
+            protected set;
         }
         public int defencePoints
         {
             get;
-            private set;
+            protected set;
+        }
+        public Boolean isNeighbour(int x, int y, Map m)
+        {
+            if (!m.ValidCoordinates(x, y) || !m.ValidCoordinates(axis,ordinate)) { return false; }
+            else {
+                if (axis % 2 == 0)
+                {
+                    return
+                        (x == axis + 1 && y == ordinate) ||
+                        (x == axis - 1 && y == ordinate) ||
+                        (x == axis - 1 && y == ordinate + 1) ||
+                        (x == axis - 1 && y == ordinate - 1) ||
+                        (x == axis && y == ordinate + 1) ||
+                        (x == axis && y == ordinate - 1);
+                }
+                else
+                {
+                    return
+                        (x == axis + 1 && y == ordinate) ||
+                        (x == axis - 1 && y == ordinate) ||
+                        (x == axis + 1 && y == ordinate + 1) ||
+                        (x == axis + 1 && y == ordinate - 1) ||
+                        (x == axis && y == ordinate + 1) ||
+                        (x == axis && y == ordinate - 1);
+                }
+            }
+        }
+        public enum Type { Dwarf, Elf, Orc, Unit };
+
+        public Type getType()
+        {
+            return Type.Unit;
+        }
+        public Space.Type favoriteSpace
+        {
+            get;
+            protected set;
         }
 
+        public void move(int x, int y, Map m) 
+        {
+            if (getType() == Type.Dwarf && m[x, y].getType() == Space.Type.Mountain)
+            {
+                placer(x, y);
+                movePoints--;
+            }
+            else if (!isNeighbour(x,y,m) || movePoints == 0) 
+            {
+                Console.WriteLine("Impossible to move here");
+            }
+            else if (isNeighbour(x,y,m) && getType() == Type.Elf && m[x, y].getType() == Space.Type.Desert)
+            {
+                placer(x, y);
+                movePoints = movePoints - 2;
+            }
+            else if (isNeighbour(x, y, m) && m[x, y].getType() == favoriteSpace)
+            {
+                placer(x, y);
+                movePoints = movePoints - 0.5;
+            }
+            else
+            {
+                placer(x, y);
+                movePoints--;
+            }
+        }
         public Boolean fight(Unit attacked, Game g)
         {
             Boolean b;
-            if (attacked.Space.axis < 0 || attacked.Space.axis > g.getMapSize()-1 || attacked.Space.ordinate < 0 || attacked.Space.ordinate > g.getMapSize()- 1)
-            {
-                Console.WriteLine("Attacked space does not exist !");
-                b = false;
-                return b;
-            }
-            /*else if (!this.Space.isNeighbour(Game.Map[attacked.Space.axis, attacked.Space.ordinate]))
+            if (!isNeighbour(attacked.axis, attacked.ordinate, g.Map))
             {
                 Console.WriteLine("You can't attack this space !");
                 b = false;
                 return b;
-            }*/
-            else
+            }
+            else 
             {
                 b = true;
                 // number of fights
@@ -112,21 +174,6 @@ namespace Jeu
                     }
                 }
                 return b;
-            }
-        }
-
-        public Boolean move(int x, int y, Game g)
-        {
-            Space sp = g.getSpace(x, y);
-            if (movePoints == 0 || Space.isNeighbour(sp))
-            {
-                return false;
-            }
-            else 
-            {
-                placer(g.getSpace(x,y));
-                movePoints--;
-                return true;
             }
         }
 

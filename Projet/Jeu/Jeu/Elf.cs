@@ -28,9 +28,9 @@ namespace Jeu
             WrapperAlgo algo = new WrapperAlgo();
             foreach (UnitElf u in UnitsElves)
             {
-                if (u.Space.isNeighbour(g.getSpace(x, y)))
+                if (u.isNeighbour(x, y, g.Map))
                 {
-                    u.move(x, y, g);
+                    u.move(x, y, g.Map);
                 }
             }
         }

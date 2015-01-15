@@ -26,9 +26,12 @@ namespace Jeu
 
         public void place(int x, int y, Map m)
         {
-            foreach (Unit u in units)
+            if (m.ValidCoordinates(x, y))
             {
-                u.placer(m[x,y]);
+                foreach (Unit u in units)
+                {
+                    u.placer(x, y);
+                }
             }
         }
 

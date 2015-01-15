@@ -7,6 +7,13 @@ namespace Jeu
 {
     public class UnitOrc : Unit
     {
-        public UnitOrc() : base() { }
+        public UnitOrc()
+        {
+            favoriteSpace = Space.Type.Field;
+        }
+        public Type getType()
+        {
+            return Type.Orc;
+        }
     }
 }

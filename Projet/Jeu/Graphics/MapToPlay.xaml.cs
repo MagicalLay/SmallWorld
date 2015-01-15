@@ -34,7 +34,7 @@ namespace Graphics
 				{
 					Cellule cell = new Cellule(_map[x,y],x,y);
 					gridMap.Children.Add(cell);
-                    cellules.Add(Map.getIndexFromCoodinates(x, y), cell);
+                    cellules.Add(_map.getIndexFromCoordinates(x, y), cell);
 				}
 			}
             switch (Map.Size)

@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Jeu;
 
 namespace Jeu
 {
     public class UnitElf : Unit
     {
-        public UnitElf() : base() { }
+        public UnitElf()
+        {
+            favoriteSpace = Space.Type.Forest;
+        }
+        public Type getType()
+        {
+            return Type.Elf;
+        }
     }
 }

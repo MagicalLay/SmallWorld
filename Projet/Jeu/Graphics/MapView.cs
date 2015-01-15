@@ -29,7 +29,7 @@ namespace Graphics
 				{
 					Cellule cell = new Cellule(_map.Spaces[x,y],x,y);
 					grid.Children.Add(cell);
-                    cellules.Add(Map.getIndexFromCoodinates(x, y), cell);
+                    cellules.Add(_map.getIndexFromCoordinates(x, y), cell);
 				}
 			}
 		}

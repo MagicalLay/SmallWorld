@@ -7,6 +7,13 @@ namespace Jeu
 {
     public class UnitDwarf : Unit
     {
-        public UnitDwarf() : base() { }
+        public UnitDwarf()
+        {
+            favoriteSpace = Space.Type.Field;
+        }
+        public Type getType()
+        {
+            return Type.Dwarf;
+        }
     }
 }
