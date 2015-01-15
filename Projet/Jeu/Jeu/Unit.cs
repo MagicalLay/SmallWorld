@@ -14,7 +14,7 @@ namespace Jeu
             Random rnd = new Random();
             int x = rnd.Next(0, Game.Map.Size);
             int y = rnd.Next(0, Game.Map.Size);
-            this.Space=Game.Map[x,y];
+            this.Space=Game.Map[x,y]  ;
         }
 
         public Space Space
@@ -46,21 +46,24 @@ namespace Jeu
             private set;
         }
 
-        public Boolean init_attack(Unit attacked)
+        public Boolean fight(Unit attacked)
         {
             Boolean b;
             if (attacked.Space.axis < 0 || attacked.Space.axis > Game.Map.Size - 1 || attacked.Space.ordinate < 0 || attacked.Space.ordinate > Game.Map.Size - 1)
             {
                 Console.WriteLine("Attacked space does not exist !");
                 b = false;
+                return b;
             }
             else if (!this.Space.isNeighbour(Game.Map[attacked.Space.axis, attacked.Space.ordinate]))
             {
                 Console.WriteLine("You can't attack this space !");
                 b = false;
+                return b;
             }
             else
             {
+                b = true;
                 // number of fights
                 int nbFights;
                 Random rnd = new Random();
@@ -77,76 +80,42 @@ namespace Jeu
                 double attackerChancesOfLosingHp = 0.5 + 0.5 * (attackPoints / (attacked.defencePoints));
                 
                 // probabilities for attacker and defender
-                double probabilityAttacker = (this.hp / 5) * this.attackPoints;
-                double probabilityDefender = (attacked.hp / 5) * attacked.attackPoints;
+                double probaAttacker = (this.hp / 5) * this.attackPoints;
+                double probaDefender = (attacked.hp / 5) * attacked.attackPoints;
 
-                this.attack(attacked, nbFights);
-                b = true;
+                for (int i = 0; i < nbFights; i++) 
+                {
+                    if (i % 2 == 0 && attacked.hp != 0 && attacked.defencePoints != 0) 
+                    {
+                        attacked.hp--;
+                        attacked.defencePoints--;
+                        attackPoints--;
+                    }
+                    else if (i % 2 == 0 && (attacked.hp == 0 || attacked.defencePoints == 0))
+                    {
+                        attacked.die();
+                        move(attacked.Space.axis, attacked.Space.ordinate);
+                        Console.WriteLine("End of fight - Attacker wins");
+                        return b;
+                    }
+                    else if (i % 2 == 1 && (hp == 0 || defencePoints == 0))
+                    {
+                        die();
+                        attacked.move(Space.axis, Space.ordinate);
+                        Console.WriteLine("End of fight - Defender wins");
+                        return b;
+                    }
+                    else
+                    {
+                        hp--;
+                        defencePoints--;
+                        attacked.attackPoints--;
+                    }
+                }
+                return b;
             }
-            return b;
         }
 
-        public Boolean attack(Unit attacked, int nbFights)
-        {
-            Boolean b;
-            if (nbFights != 0)
-            {
-                nbFights--;
-                if (attacked.hp == 0)
-                {
-                    attacked.die();
-                    Console.WriteLine("End of fight - defender wins !");
-                    b = true;
-                    this.move(attacked.Space.axis, attacked.Space.ordinate);
-                }
-                else if (hp == 0)
-                {
-                    die();
-                    Console.WriteLine("End of fight - attacker wins !");
-                    b = true;
-                }
-                else
-                {
-                    b = false;
-                }
-            }
-            else 
-            {
-                Console.WriteLine("End of fight !");
-                b = true; 
-            }
-            return b;
-        }
-        public Boolean defend(Unit attacker, int nbFights)
-        {
-            Boolean b;
-            if (nbFights != 0)
-            {
-                nbFights--;
-                if (attacker.hp == 0)
-                {
-                    attacker.die();
-                    Console.WriteLine("End of fight - defender wins !");
-                    b = true;
-                }
-                else if (hp == 0)
-                {
-                    die();
-                    Console.WriteLine("End of fight - attacker wins !");
-                    b = true;
-                }
-                else
-                {
-                    b = false;
-                }
-            }
-            else 
-            {
-                Console.WriteLine("End of fight");
-                b = true; 
-            }
-            return b;
-        }
         public Boolean move(int x, int y)
         {
             Boolean b;
