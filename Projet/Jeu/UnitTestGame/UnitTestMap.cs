@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace UnitTests
+/// <summary>
+/// Tests sur les créations de carte
+/// </summary>
 {
     [TestClass]
     public class UnitTestMap

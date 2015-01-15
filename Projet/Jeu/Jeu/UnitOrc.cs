@@ -8,6 +8,5 @@ namespace Jeu
     public class UnitOrc : Unit
     {
         public UnitOrc() : base() { }
-
     }
 }

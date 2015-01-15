@@ -22,7 +22,7 @@ namespace Jeu
             {
                 if (u.Space.isNeighbour(Game.Map[x, y]))
                 {
-                    u.Space = Game.Map[x, y];
+                    u.move(x,y);
                 }
             }
         }
