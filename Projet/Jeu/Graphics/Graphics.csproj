@@ -60,6 +60,12 @@
     <Compile Include="gameWindow.xaml.cs">
       <DependentUpon>gameWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListUnite.xaml.cs">
+      <DependentUpon>ListUnite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapUnitView.xaml.cs">
+      <DependentUpon>MapUnitView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="selectionPeuples.xaml.cs">
       <DependentUpon>selectionPeuples.xaml</DependentUpon>
     </Compile>
@@ -72,6 +78,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="gameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListUnite.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -90,6 +100,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MapUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="selectionPeuples.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

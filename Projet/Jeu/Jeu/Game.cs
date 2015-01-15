@@ -137,6 +137,11 @@ namespace Jeu
             private set;
         }
 
+        public void moveUnit(Unit u, int x, int y)
+        {
+            u.move(x, y, Map);
+        }
+
         public void selection(int x, int y)
         {
             SelectionX = x;

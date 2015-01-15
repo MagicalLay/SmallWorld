@@ -21,6 +21,8 @@ namespace Graphics
     public partial class gameWindow : Window
     {
 
+        Game game;
+        List<MapUnitView> unitViews = new List<MapUnitView>();
         MapView mapView;
 
         bool IsPaused
@@ -36,6 +38,7 @@ namespace Graphics
         /// </summary>
         public gameWindow(CreateBuilder cB)
         {
+            game = cB.game;
             InitializeComponent();
             IsPaused = false;
             mapView = new MapView(cB.map, mapGrid, cB.game);
@@ -63,17 +66,17 @@ namespace Graphics
             // Populate the map with the units
             foreach (Unit u in cB.p[0].units)
             {
-                //unitViews.Add(new MapUnitView(u));
+                unitViews.Add(new MapUnitView(u));
             }
             foreach (Unit u in cB.p[1].units)
             {
-                //unitViews.Add(new MapUnitView(u));
-            }/*
+                unitViews.Add(new MapUnitView(u));
+            }
             foreach (MapUnitView uv in unitViews)
             {
                 mapGrid.Children.Add(uv);
             }
-            */
+            
 
             this.DataContext = this;
             /*
@@ -91,7 +94,6 @@ namespace Graphics
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        /// 
         /*
         public void update(object sender, PropertyChangedEventArgs e)
         {
@@ -99,7 +101,7 @@ namespace Graphics
             {
                 case "CurrentPlayer":
                     TryEndGame();
-                    lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname;
+                    lblCurrentPlayer.Content = Game.CurrentPlayer.Nickname;
                     break;
                 case "RemainingTurns":
                     lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
@@ -121,13 +123,13 @@ namespace Graphics
         /// Clears and updates the list of units of the selected cell
         /// </summary>
         private void updateListUnits()
-        {/*
+        {
             listUnitGrid.Children.Clear();
-            List<Unit> all = GameImpl.INSTANCE.Player1.Units.Concat(GameImpl.INSTANCE.Player2.Units).ToList();
-            foreach (Unit u in all.Where(u => u.X == GameImpl.INSTANCE.XSelected && u.Y == GameImpl.INSTANCE.YSelected))
+            List<Unit> all = Game.Peoples[0].units.Concat(Game.Peoples[1].units).ToList();
+            foreach (Unit u in all.Where(u => u.axis == game.SelectionX && u.ordinate == game.SelectionY))
             {
-                listUnitGrid.Children.Add(new FullUnitView(u));
-            }*/
+                listUnitGrid.Children.Add(new ListUnite(u, game));
+            }
         }
 
 
