@@ -8,7 +8,9 @@ namespace Jeu
 {
     public class Dwarf : People
     {
-        public Dwarf(int nbUnits) : base(nbUnits, Species.Dwarf) { }
+        public Dwarf(int nbUnits) : base(nbUnits) {
+            units = new UnitDwarf[nbUnits];
+        }
 
         public System.Collections.Generic.IEnumerable<Jeu.UnitDwarf> UnitsDwarves
         {

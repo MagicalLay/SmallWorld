@@ -10,6 +10,12 @@ namespace Jeu
 {
     public class Game
     {
+        public static People[] Peoples
+        {
+            get;
+            private set;
+        }
+
         public Game()
         {
             Peoples = new People[2];
@@ -18,6 +24,7 @@ namespace Jeu
         {
             // initializations
             Map = m;
+            Peoples = new People[2];
             Peoples[0] = p1;
             Peoples[1] = p2;
             GameOnGoing = true;
@@ -89,12 +96,6 @@ namespace Jeu
             private set;
         }
 
-        public static People[] Peoples 
-        {
-            get;
-            private set;
-        }
-
         public static Map Map
         {
             get;
@@ -137,7 +138,8 @@ namespace Jeu
         public unsafe void initialPosPeople(People p1, People p2)
         {
             WrapperAlgo algo = new WrapperAlgo();
-            int* pos = algo.WrapperInitialCoord(Map.toInt(), Map.Size);
+            int* tabMap = Map.toInt();
+            int* pos = algo.WrapperInitialCoord(tabMap, Map.Size);
             foreach (Unit u in p1.units)
             {
                 u.move(pos[0], pos[1]);

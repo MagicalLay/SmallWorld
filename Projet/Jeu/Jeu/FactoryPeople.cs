@@ -17,10 +17,10 @@ namespace Jeu
 
         public FactoryPeople()
         {
-            int nb = Jeu.People.nbUnits;
+            /*int nb = Jeu.People.nbUnits;
             elves = new Elf(nb);
             dwarves = new Dwarf(nb);
-            orcs = new Orc(nb);
+            orcs = new Orc(nb);*/
         }
         public static FactoryPeople Instance_FactPeople
         {
@@ -41,21 +41,18 @@ namespace Jeu
             People[] p = new People[2];
             int nbUnits;
 
-            do
+            if (m.Size == 6)
             {
-                if (m.Size == 6)
-                {
-                    nbUnits = 4;
-                }
-                else if (m.Size == 10)
-                {
-                    nbUnits = 6;
-                }
-                else
-                {
-                    nbUnits = 8;
-                }
-            } while (m.Size == 4 || m.Size == 10 || m.Size == 14);
+                nbUnits = 4;
+            }
+            else if (m.Size == 10)
+            {
+                nbUnits = 6;
+            }
+            else
+            {
+                nbUnits = 8;
+            }
 
             switch (race1)
             {

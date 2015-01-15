@@ -7,21 +7,25 @@ namespace Jeu
 {
     public abstract class People
     {
-        public People(int nb, Species race)
+        public People(int nb)
         {
             nbUnits = nb;
             nbPoints = 0;
-            units = new Unit[nb];
         }
+
         public Unit[] units
         {
             get;
-            private set;
+            protected set;
         }
         public static int nbUnits
         {
             get;
             private set;
+        }
+
+        public void move(int x, int y)
+        {
         }
 
         public int nbPoints
