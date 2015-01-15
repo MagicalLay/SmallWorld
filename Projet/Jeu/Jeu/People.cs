@@ -24,8 +24,12 @@ namespace Jeu
             private set;
         }
 
-        public void move(int x, int y)
+        public void place(int x, int y, Map m)
         {
+            foreach (Unit u in units)
+            {
+                u.placer(m[1,1]);
+            }
         }
 
         public int nbPoints

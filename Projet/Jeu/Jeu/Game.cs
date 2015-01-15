@@ -140,16 +140,8 @@ namespace Jeu
             WrapperAlgo algo = new WrapperAlgo();
             int* tabMap = Map.toInt();
             int* pos = algo.WrapperInitialCoord(tabMap, Map.Size);
-            foreach (Unit u in p1.units)
-            {
-                u.move(pos[0], pos[1]);
-
-            }
-            foreach (Unit u in p2.units)
-            {
-                u.move(pos[2], pos[3]);
-
-            }
+            p1.place(pos[0], pos[1], Map);
+            p2.place(pos[2], pos[3], Map);
         } 
 
         /* the 3 following functions are used to save or load a game */

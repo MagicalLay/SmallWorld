@@ -9,7 +9,12 @@ namespace Jeu
     public class Dwarf : People
     {
         public Dwarf(int nbUnits) : base(nbUnits) {
-            units = new UnitDwarf[nbUnits];
+            int i;
+            units = new Unit[nbUnits];
+            for (i = 0; i < nbUnits; i++)
+            {
+                units[i] = new UnitDwarf();
+            }
         }
 
         public System.Collections.Generic.IEnumerable<Jeu.UnitDwarf> UnitsDwarves
