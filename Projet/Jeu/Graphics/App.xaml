@@ -8,7 +8,7 @@
         <BitmapImage x:Key="DesertCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./textures/desert.png"/>
         <BitmapImage x:Key="ForestCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./textures/forest.png"/>
         <BitmapImage x:Key="SpaceCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad"/>
-
+<!-- 
         <Style TargetType="Button">
             <Setter Property="VerticalAlignment" Value="Top" />
             <Setter Property="Width" Value="100" />
@@ -18,5 +18,6 @@
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Top" />
         </Style>
+-->
     </Application.Resources>
 </Application>

@@ -57,6 +57,9 @@
     <Compile Include="Cellule.xaml.cs">
       <DependentUpon>Cellule.xaml</DependentUpon>
     </Compile>
+    <Compile Include="gameWindow.xaml.cs">
+      <DependentUpon>gameWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MapToPlay.xaml.cs">
       <DependentUpon>MapToPlay.xaml</DependentUpon>
     </Compile>
@@ -68,6 +71,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ecranAccueil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gameWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
