@@ -20,18 +20,20 @@ namespace Graphics
     /// </summary>
     public partial class MapToPlay : Window
     {
-        public MapToPlay()
-        {
-            InitializeComponent();
-        }
+        public static Map Map { get; protected set; }
+        public static Dictionary<int, Cellule> cellules { get; protected set; }
 
         public MapToPlay(Map _map) {
-			for (int y = 0; y < _map.Size; y++)
+            InitializeComponent();
+            Map = _map;
+            cellules = new Dictionary<int, Cellule>();
+			for (int y = 0; y < Map.Size; y++)
 			{
-				for (int x = 0; x < _map.Size; x++)
+				for (int x = 0; x < Map.Size; x++)
 				{
-					Cellule cell = new Cellule(_map.Spaces[x,y],x,y);
-					GridMap.Children.Add(cell);
+					Cellule cell = new Cellule(_map[x,y],x,y);
+					gridMap.Children.Add(cell);
+                    //cellules.Add(Map.getIndexFromCoodinates(x, y), cell);
 				}
 			}
 		}

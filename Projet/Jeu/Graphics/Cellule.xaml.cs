@@ -21,10 +21,28 @@ namespace Graphics
     /// </summary>
     public partial class Cellule : UserControl
     {
-        public Cellule()
-        {
-            InitializeComponent();
+        static Cellule()
+        {/*
+            brushResourceNameFromCellType = new string[4];
+            brushResourceNameFromCellType[(int)CellType.Desert] = "BrushDesertCell";
+            brushResourceNameFromCellType[(int)CellType.Plains] = "BrushPlainCell"; 
+            brushResourceNameFromCellType[(int)CellType.Forest] = "BrushForestCell";
+            brushResourceNameFromCellType[(int)CellType.Mountain] = "BrushMountainCell";*/
         }
+
+        public int X
+        {
+            get;
+            private set;
+        }
+
+        public int Y
+        {
+            get;
+            private set;
+        }
+
+        static string[] brushResourceNameFromCellType;
 
         public Cellule(Space c, int x, int y)
         {

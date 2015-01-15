@@ -32,7 +32,7 @@ namespace Graphics
         {
             if (Peuple1.SelectedItem.ToString() == Peuple2.SelectedItem.ToString())
             {
-                MessageBox.Show("Les deux joueurs ne peuvent pas avoir le même peuple", "Confirmation", MessageBoxButton.OKCancel);
+                MessageBox.Show("Les deux joueurs ne peuvent pas avoir le même peuple", "Confirmation", MessageBoxButton.OK);
             }
             else
             {
