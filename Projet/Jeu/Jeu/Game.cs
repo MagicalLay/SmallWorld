@@ -33,6 +33,8 @@ namespace Jeu
         {
             // initializations
             Map = m;
+            SelectionX = 0;
+            SelectionY = 0;
             Peoples = new People[2];
             Peoples[0] = p1;
             Peoples[1] = p2;
@@ -93,6 +95,7 @@ namespace Jeu
             get;
             private set;
         }
+        
         public static int NbTurns
         {
             get;
@@ -110,6 +113,25 @@ namespace Jeu
             get;
             private set;
         }
+
+        public Unit SelectionUnit
+        {
+            get;
+            private set;
+        }
+
+        public int SelectionX
+        {
+            get;
+            private set;
+        }
+
+        public int SelectionY
+        {
+            get;
+            private set;
+        }
+
         public static void nextTurn()
         {
             if (Turn.numTurn + 1 < NbTurns)

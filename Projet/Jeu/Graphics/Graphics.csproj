@@ -60,9 +60,6 @@
     <Compile Include="gameWindow.xaml.cs">
       <DependentUpon>gameWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MapToPlay.xaml.cs">
-      <DependentUpon>MapToPlay.xaml</DependentUpon>
-    </Compile>
     <Compile Include="selectionPeuples.xaml.cs">
       <DependentUpon>selectionPeuples.xaml</DependentUpon>
     </Compile>
@@ -93,10 +90,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MapToPlay.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="selectionPeuples.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

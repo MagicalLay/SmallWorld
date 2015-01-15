@@ -21,6 +21,48 @@ namespace Graphics
     /// </summary>
     public partial class Cellule : UserControl
     {
+
+        public Game game
+        {
+            get;
+            private set;
+        }
+
+        public bool IsSelected
+        {
+            get
+            {
+                return game.SelectionX == Y && game.SelectionY == X;
+            }
+            set
+            {
+                if (value)
+                {
+                    Cellule selectedCell;
+                    try
+                    {
+                        if (MapView.cellules.TryGetValue(game.Map.getIndexFromCoodinates(game.SelectionX, game.YSelectionY), out  selectedCell))
+                            selectedCell.IsSelected = false;
+                    }
+                    catch (Exception)
+                    {
+                        // No Cell previously selected
+                    }
+                    game.SelectionX = X;
+                    game.SelectionY = Y;
+                    this.bgPath.Opacity = 0.4;
+                    game.SelectionUnit = Game.CurrentPlayer.units.Where(u => u.X == this.X && u.Y == this.Y).FirstOrDefault();
+
+                }
+                else
+                {
+                    game.SelectionX = -1;
+                    game.SelectionY = -1;
+                    this.bgPath.Opacity = 1;
+                }
+            }
+        }
+
         static Cellule()
         {/*
             brushResourceNameFromCellType = new string[4];
@@ -44,16 +86,39 @@ namespace Graphics
 
         static string[] brushResourceNameFromCellType;
 
-        public Cellule(Space c, int x, int y)
+        public Cellule(Space c, int x, int y, Game g)
         {
             InitializeComponent();
             //this.bgPath.Fill = (Brush)grid.Resources[brushResourceNameFromCellType[(int)c.getType()]];
+            game = g;
+            X = x;
+            Y = y;
+            //GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update);
             //lblCoords.Content = x + "," + y;
         }
 
-        private void hexagonPath_MouseEnter(object sender, MouseEventArgs e) { }
-        public void hexagonPath_MouseLeave(object sender, MouseEventArgs e) { }
-        public void bgPath_MouseLeftButtonDown(object sender, MouseEventArgs e) { }
+        private void OnCellViewLoaded(object sender, RoutedEventArgs e)
+        {
+            // Set position (hexagon disposition)
+            //TranslateTransform trTns = new TranslateTransform(X * 60 + ((Y % 2 == 0) ? 0 : 30) - 640, Y * 50 - 370);
+            TranslateTransform trTns = new TranslateTransform(X * 60 + ((Y % 2 == 0) ? 0 : 30), Y * 50);
+            TransformGroup trGrp = new TransformGroup();
+            trGrp.Children.Add(trTns);
+
+            grid.RenderTransform = trGrp;
+        }
+
+        private void hexagonPath_MouseEnter(object sender, MouseEventArgs e) {
+            this.hexagonPath.Opacity = 1;
+        }
+        public void hexagonPath_MouseLeave(object sender, MouseEventArgs e) {
+            this.hexagonPath.Opacity = 0;
+        }
+        public void bgPath_MouseLeftButtonDown(object sender, MouseEventArgs e)
+        {
+            MapView.cellules[game.Map.getIndexFromCoodinates(game.SelectionX, game.SelectionY)].IsSelected = false;
+            this.IsSelected = true;
+        }
         public void bgPath_MouseRightButtonDown(object sender, MouseEventArgs e) { }
     }
 }
