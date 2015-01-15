@@ -27,6 +27,14 @@ namespace Graphics
             get;
             private set;
         }
+        /*
+        public bool SelectedUnitCanMoveTo
+        {
+            get
+            {
+                return game.SelectionUnit != null ? game.SelectionUnit.possibleMoveTo(this.X, this.Y, game.Map) : false;
+            }
+        }*/
 
         public bool IsSelected
         {
@@ -91,14 +99,11 @@ namespace Graphics
             game = g;
             X = x;
             Y = y;
-            //GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update);
-            //lblCoords.Content = x + "," + y;
+            //game.PropertyChanged += new PropertyChangedEventHandler(update);
         }
 
         private void OnCellViewLoaded(object sender, RoutedEventArgs e)
         {
-            // Set position (hexagon disposition)
-            //TranslateTransform trTns = new TranslateTransform(X * 60 + ((Y % 2 == 0) ? 0 : 30) - 640, Y * 50 - 370);
             TranslateTransform trTns = new TranslateTransform(X * 60 + ((Y % 2 == 0) ? 0 : 30), Y * 50);
             TransformGroup trGrp = new TransformGroup();
             trGrp.Children.Add(trTns);
@@ -109,14 +114,22 @@ namespace Graphics
         private void hexagonPath_MouseEnter(object sender, MouseEventArgs e) {
             this.hexagonPath.Opacity = 1;
         }
+
         public void hexagonPath_MouseLeave(object sender, MouseEventArgs e) {
             this.hexagonPath.Opacity = 0;
         }
-        public void bgPath_MouseLeftButtonDown(object sender, MouseEventArgs e)
-        {
+
+        public void bgPath_MouseLeftButtonDown(object sender, MouseEventArgs e) {
             MapView.cellules[game.Map.getIndexFromCoordinates(game.SelectionX, game.SelectionY)].IsSelected = false;
             this.IsSelected = true;
         }
-        public void bgPath_MouseRightButtonDown(object sender, MouseEventArgs e) { }
+
+        public void bgPath_MouseRightButtonDown(object sender, MouseEventArgs e) {
+            if (game.SelectionUnit != null)
+            {
+                game.moveUnit(game.SelectionUnit, this.X, this.Y);
+                this.IsSelected = true;
+            }
+        }
     }
 }
