@@ -41,7 +41,7 @@ namespace Jeu
             private set;
         }
         public enum Type { DwarfP, ElfP, OrcP, People };
-        public Type getType()
+        public virtual Type getType()
         {
             return Type.People;
         }

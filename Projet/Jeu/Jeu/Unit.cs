@@ -76,7 +76,7 @@ namespace Jeu
         }
         public enum Type { Dwarf, Elf, Orc, Unit };
 
-        public Type getType()
+        public virtual Type getType()
         {
             return Type.Unit;
         }
@@ -91,10 +91,10 @@ namespace Jeu
         {
             Map m = g.Map;
             return
-                (getType() == Type.Dwarf && m[x, y].getType() == Space.Type.Mountain && movePoints >= 1 && m.zeroUnit(x, y, g.getPeople(opponent(g)))) ||
+                ((m.ValidCoordinates(x,y) && getType() == Type.Dwarf && m[x, y].getType() == Space.Type.Mountain && movePoints >= 1 && m.zeroUnit(x, y, g.getPeople(opponent(g)))) ||
                 (isNeighbour(x, y, m) && getType() == Type.Elf && m[x, y].getType() == Space.Type.Desert && movePoints == 2) ||
                 (isNeighbour(x, y, m) && m[x, y].getType() == favoriteSpace && movePoints >= 0.5) ||
-                (isNeighbour(x, y, m) && m[x, y].getType() != favoriteSpace && movePoints >= 1);
+                (isNeighbour(x, y, m) && m[x, y].getType() != favoriteSpace && movePoints >= 1));
         }
 
         // Renvoie le numéro du peuple adversaire de l'unité courante dans le jeu g, 
@@ -147,19 +147,37 @@ namespace Jeu
                 movePoints--;
             } 
         }
-        public Boolean fight(Unit attacked, Game g)
+        // Renvoie pour une case[x,y] la meilleure unité défensive adverse présente
+        // cette fonction sera utilisée dans la fonction fight qui vérifie déjà la validité de [x,y]
+        // ainsi que l'existence de l'adversaire dans g
+        Unit bestDefensiveUnit(int x, int y, Game g)
         {
-            Boolean b;
-            if (!isNeighbour(attacked.axis, attacked.ordinate, g.Map))
+            People opp = g.getPeople(opponent(g));
+            Unit attacked = opp.units[0]; // par défaut
+            foreach (Unit u in opp.units)
             {
-                Console.WriteLine("You can't attack this space !");
+                if (u.axis == x && u.ordinate == y && u.hp >= attacked.hp) { attacked = u; }
+            }
+            return attacked;
+        }
+
+        // Algorithme des combats : renvoie vrai si le combat a eu lieu, faux sinon
+        public Boolean fight(int x, int y, Game g)
+        {
+
+            Boolean b;
+            if (attackPoints == 0 || g.Map.zeroUnit(x,y,g.getPeople(opponent(g))))
+            {
+                Console.WriteLine("You can't attack this space");
                 b = false;
                 return b;
             }
             else 
             {
                 b = true;
-                // number of fights
+                // choice of the defensive Unit
+                Unit attacked = bestDefensiveUnit(x, y, g);
+                // number of rounds
                 int nbFights;
                 Random rnd = new Random();
                 if (hp > attacked.hp)
@@ -178,7 +196,7 @@ namespace Jeu
                 double probaAttacker = (this.hp / 5) * this.attackPoints;
                 double probaDefender = (attacked.hp / 5) * attacked.attackPoints;
 
-                for (int i = 0; i < nbFights; i++) 
+                /*for (int i = 0; i < nbFights; i++) 
                 {
                     if (i % 2 == 0 && attacked.hp != 0 && attacked.defencePoints != 0) 
                     {
@@ -188,14 +206,14 @@ namespace Jeu
                     }
                     else if (i % 2 == 0 && (attacked.hp == 0 || attacked.defencePoints == 0))
                     {
-                        attacked.die();
+                        attacked.die(g);
                         //move(attacked.Space.axis, attacked.Space.ordinate);
                         Console.WriteLine("End of fight - Attacker wins");
                         return b;
                     }
                     else if (i % 2 == 1 && (hp == 0 || defencePoints == 0))
                     {
-                        die();
+                        die(g);
                         //attacked.move(Space.axis, Space.ordinate);
                         Console.WriteLine("End of fight - Defender wins");
                         return b;
@@ -206,14 +224,21 @@ namespace Jeu
                         defencePoints--;
                         attacked.attackPoints--;
                     }
+                }*/
+                Random rnd2 = new Random();
+                int noLuck = rnd2.Next(0,2);
+                if (noLuck == 0) {
+                    die(g);
+                } else {
+                    attacked.die(g);
                 }
                 return b;
             }
         }
 
-        public void die()
+        public void die(Game g)
         {
-            Console.WriteLine("Dead unit");
+            Console.WriteLine("And... you failed!");
         }
     }
 }
