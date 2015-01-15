@@ -10,15 +10,6 @@ namespace Jeu
             movePoints = 1;
             attackPoints = 2;
             defencePoints = 1;
-            // Par défaut l'unité est placée sur une case aléatoire
-            /*Random rnd = new Random();
-            int x = rnd.Next(0, Game.Map.Size);
-            int y = rnd.Next(0, Game.Map.Size);
-<<<<<<< HEAD
-            this.Space=Game.Map[x,y]  ;
-=======
-            this.Space=Game.Map[x,y];*/
->>>>>>> origin/master
         }
 
         public Space Space
