@@ -12,7 +12,7 @@ namespace Jeu
         {
             favoriteSpace = Space.Type.Forest;
         }
-        public Type getType()
+        public override Type getType()
         {
             return Type.Elf;
         }

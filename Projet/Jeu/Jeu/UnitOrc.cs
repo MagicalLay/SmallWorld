@@ -11,7 +11,7 @@ namespace Jeu
         {
             favoriteSpace = Space.Type.Field;
         }
-        public Type getType()
+        public override Type getType()
         {
             return Type.Orc;
         }
