@@ -8,7 +8,7 @@
     <!--
     <Window.Background>
         <ImageBrush ImageSource="textures/fondNoir.png"/>
-    </Window.Background>-->
+    </Window.Background> -->
     <Viewbox x:Name="main">
         <Grid x:Name="mainGrid">
            <!-- <Grid.Resources>

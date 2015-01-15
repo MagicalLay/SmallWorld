@@ -1,9 +1,0 @@
-﻿<Window x:Class="Graphics.MapToPlay"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:Graphics"
-        Title="MapToPlay" Height="300" Width="300">
-    <Grid Name="gridMap">
-        <Grid x:Name="mapGrid" HorizontalAlignment="Center" Grid.Column="1" Margin="392.664,375,437,375" />
-    </Grid>
-</Window>

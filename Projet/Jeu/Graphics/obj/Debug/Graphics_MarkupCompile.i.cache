@@ -9,12 +9,17 @@ Graphics
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\App.xaml
 6195242754
+=======
+D:\Github\SmallWorld\Projet\Jeu\Graphics\App.xaml
+5-463092500
+>>>>>>> origin/master
 71327772052
-15444308185
-14-1887980527
-Cellule.xaml;ecranAccueil.xaml;gameWindow.xaml;MainWindow.xaml;MapToPlay.xaml;selectionPeuples.xaml;
+14601544943
+141073635256
+Cellule.xaml;ecranAccueil.xaml;gameWindow.xaml;MainWindow.xaml;selectionPeuples.xaml;
 
 False
 
