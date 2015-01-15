@@ -43,13 +43,13 @@ namespace Jeu
             Turn = new Turn(0);
             switch (m.Size)
             {
-                case(6):
+                case (6):
                     NbTurns = 5;
                     break;
-                case(10):
+                case (10):
                     NbTurns = 20;
                     break;
-                case(14):
+                case (14):
                     NbTurns = 30;
                     break;
                 default:
@@ -95,7 +95,7 @@ namespace Jeu
             get;
             private set;
         }
-        
+
         public static int NbTurns
         {
             get;
@@ -122,7 +122,7 @@ namespace Jeu
 
         public void selectionUnite(Unit unit)
         {
-            SelectionUnit=unit;
+            SelectionUnit = unit;
         }
 
         public int SelectionX
@@ -184,40 +184,6 @@ namespace Jeu
             int* pos = algo.WrapperInitialCoord(tabMap, Map.Size);
             p1.place(pos[0], pos[1], Map);
             p2.place(pos[2], pos[3], Map);
-        } 
-
-        /* the 3 following functions are used to save or load a game */
-        public bool save()
-        {
-            {
-                if (SaveName != "")
-                {
-                    this.saveUnder(SaveName);
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        }
-
-        public void saveUnder(String fileName)
-        {
-            FileStream stream = File.Create(fileName);
-            BinaryFormatter formatter = new BinaryFormatter();
-            Console.WriteLine("Serializing");
-            formatter.Serialize(stream, this);
-            stream.Close();
-        }
-
-        public Game loadGame(string fileName)
-        {
-            FileStream stream = File.OpenRead(fileName);
-            BinaryFormatter formatter = new BinaryFormatter();
-            Game g = (Game)formatter.Deserialize(stream);
-            stream.Close();
-            return g;
         }
     }
 }

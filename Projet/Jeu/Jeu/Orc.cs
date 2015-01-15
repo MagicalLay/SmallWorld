@@ -29,9 +29,13 @@ namespace Jeu
             {
                 if (u.isNeighbour(x,y,g.Map))
                 {
-                    u.move(x,y,g.Map);
+                    u.move(x,y,g);
                 }
             }
+        }
+        public Type getType()
+        {
+            return Type.OrcP;
         }
     }
 }

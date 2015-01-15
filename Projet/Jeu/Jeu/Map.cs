@@ -66,7 +66,6 @@ namespace Jeu
                 }
             }
         }
-
         public Space this[int x, int y]
         {
             get
@@ -127,6 +126,21 @@ namespace Jeu
         public bool ValidCoordinates(int x, int y)
         {
             return x >= 0 && y >= 0 && x < Size && y < Size;
+        }
+
+        // Renvoie vrai s'il n'y a aucune unité du peuple p sur la case[x,y]
+        public Boolean zeroUnit(int x, int y, People p)
+        {
+            Boolean b = true;
+            if (ValidCoordinates(x, y))
+            {
+                foreach (Unit u in p.units)
+                {
+                    if (u.axis == x && u.ordinate == y) { b = false; }
+                }
+            }
+            else { b = false; }
+            return b;
         }
     }
 }

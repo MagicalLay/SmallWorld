@@ -86,32 +86,66 @@ namespace Jeu
             protected set;
         }
 
-        public void move(int x, int y, Map m) 
+        // Renvoie vrai si la case [x,y] de m est accessible par l'unité
+        public Boolean possibleMove(int x, int y, Game g)
         {
-            if (getType() == Type.Dwarf && m[x, y].getType() == Space.Type.Mountain)
+            Map m = g.Map;
+            return
+                (getType() == Type.Dwarf && m[x, y].getType() == Space.Type.Mountain && movePoints >= 1 && m.zeroUnit(x, y, g.getPeople(opponent(g)))) ||
+                (isNeighbour(x, y, m) && getType() == Type.Elf && m[x, y].getType() == Space.Type.Desert && movePoints == 2) ||
+                (isNeighbour(x, y, m) && m[x, y].getType() == favoriteSpace && movePoints >= 0.5) ||
+                (isNeighbour(x, y, m) && m[x, y].getType() != favoriteSpace && movePoints >= 1);
+        }
+
+        // Renvoie le numéro du peuple adversaire de l'unité courante dans le jeu g, 
+        // renvoie -1 si le type de l'unité courante n'est pas dans g
+        public int opponent(Game g)
+        {
+            if (g.getPeople(0).units[0].getType() == getType())
             {
-                placer(x, y);
-                movePoints--;
+                return 1;
             }
-            else if (!isNeighbour(x,y,m) || movePoints == 0) 
+            else if (g.getPeople(1).units[0].getType() == getType())
+            {
+                return 0;
+            }
+            else 
+            { 
+                return -1; 
+            }
+        }
+        
+        // Effectue le déplacement de l'unité sur la case [x,y] de m, si c'est possible
+        public void move(int x, int y, Game g) 
+            // Les nains peuvent accéder aux cases Mountain si ils ont assez de points de mouvement et si cette case
+            // ne contient pas d'unité adverse
+        {
+            Map m = g.Map;
+                if (getType() == Type.Dwarf && m[x, y].getType() == Space.Type.Mountain && movePoints >= 1 && opponent(g) != -1
+                    && m.zeroUnit(x,y,g.getPeople(opponent(g))))
+                {
+                    placer(x, y);
+                    movePoints--;
+                }
+            if (!isNeighbour(x,y,m) || movePoints == 0) 
             {
                 Console.WriteLine("Impossible to move here");
             }
-            else if (isNeighbour(x,y,m) && getType() == Type.Elf && m[x, y].getType() == Space.Type.Desert)
+            if (isNeighbour(x,y,m) && getType() == Type.Elf && m[x, y].getType() == Space.Type.Desert && movePoints == 2)
             {
                 placer(x, y);
-                movePoints = movePoints - 2;
+                movePoints = 0;
             }
-            else if (isNeighbour(x, y, m) && m[x, y].getType() == favoriteSpace)
+            if (isNeighbour(x, y, m) && m[x, y].getType() == favoriteSpace && movePoints >= 0.5)
             {
                 placer(x, y);
                 movePoints = movePoints - 0.5;
             }
-            else
+            if (isNeighbour(x, y, m) && m[x, y].getType() != favoriteSpace && movePoints >= 1)
             {
                 placer(x, y);
                 movePoints--;
-            }
+            } 
         }
         public Boolean fight(Unit attacked, Game g)
         {

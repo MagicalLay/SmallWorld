@@ -23,16 +23,19 @@ namespace Jeu
             get;
             private set;
         }
-        unsafe public void move(int x, int y, Game g)
+        public void move(int x, int y, Game g)
         {
-            WrapperAlgo algo = new WrapperAlgo();
             foreach (UnitElf u in UnitsElves)
             {
                 if (u.isNeighbour(x, y, g.Map))
                 {
-                    u.move(x, y, g.Map);
+                    u.move(x, y, g);
                 }
             }
+        }
+        public Type getType()
+        {
+            return Type.ElfP;
         }
     }
 }

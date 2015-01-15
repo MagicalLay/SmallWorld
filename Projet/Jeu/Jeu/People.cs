@@ -40,5 +40,10 @@ namespace Jeu
             get;
             private set;
         }
+        public enum Type { DwarfP, ElfP, OrcP, People };
+        public Type getType()
+        {
+            return Type.People;
+        }
     }
 }
