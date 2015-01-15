@@ -8,8 +8,10 @@ using Wrapper;
 using Jeu;
 
 namespace UnitTests
+/// <summary>
+/// Tests sur les algo du wrapper, petite carte seulement
+/// </summary>
 {
-
     [TestClass]
     public class UnitTestWrapper
     {
@@ -17,10 +19,7 @@ namespace UnitTests
         public unsafe void TestInitialCoord()
         {
             WrapperAlgo algo = new WrapperAlgo();
-
             StrategySmall sts = new StrategySmall();
-            StrategyMedium stm = new StrategyMedium();
-            StrategyLarge stl = new StrategyLarge();
 
             Map m1 = sts.instantiate();
             int* map1 = m1.toInt();
@@ -29,22 +28,6 @@ namespace UnitTests
             Assert.IsInstanceOfType(coord1[1], typeof(int));
             Assert.IsInstanceOfType(coord1[2], typeof(int));
             Assert.IsInstanceOfType(coord1[3], typeof(int));
-
-            Map m2 = stm.instantiate();
-            int* map2 = m2.toInt();
-            int* coord2 = algo.WrapperInitialCoord(map2,m2.Size);
-            Assert.IsInstanceOfType(coord2[0], typeof(int));
-            Assert.IsInstanceOfType(coord2[1], typeof(int));
-            Assert.IsInstanceOfType(coord2[2], typeof(int));
-            Assert.IsInstanceOfType(coord2[3], typeof(int));
-
-            Map m3 = stl.instantiate();
-            int* map3 = m3.toInt();
-            int* coord3 = algo.WrapperInitialCoord(map3,m3.Size);
-            Assert.IsInstanceOfType(coord3[0], typeof(int));
-            Assert.IsInstanceOfType(coord3[1], typeof(int));
-            Assert.IsInstanceOfType(coord3[2], typeof(int));
-            Assert.IsInstanceOfType(coord3[3], typeof(int));
         }
     }
 }
