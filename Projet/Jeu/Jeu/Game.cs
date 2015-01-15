@@ -139,7 +139,7 @@ namespace Jeu
 
         public void moveUnit(Unit u, int x, int y)
         {
-            u.move(x, y, Map);
+            u.move(x, y, this);
         }
 
         public void selection(int x, int y)
