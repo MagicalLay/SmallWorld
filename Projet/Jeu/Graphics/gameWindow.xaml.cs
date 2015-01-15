@@ -38,7 +38,7 @@ namespace Graphics
         {
             InitializeComponent();
             IsPaused = false;
-            mapView = new MapView(cB.map, mapGrid);
+            mapView = new MapView(cB.map, mapGrid, cB.game);
 
             //to move the map at the center (depending on the size of the map)
             switch (MapView.Map.Size)

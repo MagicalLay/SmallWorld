@@ -18,7 +18,7 @@ namespace Graphics
         public static Grid MapViewGrid { get; protected set; }
         public static Dictionary<int, Cellule> cellules { get; protected set; }
 
-        public MapView(Map _map, Grid grid) {
+        public MapView(Map _map, Grid grid, Game g) {
             Map = _map;
             MapViewGrid = grid;
             cellules = new Dictionary<int, Cellule>();
@@ -27,7 +27,7 @@ namespace Graphics
 			{
 				for (int x = 0; x < Map.Size; x++)
 				{
-					Cellule cell = new Cellule(_map.Spaces[x,y],x,y,);
+					Cellule cell = new Cellule(_map.Spaces[x,y],x,y,g);
 					grid.Children.Add(cell);
                     cellules.Add(_map.getIndexFromCoordinates(x, y), cell);
 				}

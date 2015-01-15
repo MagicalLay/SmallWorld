@@ -41,23 +41,21 @@ namespace Graphics
                     Cellule selectedCell;
                     try
                     {
-                        if (MapView.cellules.TryGetValue(game.Map.getIndexFromCoodinates(game.SelectionX, game.YSelectionY), out  selectedCell))
+                        if (MapView.cellules.TryGetValue(game.Map.getIndexFromCoordinates(game.SelectionX, game.SelectionY), out  selectedCell))
                             selectedCell.IsSelected = false;
                     }
                     catch (Exception)
                     {
                         // No Cell previously selected
                     }
-                    game.SelectionX = X;
-                    game.SelectionY = Y;
+                    game.selection(X, Y);
                     this.bgPath.Opacity = 0.4;
-                    game.SelectionUnit = Game.CurrentPlayer.units.Where(u => u.X == this.X && u.Y == this.Y).FirstOrDefault();
+                    game.selectionUnite(Game.CurrentPlayer.units.Where(u => u.axis == this.X && u.ordinate == this.Y).FirstOrDefault());
 
                 }
                 else
                 {
-                    game.SelectionX = -1;
-                    game.SelectionY = -1;
+                    game.selection(-1, -1);
                     this.bgPath.Opacity = 1;
                 }
             }
@@ -116,7 +114,7 @@ namespace Graphics
         }
         public void bgPath_MouseLeftButtonDown(object sender, MouseEventArgs e)
         {
-            MapView.cellules[game.Map.getIndexFromCoodinates(game.SelectionX, game.SelectionY)].IsSelected = false;
+            MapView.cellules[game.Map.getIndexFromCoordinates(game.SelectionX, game.SelectionY)].IsSelected = false;
             this.IsSelected = true;
         }
         public void bgPath_MouseRightButtonDown(object sender, MouseEventArgs e) { }

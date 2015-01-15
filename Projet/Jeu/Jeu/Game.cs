@@ -120,6 +120,11 @@ namespace Jeu
             private set;
         }
 
+        public void selectionUnite(Unit unit)
+        {
+            SelectionUnit=unit;
+        }
+
         public int SelectionX
         {
             get;
@@ -130,6 +135,12 @@ namespace Jeu
         {
             get;
             private set;
+        }
+
+        public void selection(int x, int y)
+        {
+            SelectionX = x;
+            SelectionY = y;
         }
 
         public static void nextTurn()
