@@ -4,26 +4,17 @@
 winexe
 C#
 .cs
-D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\
 Graphics
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\App.xaml
-51458231047
-71327772052
-14-750032486
-14-1887980527
-Cellule.xaml;ecranAccueil.xaml;MainWindow.xaml;MapToPlay.xaml;selectionPeuples.xaml;
-=======
 D:\Github\SmallWorld\Projet\Jeu\Graphics\App.xaml
 6195242754
 71327772052
 15-182795660
 141073635256
 Cellule.xaml;ecranAccueil.xaml;gameWindow.xaml;MainWindow.xaml;MapToPlay.xaml;selectionPeuples.xaml;
->>>>>>> origin/master
 
 False
 
