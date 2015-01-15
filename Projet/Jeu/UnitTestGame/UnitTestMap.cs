@@ -12,6 +12,7 @@ namespace UnitTests
     {
         [TestMethod]
         public void TestMapSize()
+            // teste si la carte créée est de la taille voulue
         {
             StrategySmall sts = new StrategySmall();
             StrategyMedium stm = new StrategyMedium();
@@ -31,6 +32,16 @@ namespace UnitTests
             Object o3 = m3.Size;
             Assert.IsInstanceOfType(o3, typeof(int));
             Assert.AreEqual(o3, 14);
+        }
+
+        [TestMethod]
+        public void TestMapType()
+            // teste si la carte est bien constituée de cases
+        {
+            StrategySmall sts = new StrategySmall();
+            Map m1 = sts.instantiate();
+            Object o1 = m1[0,0];
+            Assert.IsInstanceOfType(o1, typeof(Space));
         }
     }
 }

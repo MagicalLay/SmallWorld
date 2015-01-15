@@ -22,14 +22,14 @@ namespace Jeu
             get;
             private set;
         }
-        unsafe public void move(int x, int y)
+        unsafe public void move(int x, int y, Game g)
         {
             WrapperAlgo algo = new WrapperAlgo();
             foreach (UnitDwarf u in UnitsDwarves)
             {
-                if (u.Space.isNeighbour(Game.Map[x, y]))
+                if (u.Space.isNeighbour(g.getSpace(x, y)))
                 {
-                    //u.move(x,y);
+                    u.move(x, y, g);
                 }
             }
         }

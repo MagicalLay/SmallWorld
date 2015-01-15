@@ -15,10 +15,7 @@ namespace Jeu
             get;
             private set;
         }
-        public Space getSpace(int x, int y)
-        {
-            return Map[x, y];
-        }
+
         public People getPeople(int x)
         {
             return Peoples[x];
@@ -27,10 +24,11 @@ namespace Jeu
         {
             return Map.Size;
         }
-        public Game()
+        public Space getSpace(int x, int y)
         {
-            Peoples = new People[2];
+            return Map[x, y];
         }
+
         public Game(Map m, People p1, People p2)
         {
             // initializations
@@ -107,7 +105,7 @@ namespace Jeu
             private set;
         }
 
-        public static Map Map
+        public Map Map
         {
             get;
             private set;

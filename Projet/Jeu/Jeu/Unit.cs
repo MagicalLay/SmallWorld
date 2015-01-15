@@ -45,21 +45,21 @@ namespace Jeu
             private set;
         }
 
-        public Boolean fight(Unit attacked)
+        public Boolean fight(Unit attacked, Game g)
         {
             Boolean b;
-            if (attacked.Space.axis < 0 || attacked.Space.axis > Game.Map.Size - 1 || attacked.Space.ordinate < 0 || attacked.Space.ordinate > Game.Map.Size - 1)
+            if (attacked.Space.axis < 0 || attacked.Space.axis > g.getMapSize()-1 || attacked.Space.ordinate < 0 || attacked.Space.ordinate > g.getMapSize()- 1)
             {
                 Console.WriteLine("Attacked space does not exist !");
                 b = false;
                 return b;
             }
-            else if (!this.Space.isNeighbour(Game.Map[attacked.Space.axis, attacked.Space.ordinate]))
+            /*else if (!this.Space.isNeighbour(Game.Map[attacked.Space.axis, attacked.Space.ordinate]))
             {
                 Console.WriteLine("You can't attack this space !");
                 b = false;
                 return b;
-            }
+            }*/
             else
             {
                 b = true;
@@ -117,7 +117,8 @@ namespace Jeu
 
         public Boolean move(int x, int y, Game g)
         {
-            if (movePoints == 0 || Space.isNeighbour(g.getSpace(x,y)) != true)
+            Space sp = g.getSpace(x, y);
+            if (movePoints == 0 || Space.isNeighbour(sp))
             {
                 return false;
             }

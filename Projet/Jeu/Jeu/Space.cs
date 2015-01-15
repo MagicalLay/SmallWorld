@@ -7,6 +7,8 @@ namespace Jeu
 {
     public abstract class Space
     {
+        public Space() { }
+
         public int axis
         {
             get;
@@ -20,19 +22,18 @@ namespace Jeu
 
         public enum Type{ Desert, Field, Forest, Mountain, Space};
 
-        public Type getType(){
+        public Type getType()
+        {
             return Type.Space;
         }
-
+        public void place(int x, int y) 
+        {
+            axis = x;
+            ordinate = y;
+        }
         public Boolean isNeighbour(Space sp)
         {
-            return 
-                (sp.axis == axis + 1 && sp.ordinate == ordinate) ||
-                (sp.axis == axis - 1 && sp.ordinate == ordinate) ||
-                (sp.axis == axis + 1 && sp.ordinate == ordinate + 1) ||
-                (sp.axis == axis + 1 && sp.ordinate == ordinate - 1) ||
-                (sp.axis == axis - 1 && sp.ordinate == ordinate + 1) ||
-                (sp.axis == axis - 1 && sp.ordinate == ordinate - 1);
+            return sp.axis == 1 && sp.ordinate == 0;
         }
     }
 }

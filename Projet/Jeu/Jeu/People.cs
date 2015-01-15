@@ -28,7 +28,7 @@ namespace Jeu
         {
             foreach (Unit u in units)
             {
-                u.placer(m[1,1]);
+                u.placer(m[x,y]);
             }
         }
 

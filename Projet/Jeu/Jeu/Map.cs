@@ -39,25 +39,29 @@ namespace Jeu
             int* map = algo.WrapperFillMap(Size);
             /* replaces ints by spaces */
             Spaces = new Jeu.Space[Size,Size];
+            Space sp_field = primarySpaces.getField();
+            Space sp_forest = primarySpaces.getForest();
+            Space sp_desert = primarySpaces.getDesert();
+            Space sp_mountain = primarySpaces.getMountain();
             for (int i = 0; i < Size; i++)
             {
                 for (int j = 0; j < Size; j++)
                 {
                     if (map[i*Size+j] == 0)
                     {
-                        this[i,j] = primarySpaces.getDesert();
+                        this[i, j] = sp_desert;
                     }
                     else if (map[i*Size+j] == 1)
                     {
-                        this[i, j] = primarySpaces.getField();
+                        this[i, j] = sp_field;
                     }
                     else if (map[i*Size+j] == 2)
                     {
-                        this[i, j] = primarySpaces.getForest();
+                        this[i, j] = sp_forest;
                     }
                     else
                     {
-                        this[i,j] = primarySpaces.getMountain();
+                        this[i, j] = sp_mountain;
                     } 
                 }
             }
@@ -71,6 +75,7 @@ namespace Jeu
             }
             private set
             {
+                value.place(x, y);
                 Spaces[x,y] = value;
             }
         }
@@ -84,7 +89,6 @@ namespace Jeu
         unsafe public int* toInt()
         {
             IntPtr pNative = IntPtr.Zero;
-            FlyweightSpace fw = new FlyweightSpace();
             int i, j;
             int* result = stackalloc int[Size*Size + 1];
             for (i = 0; i < Size; i++)
@@ -92,15 +96,15 @@ namespace Jeu
                 for (j = 0; j < Size; j++)
                 {
                     Space sp = this[i, j];
-                    if(sp.Equals(fw.getDesert())) 
+                    if(sp.getType() == Space.Type.Desert) 
                     {
                         result[i * Size + j] = 0;
                     }
-                    else if (sp.Equals(fw.getField()))
+                    else if (sp.getType() == Space.Type.Field)
                     {
                         result[i * Size + j] = 1;
                     }
-                    else if (sp.Equals(fw.getForest()))
+                    else if (sp.getType() == Space.Type.Forest)
                     {
                         result[i * Size + j] = 2;
                     }

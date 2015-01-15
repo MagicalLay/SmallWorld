@@ -22,14 +22,14 @@ namespace Jeu
             private set;
         }
 
-        public void move(int x, int y)
+        public void move(int x, int y, Game g)
         {
             WrapperAlgo algo = new WrapperAlgo();
             foreach (UnitOrc u in UnitsOrcs)
             {
-                if (u.Space.isNeighbour(Game.Map[x, y]))
+                if (u.Space.isNeighbour(g.getSpace(x, y)))
                 {
-                    //u.move(x,y);
+                    u.move(x,y,g);
                 }
             }
         }
