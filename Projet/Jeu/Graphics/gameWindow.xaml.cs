@@ -1,7 +1,10 @@
 ﻿using Jeu;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -79,14 +82,14 @@ namespace Graphics
             
 
             this.DataContext = this;
-            /*
-            lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname;
-            lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
+            
+            lblCurrentPlayer.Content = Game.CurrentPlayer.Nickname;
+            lblRemainingTurns.Content = Game.NbTurnsLeft + " turns left.";
 
-            lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : 1";
-            lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : 1";
+            lblVictoryPointsP1.Content = Game.Peoples[0].Nickname + "'s victory points : 1";
+            lblVictoryPointsP2.Content = Game.Peoples[1].Nickname + "'s victory points : 1";
 
-            GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update); // Souscription au OnPropertyChanged*/
+            game.PropertyChanged += new PropertyChangedEventHandler(update); // Souscription au OnPropertyChanged*/
         }
 
         /// <summary>
@@ -94,7 +97,7 @@ namespace Graphics
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        /*
+        
         public void update(object sender, PropertyChangedEventArgs e)
         {
             switch (e.PropertyName)
@@ -104,7 +107,7 @@ namespace Graphics
                     lblCurrentPlayer.Content = Game.CurrentPlayer.Nickname;
                     break;
                 case "RemainingTurns":
-                    lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
+                    lblRemainingTurns.Content = Game.NbTurnsLeft + " turns left.";
                     break;
                 case "LastCombatReport":
                     deleteDeadUnits();
@@ -116,7 +119,7 @@ namespace Graphics
                     updateListUnits();
                     break;
             }
-        }*/
+        }
 
 
         /// <summary>
@@ -139,29 +142,29 @@ namespace Graphics
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnEndTurn_Click(object sender, RoutedEventArgs e)
-        {/*
+        {
             if (!IsPaused)
-                GameImpl.INSTANCE.EndTurn();
-            lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player1.Score;
-            lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player2.Score;*/
+                Game.nextTurn();
+            lblVictoryPointsP1.Content = Game.Peoples[0].Nickname + "'s victory points : " + Game.Peoples[0].nbPoints;
+            lblVictoryPointsP2.Content = Game.Peoples[1].Nickname + "'s victory points : " + Game.Peoples[1].nbPoints;
         }
 
         /// <summary>
         /// Ends the game if a player has won
         /// </summary>
         private void TryEndGame()
-        {/*
-            if (GameImpl.INSTANCE.GameOver)
+        {
+            if (Game.endGame())
             {
                 IsPaused = true;
                 btnBack.Visibility = System.Windows.Visibility.Visible;
-                Player Winner = GameImpl.INSTANCE.Winner;
+                People Winner = Game.Winner;
                 if (Winner != null)
                     lblVictory.Content = Winner.Nickname + " won !";
                 else
                     lblVictory.Content = "It's a tie !";
                 lblVictory.Visibility = System.Windows.Visibility.Visible;
-            }*/
+            }
 
         }
 
@@ -208,7 +211,7 @@ namespace Graphics
         /// Toggles the menu
         /// </summary>
         private void toggleMenu()
-        {/*
+        {
             IsPaused = !IsPaused;
             main.Stretch = main.Stretch == Stretch.Uniform ? Stretch.UniformToFill : Stretch.Uniform;
             MenuRectangle.IsEnabled = !MenuRectangle.IsEnabled;
@@ -216,7 +219,7 @@ namespace Graphics
             btnContinue.Visibility = btnContinue.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
             btnQuit.Visibility = btnQuit.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
             btnSaveGame.Visibility = btnSaveGame.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
-            lblGamePaused.Visibility = lblGamePaused.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;*/
+            lblGamePaused.Visibility = lblGamePaused.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
         }
 
         /// <summary>
@@ -225,9 +228,9 @@ namespace Graphics
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnContinue_Click(object sender, RoutedEventArgs e)
-        {/*
+        {
             toggleMenu();
-            main.Stretch = Stretch.Uniform;*/
+            main.Stretch = Stretch.Uniform;
         }
 
         /// <summary>

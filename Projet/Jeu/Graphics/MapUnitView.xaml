@@ -24,7 +24,7 @@
         </Rectangle>
 
         <Image Name="imgUnit" 
-            Width="60"
+            Width="35"
             Source="peoples/dwarf.png"/>
     </Grid>
 </UserControl>

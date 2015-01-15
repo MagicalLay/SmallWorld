@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -10,7 +13,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Jeu;
 
@@ -22,19 +24,19 @@ namespace Graphics
     public partial class Cellule : UserControl
     {
 
+        public bool SelectedUnitCanMoveTo
+        {
+            get
+            {
+                return game.SelectionUnit != null ? game.SelectionUnit.possibleMove(this.X, this.Y, game) : false;
+            }
+        }
+
         public Game game
         {
             get;
             private set;
         }
-        /*
-        public bool SelectedUnitCanMoveTo
-        {
-            get
-            {
-                return game.SelectionUnit != null ? game.SelectionUnit.possibleMoveTo(this.X, this.Y, game.Map) : false;
-            }
-        }*/
 
         public bool IsSelected
         {
@@ -69,15 +71,6 @@ namespace Graphics
             }
         }
 
-        static Cellule()
-        {/*
-            brushResourceNameFromCellType = new string[4];
-            brushResourceNameFromCellType[(int)CellType.Desert] = "BrushDesertCell";
-            brushResourceNameFromCellType[(int)CellType.Plains] = "BrushPlainCell"; 
-            brushResourceNameFromCellType[(int)CellType.Forest] = "BrushForestCell";
-            brushResourceNameFromCellType[(int)CellType.Mountain] = "BrushMountainCell";*/
-        }
-
         public int X
         {
             get;
@@ -99,7 +92,34 @@ namespace Graphics
             game = g;
             X = x;
             Y = y;
-            //game.PropertyChanged += new PropertyChangedEventHandler(update);
+            game.PropertyChanged += new PropertyChangedEventHandler(update);
+        }
+
+        static Cellule()
+        {/*
+            brushResourceNameFromCellType = new string[4];
+            brushResourceNameFromCellType[(int)CellType.Desert] = "BrushDesertCell";
+            brushResourceNameFromCellType[(int)CellType.Plains] = "BrushPlainCell"; 
+            brushResourceNameFromCellType[(int)CellType.Forest] = "BrushForestCell";
+            brushResourceNameFromCellType[(int)CellType.Mountain] = "BrushMountainCell";*/
+        }
+
+
+        private void update(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "SelectedUnit")
+            {
+                if (this.SelectedUnitCanMoveTo)
+                {
+                    // show green
+                    canMovePath.Visibility = System.Windows.Visibility.Visible;
+                }
+                else
+                {
+                    // don't show green
+                    canMovePath.Visibility = System.Windows.Visibility.Collapsed;
+                }
+            }
         }
 
         private void OnCellViewLoaded(object sender, RoutedEventArgs e)

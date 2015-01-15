@@ -54,9 +54,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BoolVisibilityConverter.cs" />
     <Compile Include="Cellule.xaml.cs">
       <DependentUpon>Cellule.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EnumBooleanConverter.cs" />
     <Compile Include="gameWindow.xaml.cs">
       <DependentUpon>gameWindow.xaml</DependentUpon>
     </Compile>

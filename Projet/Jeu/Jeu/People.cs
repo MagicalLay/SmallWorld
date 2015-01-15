@@ -7,6 +7,18 @@ namespace Jeu
 {
     public abstract class People
     {
+
+        public string Nickname
+        {
+            get;
+            protected set;
+        }
+
+        public void surnom(string s)
+        {
+            Nickname = s;
+        }
+
         public People(int nb)
         {
             nbUnits = nb;
@@ -18,7 +30,7 @@ namespace Jeu
             get;
             protected set;
         }
-        public static int nbUnits
+        public int nbUnits
         {
             get;
             private set;

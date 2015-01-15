@@ -1,20 +1,41 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using Wrapper;
 
 namespace Jeu
 {
-    public class Game
+    public class Game : INotifyPropertyChanged
     {
         public static People[] Peoples
         {
             get;
             private set;
         }
+
+        #region INotifyPropertyChanged
+
+        [field: NonSerialized()]
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            if (this.PropertyChanged != null)
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        #endregion
 
         public People getPeople(int x)
         {
@@ -38,8 +59,10 @@ namespace Jeu
             Peoples = new People[2];
             Peoples[0] = p1;
             Peoples[1] = p2;
+            Peoples[0].surnom("Joueur 1");
+            Peoples[0].surnom("Joueur 2");
             GameOnGoing = true;
-            NbUnitsAlive = People.nbUnits * 2;
+            NbUnitsAlive = Peoples[0].nbUnits * 2;
             Turn = new Turn(0);
             switch (m.Size)
             {
@@ -163,6 +186,12 @@ namespace Jeu
             }
         }
 
+        public static People Winner
+        {
+            get;
+            private set;
+        }
+
         public static void changePlayer()
         {
             People p = CurrentPlayer;
@@ -176,10 +205,17 @@ namespace Jeu
             }
         }
 
-        public static void endGame()
+        public static bool endGame()
         {
-            GameOnGoing = false;
-            Console.WriteLine("End of the game !");
+            if (NbTurnsLeft == 0 || Game.Peoples[0].nbUnits == 0 || Game.Peoples[1].nbUnits == 0)
+            {
+                GameOnGoing = false;
+                Console.WriteLine("End of the game !");
+                return true;
+            }
+            else{
+                return false;
+            }
         }
 
         public unsafe void initialPosPeople(People p1, People p2)
