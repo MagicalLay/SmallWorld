@@ -8,7 +8,7 @@ namespace Jeu
     public class Desert : Space
     {
         public Desert() { }
-        public Type getType()
+        public override Type getType()
         {
             return Type.Desert;
         }

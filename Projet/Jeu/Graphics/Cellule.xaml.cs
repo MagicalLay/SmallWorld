@@ -88,7 +88,7 @@ namespace Graphics
         public Cellule(Space c, int x, int y, Game g)
         {
             InitializeComponent();
-            //this.bgPath.Fill = (Brush)grid.Resources[brushResourceNameFromCellType[(int)c.getType()]];
+            this.bgPath.Fill = (Brush)grid.Resources[brushResourceNameFromCellType[(int)c.getType()]];
             game = g;
             X = x;
             Y = y;
@@ -96,18 +96,19 @@ namespace Graphics
         }
 
         static Cellule()
-        {/*
-            brushResourceNameFromCellType = new string[4];
-            brushResourceNameFromCellType[(int)CellType.Desert] = "BrushDesertCell";
-            brushResourceNameFromCellType[(int)CellType.Plains] = "BrushPlainCell"; 
-            brushResourceNameFromCellType[(int)CellType.Forest] = "BrushForestCell";
-            brushResourceNameFromCellType[(int)CellType.Mountain] = "BrushMountainCell";*/
+        {
+            brushResourceNameFromCellType = new string[5];
+            brushResourceNameFromCellType[(int)Space.Type.Desert] = "BrushDesertCell";
+            brushResourceNameFromCellType[(int)Space.Type.Field] = "BrushFieldCell"; 
+            brushResourceNameFromCellType[(int)Space.Type.Forest] = "BrushForestCell";
+            brushResourceNameFromCellType[(int)Space.Type.Mountain] = "BrushMountainCell";
+            brushResourceNameFromCellType[(int)Space.Type.Space] = "BrushMountainCell";
         }
 
 
         private void update(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == "SelectedUnit")
+            if (e.PropertyName == "SelectionUnit")
             {
                 if (this.SelectedUnitCanMoveTo)
                 {
