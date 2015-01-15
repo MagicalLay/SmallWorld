@@ -4,12 +4,16 @@
 winexe
 C#
 .cs
-D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\obj\Debug\
+D:\Github\SmallWorld\Projet\Jeu\Graphics\obj\Debug\
 Graphics
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\Graphics\App.xaml
+=======
+D:\Github\SmallWorld\Projet\Jeu\Graphics\App.xaml
+>>>>>>> origin/master
 6195242754
 71327772052
 15444308185
