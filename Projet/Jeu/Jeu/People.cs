@@ -36,6 +36,11 @@ namespace Jeu
             private set;
         }
 
+        public void decUnits()
+        {
+            if (nbUnits > 0) { nbUnits--;  }
+        }
+
         public void place(int x, int y, Map m)
         {
             if (m.ValidCoordinates(x, y))

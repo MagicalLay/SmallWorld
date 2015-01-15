@@ -160,11 +160,42 @@ namespace Jeu
             }
             return attacked;
         }
-
+        // Algorithme simplifié des combats : renvoie vrai si le combat a eu lieu, faux sinon
+        // L'unité tuée à la fin est choisie de façon aléatoire
+        public Boolean SimpleFight(int x, int y, Game g)
+        {
+            Boolean b;
+            if (attackPoints == 0 || g.Map.zeroUnit(x, y, g.getPeople(opponent(g))))
+            {
+                Console.WriteLine("You can't attack this space");
+                b = false;
+                return b;
+            }
+            else
+            {
+                b = true;
+                // choice of the defensive Unit
+                Unit attacked = bestDefensiveUnit(x, y, g);
+                Random rnd2 = new Random();
+                int noLuck = rnd2.Next(0, 2);
+                if (noLuck == 0)
+                {
+                    die(g);
+                }
+                else
+                {
+                    attacked.die(g);
+                    if (g.Map.zeroUnit(x, y, g.getPeople(opponent(g))))
+                    {
+                        move(x, y, g);
+                    }
+                }
+                return b;
+            }
+        }
         // Algorithme des combats : renvoie vrai si le combat a eu lieu, faux sinon
         public Boolean fight(int x, int y, Game g)
         {
-
             Boolean b;
             if (attackPoints == 0 || g.Map.zeroUnit(x,y,g.getPeople(opponent(g))))
             {
@@ -196,7 +227,7 @@ namespace Jeu
                 double probaAttacker = (this.hp / 5) * this.attackPoints;
                 double probaDefender = (attacked.hp / 5) * attacked.attackPoints;
 
-                /*for (int i = 0; i < nbFights; i++) 
+                for (int i = 0; i < nbFights; i++) 
                 {
                     if (i % 2 == 0 && attacked.hp != 0 && attacked.defencePoints != 0) 
                     {
@@ -224,21 +255,25 @@ namespace Jeu
                         defencePoints--;
                         attacked.attackPoints--;
                     }
-                }*/
-                Random rnd2 = new Random();
-                int noLuck = rnd2.Next(0,2);
-                if (noLuck == 0) {
-                    die(g);
-                } else {
-                    attacked.die(g);
                 }
                 return b;
             }
         }
-
+        public Boolean isDead()
+        {
+            return hp == 0;
+        }
         public void die(Game g)
         {
-            Console.WriteLine("And... you failed!");
+            hp = 0;
+            if (opponent(g) == 0)
+            {
+                g.getPeople(1).decUnits();
+            }
+            else
+            {
+                g.getPeople(0).decUnits();
+            }
         }
     }
 }
