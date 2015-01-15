@@ -8,7 +8,15 @@ namespace Jeu
 {
     public class Elf : People
     {
-        public Elf(int nbUnits) : base(nbUnits, Species.Elf) { }
+
+        public Elf(int nbU) : base(nbU){
+            int i;
+            units = new Unit[nbU];
+            for (i = 0; i < nbUnits; i++)
+            {
+                units[i] = new UnitElf();
+            }
+        }
 
         public System.Collections.Generic.IEnumerable<Jeu.UnitElf> UnitsElves
         {

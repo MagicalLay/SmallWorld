@@ -8,7 +8,14 @@ namespace Jeu
 {
     public class Orc : People
     {
-        public Orc(int nbUnits) : base(nbUnits, Species.Orc) { }
+        public Orc(int nbUnits) : base(nbUnits) {
+            int i;
+            units = new Unit[nbUnits];
+            for (i = 0; i < nbUnits; i++)
+            {
+                units[i] = new UnitOrc();
+            }
+        }
         public System.Collections.Generic.IEnumerable<Jeu.UnitOrc> UnitsOrcs
         {
             get;
