@@ -93,14 +93,14 @@ namespace Jeu
                     else if (i % 2 == 0 && (attacked.hp == 0 || attacked.defencePoints == 0))
                     {
                         attacked.die();
-                        move(attacked.Space.axis, attacked.Space.ordinate);
+                        //move(attacked.Space.axis, attacked.Space.ordinate);
                         Console.WriteLine("End of fight - Attacker wins");
                         return b;
                     }
                     else if (i % 2 == 1 && (hp == 0 || defencePoints == 0))
                     {
                         die();
-                        attacked.move(Space.axis, Space.ordinate);
+                        //attacked.move(Space.axis, Space.ordinate);
                         Console.WriteLine("End of fight - Defender wins");
                         return b;
                     }
@@ -115,32 +115,18 @@ namespace Jeu
             }
         }
 
-        public Boolean move(int x, int y)
+        public Boolean move(int x, int y, Game g)
         {
-            Boolean b;
-            if (movePoints == 0)
+            if (movePoints == 0 || Space.isNeighbour(g.getSpace(x,y)) != true)
             {
-                Console.WriteLine("Not enough points to move");
-                b = false;
+                return false;
             }
-            else if (x < 0 || x > Game.Map.Size || y < 0 || y > Game.Map.Size)
+            else 
             {
-                Console.WriteLine("Space does not exist");
-                b = false;
-            }
-            else if (!Space.isNeighbour(Game.Map[x, y]))
-            {
-                Console.WriteLine("Impossible move to this space");
-                b = false;
-            }
-            else
-            {
-                this.Space = Game.Map[x, y];
+                placer(g.getSpace(x,y));
                 movePoints--;
-                b = true;
-                Console.WriteLine("Movement achieved");
+                return true;
             }
-            return b;
         }
 
         public void die()

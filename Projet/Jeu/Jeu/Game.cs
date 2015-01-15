@@ -15,7 +15,18 @@ namespace Jeu
             get;
             private set;
         }
-
+        public Space getSpace(int x, int y)
+        {
+            return Map[x, y];
+        }
+        public People getPeople(int x)
+        {
+            return Peoples[x];
+        }
+        public int getMapSize()
+        {
+            return Map.Size;
+        }
         public Game()
         {
             Peoples = new People[2];

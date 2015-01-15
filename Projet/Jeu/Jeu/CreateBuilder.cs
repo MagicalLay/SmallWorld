@@ -61,7 +61,6 @@ namespace Jeu
                 default:
                     throw new System.NotImplementedException("Erreur dans la taille de la carte !");
             }
-
         }
 
         public Game createGame()

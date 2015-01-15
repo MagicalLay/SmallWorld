@@ -13,16 +13,15 @@ namespace UnitTests
         [TestMethod]
         public void TestOneMove()
         {
-            UnitDwarf ud = new UnitDwarf();
-
-            StrategySmall sts = new StrategySmall();
-            Map m1 = sts.instantiate();
-            Object o1 = ud.movePoints;
-            ud.move(1, 2);
-            Object o2 = ud.movePoints + 1;
-            Assert.IsInstanceOfType(o1, typeof(int));
-            Assert.IsInstanceOfType(o2, typeof(int));
-            Assert.AreEqual(o1, o2);
+            CreateBuilder c = new CreateBuilder(MapSize.Small, Species.Dwarf, Species.Elf);
+            Unit u1 = c.game.getPeople(0).units[0];
+            Assert.IsInstanceOfType(u1, typeof(UnitDwarf));
+            int x = u1.Space.axis;
+            int y = u1.Space.ordinate;
+            Boolean b = c.game.getSpace(x, y).isNeighbour(c.game.getSpace(x + 1, y));
+            Assert.AreEqual(true, b);
+            //Boolean b = u1.move(x+1, y, c.game);
+            //Assert.AreEqual(true, b);
         }
     }
 }
