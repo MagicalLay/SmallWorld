@@ -16,3 +16,12 @@ C:\Users\mleray\Documents\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Wrapper.d
 C:\Users\mleray\Documents\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Wrapper.pdb
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Wrapper.dll
 C:\Users\mleray\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Wrapper.pdb
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\UnitTestGame.dll
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\UnitTestGame.pdb
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Jeu.dll
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Wrapper.dll
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Jeu.pdb
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\bin\Debug\Wrapper.pdb
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTestGame.dll
+D:\Maud\Documents\GitHub\SmallWorld\Projet\Jeu\UnitTestGame\obj\Debug\UnitTestGame.pdb

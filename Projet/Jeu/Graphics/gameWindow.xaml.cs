@@ -142,7 +142,7 @@ namespace Graphics
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnEndTurn_Click(object sender, RoutedEventArgs e)
+        private void btnEndTurn_Click(object sender, RoutedEventArgs e, Game g)
         {
             if (!IsPaused)
             {
@@ -184,7 +184,7 @@ namespace Graphics
             switch (e.Key)
             {
                 case Key.Enter:
-                    btnEndTurn_Click(sender, e);
+                    btnEndTurn_Click(sender, e,game);
                     break;
                 case Key.Escape:
                     toggleMenu();
