@@ -43,5 +43,21 @@ namespace UnitTests
             Object o1 = m1[0,0];
             Assert.IsInstanceOfType(o1, typeof(Space));
         }
+        [TestMethod]
+        public void TestNbPoints()
+        // teste si le nombre de points initial est bien de 1 pour chaque peuple
+        {
+            CreateBuilder c = new CreateBuilder(MapSize.Small, Species.Dwarf, Species.Elf);
+            int nb1 = c.game.getPeople(0).countPoints(c.game.Map);
+            int nb2 = c.game.getPeople(1).countPoints(c.game.Map);
+            Assert.AreEqual(1, nb1);
+            Assert.AreEqual(1, nb2);
+            Unit u1 = c.game.getPeople(0).units[0];
+            u1.move(u1.axis + 1, u1.ordinate, c.game);
+            int nb3 = c.game.getPeople(0).countPoints(c.game.Map);
+            int nb4 = c.game.getPeople(1).countPoints(c.game.Map);
+            Assert.AreEqual(2, nb3);
+            Assert.AreEqual(1, nb4);
+        }
     }
 }

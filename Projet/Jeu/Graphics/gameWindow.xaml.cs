@@ -145,11 +145,17 @@ namespace Graphics
         private void btnEndTurn_Click(object sender, RoutedEventArgs e)
         {
             if (!IsPaused)
+<<<<<<< HEAD
             {
                 Game.nextTurn();
                 lblVictoryPointsP1.Content = Game.Peoples[0].Nickname + "'s victory points : " + Game.Peoples[0].nbPoints;
                 lblVictoryPointsP2.Content = Game.Peoples[1].Nickname + "'s victory points : " + Game.Peoples[1].nbPoints;
             }
+=======
+                //Game.nextTurn();
+            lblVictoryPointsP1.Content = Game.Peoples[0].Nickname + "'s victory points : " + Game.Peoples[0].nbPoints;
+            lblVictoryPointsP2.Content = Game.Peoples[1].Nickname + "'s victory points : " + Game.Peoples[1].nbPoints;
+>>>>>>> origin/master
         }
 
         /// <summary>
