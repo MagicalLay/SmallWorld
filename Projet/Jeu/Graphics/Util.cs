@@ -14,7 +14,7 @@ namespace Graphics
     public static class Util
     {
         private static string[] ImageResourceNameFromFaction;
-        private static ResourceManager rm = new System.Resources.ResourceManager("WpfSmallWorld.Properties.Resources", System.Reflection.Assembly.GetExecutingAssembly());
+        private static ResourceManager rm = new System.Resources.ResourceManager("Graphics.Properties.Resources", System.Reflection.Assembly.GetExecutingAssembly());
 
         static Util()
         {
@@ -22,6 +22,7 @@ namespace Graphics
             ImageResourceNameFromFaction[(int)Unit.Type.Orc] = "Orc";
             ImageResourceNameFromFaction[(int)Unit.Type.Dwarf] = "Dwarf";
             ImageResourceNameFromFaction[(int)Unit.Type.Elf] = "Elf";
+            ImageResourceNameFromFaction[(int)Unit.Type.Unit] = "Dwarf";
         }
 
         private static string getImageResourceNameFromFaction(Unit.Type f)

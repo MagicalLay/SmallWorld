@@ -63,7 +63,10 @@ namespace Graphics
         protected void OnUnitLoaded(object sender, RoutedEventArgs e)
         {
             update(this, null);
-            this.imgUnit.Source = Util.getImageResourceFromFaction(Unit.getType());
+            //if(Unit.getType() == Unit.Type.Dwarf){ this.imgUnit.Source = "./peoples/Dwarf.png";}
+            //else if(Unit.getType() == Unit.Type.Elf) { this.imgUnit.Source = "./peoples/Dwarf.png"; }
+            //else if(Unit.getType() == Unit.Type.Orc) { this.imgUnit.Source = "./peoples/Dwarf.png"; }
+            //this.imgUnit.Source = Util.getImageResourceFromFaction(Unit.getType());
         }
     }
 }

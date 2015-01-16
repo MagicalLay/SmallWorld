@@ -148,8 +148,11 @@ namespace Graphics
         public void bgPath_MouseRightButtonDown(object sender, MouseEventArgs e) {
             if (game.SelectionUnit != null)
             {
-                game.moveUnit(game.SelectionUnit, this.X, this.Y);
-                this.IsSelected = true;
+                if (game.SelectionUnit.possibleMove(this.X, this.Y, game))
+                {
+                    game.SelectionUnit.move(this.X, this.Y, game);
+                    this.IsSelected = true;
+                }
             }
         }
     }
