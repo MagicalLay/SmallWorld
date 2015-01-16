@@ -33,12 +33,23 @@ namespace Graphics
             private set; 
         }
 
+        static string[] brushResourceNameFromSpeciesType;
+
+
+        static MapUnitView()
+        {
+            brushResourceNameFromSpeciesType = new string[5];
+            brushResourceNameFromSpeciesType[(int)Unit.Type.Orc] = "BrushOrc";
+            brushResourceNameFromSpeciesType[(int)Unit.Type.Elf] = "BrushElf";
+            brushResourceNameFromSpeciesType[(int)Unit.Type.Dwarf] = "BrushDwarf";
+            brushResourceNameFromSpeciesType[(int)Unit.Type.Unit] = "BrushDwarf";
+        }
 
         public MapUnitView(Unit u, Game g)
         {
-            //if (u.getType() == Unit.Type.Elf) imgUnit = "{DynamicResource DwarfIcon}";
             game = g;
             this.Unit = u;
+            //this.path.Fill = (Brush) grid.Resources[brushResourceNameFromSpeciesType[(int)u.getType()]];
             InitializeComponent();
             u.PropertyChanged += new PropertyChangedEventHandler(update);
         }

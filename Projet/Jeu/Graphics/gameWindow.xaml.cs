@@ -145,6 +145,11 @@ namespace Graphics
         /// <param name="e"></param>
         private void btnEndTurn_Click(object sender, RoutedEventArgs e)
         {
+            if (Game.NbTurnsLeft == 0)
+            {
+                TryEndGame();
+            }
+
             if (!IsPaused)
             {
                 game.nextTurn();

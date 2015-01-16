@@ -9,22 +9,22 @@
             <GradientStop Color="#FFC17A33" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
-    <ScrollViewer>
-        <Grid VerticalAlignment="Bottom" Height="469" Width="492">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="150" />
-                <RowDefinition Height="180" />
-                <RowDefinition Height="92"/>
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="115*" />
-                <ColumnDefinition Width="250*" />
-                <ColumnDefinition Width="127*" />
-            </Grid.ColumnDefinitions>
-           
-            <Button Grid.Row="2" Grid.Column="1" Content="Create new game" Click="ClickNewGame" Margin="10,13,10,10"/>
-            <TextBlock Grid.Row="1" Text="Small World" TextAlignment="Center" FontSize="36" Margin="0,10,0,111" Grid.Column="1" />
-        </Grid>
-    </ScrollViewer>
+
+    <Grid VerticalAlignment="Bottom" Height="469" Width="492">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="87" />
+            <RowDefinition Height="287" />
+            <RowDefinition Height="92"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="0*" />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="2" Grid.Column="1" Content="Create new game" Click="ClickNewGame" Margin="10,13,10,10"/>
+        <TextBlock Grid.Row="1" Text="Small World" TextAlignment="Center" FontSize="78" Margin="0,0,0,121" Grid.Column="1" />
+    </Grid>
+
 </Window>

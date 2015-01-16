@@ -150,7 +150,7 @@ namespace Graphics
         public void bgPath_MouseLeftButtonDown(object sender, MouseEventArgs e) {
             MapView.cellules[game.Map.getIndexFromCoordinates(game.SelectionX, game.SelectionY)].IsSelected = false;
             this.IsSelected = true;
-
+            gW.listUnitGrid.Children.Clear();
             ListUnite list= new ListUnite(game.SelectionUnit,game);
             gW.listUnitGrid.Children.Add(list);
         }

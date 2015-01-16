@@ -11,6 +11,11 @@
     <Grid Name="grid" IsHitTestVisible="False">
         <!-- Animates the rectangle's opacity. -->
         <Grid.Resources>
+            <ImageBrush x:Key="BrushDwarf" ImageSource="{DynamicResource DwarfIcon}" />
+            <ImageBrush x:Key="BrushElf" ImageSource="{DynamicResource ElfIcon}" />
+            <ImageBrush x:Key="BrushOrc" ImageSource="{DynamicResource OrcIcon}" />
+            
+            
             <Storyboard x:Key="rectangleOpacity">
                 <DoubleAnimation
                     Storyboard.TargetName="selectedSquare" 
@@ -26,9 +31,11 @@
             Width="40" Height ="50"
             StrokeThickness="2">
         </Rectangle>
+        <Path Name="path" Fill="Red"/>
 
-        <Image Name="imgUnit" 
+        <Image Name="imgUnitDwarf" 
             Width="35"
             Source="peoples/dwarf.png"/>
+
     </Grid>
 </UserControl>
