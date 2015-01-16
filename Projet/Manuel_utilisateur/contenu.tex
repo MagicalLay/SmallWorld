@@ -1,26 +1,24 @@
-\section{Principes et but du jeu}
-
-Il s’agit d’un jeu au tour-par-tour inspiré de \og SmallWorld \fg{} dans lequel chaque joueur dirige un peuple. Le but du jeu est de gérer des unités sur une carte pour obtenir le plus de points possible, à la fin d’un certain nombre de tours. Pour ce faire, chaque joueur commence avec ses unités placées sur une même case de la carte. Il doit ensuite les répartir au mieux sur les différentes cases de la carte : par défaut, une case rapporte 1 point. Les unités d’un joueur peuvent également attaquer les unités de l'autre pour les détruire (limitant ainsi l’acquisition de points de l’adversaire) et occuper une case de la carte. Les points sont recomptés à la fin de chaque tour pour que tous les joueurs connaissent leur nombre courant de points ainsi que celui de leurs adversaires.
-
 \section{Rappel des règles du jeu}
 
-\subsection{Description des peuples}
+Il s’agit d’un jeu au tour-par-tour inspiré de \og Small World \fg{}, dans lequel chaque joueur dirige un peuple. Le but du jeu est de gérer des unités sur une carte pour obtenir le plus de points possible, à la fin d’un certain nombre de tours. Pour ce faire, chaque joueur commence avec ses unités placées sur une même case de la carte. Il doit ensuite les répartir au mieux sur les différentes cases de la carte : par défaut, une case rapporte 1 point. Les unités d’un joueur peuvent également attaquer les unités de l'autre pour les détruire (limitant ainsi l’acquisition de points de l’adversaire) et occuper une case de la carte. Les points sont recomptés à la fin de chaque tour pour que tous les joueurs connaissent leur nombre courant de points ainsi que celui de leurs adversaires.
 
-Il existe trois peuples Elfe (\textit{Elf}), Orc (\textit{Orc}), et Nain (\textit{Dwarf}), ayant des caractéristiques très différentes :
+\subsection{Les peuples et leurs unités}
+
+Il existe trois peuples \textit{Elf}, \textit{Orc}, et \textit{Nain}, ayant des caractéristiques très différentes :
 
 \begin{itemize}
 
 \item \textbf{Elf} :  le coût de déplacement sur une case Forêt est divisé par deux. Le coût de déplacement sur une case Désert est multiplié par deux.
 \item \textbf{Orc} : le coût de déplacement sur une case Plaine est divisé par deux. Une unité Orc n’acquière aucun point sur les cases de type Forêt. Lorsqu’une unité Orc détruit une autre unité, elle possède alors 1 point de bonus permanent. Cet effet est cumulable et est lié à chaque unité (i.e. si l’unité ayant le bonus meurt, le bonus disparaît).
-\item \textbf{Nain} :  le coût de déplacement sur une case Plaine est divisé par deux. Une unité Nain n’acquière aucun point sur les cases Plaine. Lorsqu’elle se trouve sur une case Montagne, une unité Nain a la capacité de se déplacer sur n’importe quelle case Montagne de la carte à condition qu’elle ne soit pas occupée par une unité adverse.
+\item \textbf{Nain} :  le coût de déplacement sur une case Plaine est divisé par deux. Une unité Nain n’acquière aucun point sur les cases Plaine. Lorsqu’elle se trouve sur une case Montagne, une unité Nain peut se déplacer sur n’importe quelle case Montagne de la carte, à condition qu’elle ne soit pas occupée par une unité adverse.
 
 \end{itemize}
 
-À chaque tour, toutes les unités peuvent être déplacées et attaquer, mais il est aussi possible de passer son tour. Par défaut, chaque unité possède deux points de mouvement et chaque déplacement en coûte un (hors bonus/malus). Cela signifie qu’une même unité peut se déplacer ou attaquer plusieurs fois par tour. Chaque unité possède 2 points d’attaque, 1 point de défense et 5 points de vie. Les unités ne récupèrent pas leurs points de vie à la fin d’un tour, mais les points de déplacement sont réinitialisés à 2.
+Lors d'un tour, toutes les unités du peuple peuvent être déplacées et attaquer. Par défaut, chaque unité possède deux points de mouvement, et chaque déplacement en coûte un (hors bonus/malus). Cela signifie qu’une même unité peut se déplacer ou attaquer plusieurs fois par tour. Chaque unité possède 2 points d’attaque, 1 point de défense et 5 points de vie. Les unités ne récupèrent pas leurs points de vie à la fin d’un tour, mais leurs points de déplacement sont réinitialisés à 2 à chaque tour.
 
-\subsection{La carte du monde}
+\subsection{Le plateau de jeu}
 
-La carte du monde se compose de cases hexagonales. Il existe quatre types de case : Plaine (\textit{Field}), Désert (\textit{Desert}), Montagne (\textit{Mountain}), Forêt (\textit{Forest}). 
+La carte du monde se compose de cases hexagonales. Il existe quatre types de case : \textit{Plaine}, \textit{Désert}, \textit{Montagne} , \textit{Forêt}. 
 
 Il existe 3 tailles de carte :
 
@@ -32,17 +30,90 @@ Il existe 3 tailles de carte :
 
 \end{itemize}
 
-\subsection{Aspect du jeu}
+La carte, ainsi que les unités des deux peuples, sont visibles par les deux joueurs. La carte est vue du dessus.
 
-La carte, ses ressources, les unités de tous les peuples sont visibles par tous les joueurs. La carte est vue du dessus.
-
-\section{Utilisation de l'interface}
+\section{Guide d'utilisation}
 
 \subsection{Lancement du jeu}
 
+Pour lancer le jeu, 
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.70\textwidth]{figure/ecranAccueil.png}
+    \caption{Page d'accueil du jeu.}
+    \label{fig:ecranAccueil}
+\end{figure} 
+
+C'est à partir de cet écran d'accueil que vous allez pouvoir créer une nouvelle partie.
+
 \subsection{Créer une partie}
 
-Pour créer une partie à partir de l'écran d'accueil, vous devez cliquer sur \og Create New Game \fg{}. Une boîte de dialogue s'affiche alors, par laquelle il faut choisir la taille de la carte par sélection dans la liste déroulante. Après validation, une nouvelle fenêtre s'affiche et chaque joueur doit choisir son peuple (une vérification a été mise en place afin de s'assurer que les peuples choisis soient différents). Une fenêtre s'affiche alors pour vous demander confirmation de vos choix : cliquez sur OK pour commencer la partie. 
+Pour créer une partie à partir de l'écran d'accueil, cliquez sur \og Create new game \fg{}. Une boîte de dialogue s'affiche alors, par laquelle il faut choisir la taille de la carte par sélection dans la liste déroulante dont vous avez un aperçu à la {\sc Figure}~\ref{fig:sizeMap}. 
 
+\begin{figure}
+    \centering
+    \includegraphics[height=0.70\textwidth]{figure/sizeMap.png}
+    \caption{Choix de la taille de la carte.}
+    \label{fig:sizeMap}
+\end{figure}
 
-Chaque peuple débute la partie avec toutes ses unités sur la même case de la carte, choisie de manière à ce que les joueurs ne soient pas trop proches. L’ordre de jeu est choisi aléatoirement en début de partie. Les joueurs jouent chacun leur tour sur un même ordinateur. Deux joueurs ne peuvent sélectionner le même peuple.
+Après validation, une nouvelle fenêtre s'affiche et chaque joueur doit choisir son peuple (une vérification a été mise en place afin de s'assurer que les peuples choisis soient différents). Cette fenêtre est similaire à celle de la {\sc Figure}~\ref{fig:choicePeoples}.
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.70\textwidth]{figure/choicePeoples.png}
+    \caption{Choix des peuples des joueurs 1 et 2.}
+    \label{fig:choicePeoples}
+\end{figure}
+
+Après cette dernière étape, vous pouvez alors commencer la partie en cliquant sur \og Valider \fg{}.
+
+\subsection{Interface du jeu}
+
+La {\sc Figure}~\ref{fig:game} montre un aperçu de l'interface globale du jeu (avec une carte de taille Medium). Différents éléments sont accessibles et/ou manipulables à partir de cette dernière.
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.70\textwidth]{figure/choicePeoples.png}
+    \caption{Interface globale du jeu.}
+    \label{fig:game}
+\end{figure}
+
+\subsubsection{Les données des joueurs}
+
+Vous pouvez voir, à gauche de la carte, le nombre de points de chacun des joueurs (recalculé à chaque nouveau tour). À droite de la carte est également affiché le nombre d'unités restantes de chaque peuple. 
+
+\subsubsection{La carte}
+
+Au début du jeu, toutes les unités d'un même peuple (et donc d'un même joueur) sont regroupées sur une même case. Le premier joueur (désigné aléatoirement) peut alors commencer à déplacer ses unités. La case sur laquelle se trouve le curseur de la souris est entourée de blanc, comme sur la {\sc Figure}~\ref{fig:sizeMap}, et s'assombrit lorsque le joueur la sélectionne.
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.70\textwidth]{figure/choicePeoples.png}
+    \caption{Passage de la souris au-dessus d'une case.}
+    \label{fig:onSpace}
+\end{figure}
+
+\subsubsection{Le déplacement des unités}
+
+Les unités peuvent seulement se déplacer sur les cases ayant un côté en commun avec la leur (excepté les Nains qui ont un accès spécial aux cases \textit{Montagne}). Pour faire bouger l'unité courante, il vous suffit de cliquer sur la case voulue. Si le déplacement est conforme aux règles du jeu, l'unité est repositionnée. Sinon, rien ne se passe et vous pouvez réessayer jusqu'à trouver une case qui fonctionne. Un autre mouvement sera ensuite possible si l'unité dispose encore de suffisamment de points de déplacement.
+
+\subsubsection{Les combats}
+
+Un combat a lieu automatiquement lorsqu'une unité a été déplacée sur une case comportant une unité adverse (ou plusieurs, auquel cas l'unité défensive la plus forte sera désignée pour se battre). Quel que soit le gagnant du combat, l'attaquant perd le même nombre de points de mouvements que lors d'un déplacement normal. Cependant, si la bataille mène à la mort de l'unité attaquée et que sa case est alors vide, l'unité attaquante est déplacée dessus.
+
+\subsubsection{Fin du tour}
+
+À n'importe quel moment du tour, même si vous n'avez pas déplacé toutes vos unités, il est possible de passer au tour suivant en cliquant sur le bouton \og End turn \fg{} en haut à droite de l'interface (voir {\sc Figure}~\ref{fig:game}). S'il reste encore au moins un tour, le joueur suivant pourra alors jouer, dans le cas contraire le jeu prendra fin.
+
+\subsubsection{Fin du jeu}
+
+Le jeu se termine de façon automatique si le nombre de tours fixé lors de la création de la partie a été atteint, ou si l'un des joueurs n'a plus aucune unité vivante. Le vainqueur est alors le joueur ayant le nombre de points le plus élevé. Cependant, il est possible de quitter le jeu à tout moment en appuyant sur la touche \og Echap \fg{}, puis en cliquant sur le bouton \og Quit game \fg{} comme sur la {\sc Figure}~\ref{fig:echap}. À partir ce menu, vous pouvez aussi revenir à la partie en cliquant sur \og Continue game \fg{}.
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.70\textwidth]{figure/choicePeoples.png}
+    \caption{Passage de la souris au-dessus d'une case.}
+    \label{fig:echap}
+\end{figure}
