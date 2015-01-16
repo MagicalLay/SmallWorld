@@ -36,6 +36,7 @@ namespace Graphics
 
         public MapUnitView(Unit u, Game g)
         {
+            //if (u.getType() == Unit.Type.Elf) imgUnit = "{DynamicResource DwarfIcon}";
             game = g;
             this.Unit = u;
             InitializeComponent();

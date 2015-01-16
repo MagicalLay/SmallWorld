@@ -15,6 +15,10 @@
         <BitmapImage x:Key="Boot"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="elements/boot.png" />
         <BitmapImage x:Key="Sword"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="elements/sword.png" />
         <BitmapImage x:Key="Shield"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="elements/shield.png" />
+        <BitmapImage x:Key="DwarfIcon" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./peoples/dwarf.png"/>
+        <BitmapImage x:Key="ElfIcon" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./peoples/elf.png"/>
+        <BitmapImage x:Key="OrcIcon" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./peoples/orc.png"/>
+        
         <local:BoolVisibilityConverter x:Key="BoolVisibilityConverter" />
         <local:EnumBooleanConverter x:Key="EnumToBooleanConverter" />
 <!--

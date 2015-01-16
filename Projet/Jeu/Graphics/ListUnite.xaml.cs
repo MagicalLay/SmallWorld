@@ -34,6 +34,7 @@ namespace Graphics
 
         public ListUnite(Unit u, Game g)
         {
+            this.Background = Brushes.White;
             game = g;
             Unit = u;
             InitializeComponent();
@@ -50,10 +51,10 @@ namespace Graphics
 
         protected void update(object sender, PropertyChangedEventArgs e)
         {
-            pbHealth.Value = Unit.hp;
-            lblHealth.Content = Unit.hp + "/" + 5;
-            pbMovingPoints.Value = Unit.movePoints;
-            lblMovingPoints.Content = Unit.movePoints + "/" + 2;
+            //pbHealth.Value = Unit.hp;
+            //lblHealth.Content = Unit.hp + "/" + 5;
+            //pbMovingPoints.Value = Unit.movePoints;
+            //lblMovingPoints.Content = Unit.movePoints + "/" + 2;
 
             if (Object.ReferenceEquals(game.SelectionUnit, this.Unit))
             {
