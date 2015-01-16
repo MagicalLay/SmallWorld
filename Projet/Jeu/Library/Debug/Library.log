@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿La génération a démarré 16/01/2015 02:31:17.
      1>Projet "D:\Github\SmallWorld\Projet\Jeu\Library\Library.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
@@ -11,3 +12,18 @@
 La génération a réussi.
 
 Temps écoulé 00:00:01.08
+=======
+<<<<<<< HEAD
+﻿La génération a démarré 16/01/2015 01:21:49.
+
+La génération a réussi.
+
+Temps écoulé 00:00:00.00
+=======
+﻿La génération a démarré 16/01/2015 01:17:17.
+
+La génération a réussi.
+
+Temps écoulé 00:00:00.06
+>>>>>>> origin/master
+>>>>>>> parent of 960aa51... pseudo résolution
