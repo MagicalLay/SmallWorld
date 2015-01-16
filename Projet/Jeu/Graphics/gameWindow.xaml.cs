@@ -142,20 +142,17 @@ namespace Graphics
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnEndTurn_Click(object sender, RoutedEventArgs e)
+        private void btnEndTurn_Click(object sender, RoutedEventArgs e, Game g)
         {
             if (!IsPaused)
-<<<<<<< HEAD
             {
-                Game.nextTurn();
+                g.nextTurn();
                 lblVictoryPointsP1.Content = Game.Peoples[0].Nickname + "'s victory points : " + Game.Peoples[0].nbPoints;
                 lblVictoryPointsP2.Content = Game.Peoples[1].Nickname + "'s victory points : " + Game.Peoples[1].nbPoints;
             }
-=======
                 //Game.nextTurn();
             lblVictoryPointsP1.Content = Game.Peoples[0].Nickname + "'s victory points : " + Game.Peoples[0].nbPoints;
             lblVictoryPointsP2.Content = Game.Peoples[1].Nickname + "'s victory points : " + Game.Peoples[1].nbPoints;
->>>>>>> origin/master
         }
 
         /// <summary>
@@ -190,7 +187,7 @@ namespace Graphics
             switch (e.Key)
             {
                 case Key.Enter:
-                    btnEndTurn_Click(sender, e);
+                    btnEndTurn_Click(sender, e,game);
                     break;
                 case Key.Escape:
                     toggleMenu();
