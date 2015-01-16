@@ -42,7 +42,7 @@ namespace Graphics
         {
             get
             {
-                return game.SelectionX == Y && game.SelectionY == X;
+                return game.SelectionY == Y && game.SelectionX == X;
             }
             set
             {
@@ -83,11 +83,18 @@ namespace Graphics
             private set;
         }
 
+        private gameWindow gW
+        {
+            get;
+            set;
+        }
+
         static string[] brushResourceNameFromCellType;
 
-        public Cellule(Space c, int x, int y, Game g)
+        public Cellule(Space c, int x, int y, Game g, gameWindow gameW)
         {
             InitializeComponent();
+            gW = gameW;
             this.bgPath.Fill = (Brush)grid.Resources[brushResourceNameFromCellType[(int)c.getType()]];
             game = g;
             X = x;
@@ -143,13 +150,21 @@ namespace Graphics
         public void bgPath_MouseLeftButtonDown(object sender, MouseEventArgs e) {
             MapView.cellules[game.Map.getIndexFromCoordinates(game.SelectionX, game.SelectionY)].IsSelected = false;
             this.IsSelected = true;
+
+            ListUnite list= new ListUnite(game.SelectionUnit,game);
+            gW.listUnitGrid.Children.Add(list);
         }
 
         public void bgPath_MouseRightButtonDown(object sender, MouseEventArgs e) {
-            if (game.SelectionUnit != null)
+            if (game.SelectionUnit != null && game.SelectionUnit.possibleMove(this.X, this.Y, game))
             {
                 game.moveUnit(game.SelectionUnit, this.X, this.Y);
+                Unit u = game.SelectionUnit;
                 this.IsSelected = true;
+                foreach (MapUnitView mUV in gW.unitViews)
+                {
+                    mUV.update(this, null);
+                }
             }
         }
     }

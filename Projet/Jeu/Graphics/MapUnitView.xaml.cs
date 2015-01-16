@@ -42,7 +42,7 @@ namespace Graphics
             u.PropertyChanged += new PropertyChangedEventHandler(update);
         }
         
-        protected virtual void update(object sender, PropertyChangedEventArgs e)
+        public virtual void update(object sender, PropertyChangedEventArgs e)
         {
             if (e == null || e.PropertyName == "X" || e.PropertyName == "Y")
             {
@@ -63,7 +63,7 @@ namespace Graphics
         protected void OnUnitLoaded(object sender, RoutedEventArgs e)
         {
             update(this, null);
-            this.imgUnit.Source = Util.getImageResourceFromFaction(Unit.getType());
+            //this.imgUnit.Source = Util.getImageResourceFromFaction(Unit.getType());
         }
     }
 }

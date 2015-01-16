@@ -25,7 +25,8 @@ namespace Graphics
     {
 
         Game game;
-        List<MapUnitView> unitViews = new List<MapUnitView>();
+        public List<MapUnitView> unitViews = new List<MapUnitView>();
+        
         MapView mapView;
 
         bool IsPaused
@@ -45,7 +46,7 @@ namespace Graphics
             game = cB.game;
             InitializeComponent();
             IsPaused = false;
-            mapView = new MapView(cB.map, mapGrid, cB.game);
+            mapView = new MapView(cB.map, mapGrid, cB.game, this);
 
             //to move the map at the center (depending on the size of the map)
             switch (MapView.Map.Size)
@@ -87,14 +88,14 @@ namespace Graphics
             lblCurrentPlayer.Content = Game.CurrentPlayer.Nickname;
             lblRemainingTurns.Content = Game.NbTurnsLeft + " turns left.";
 
-            lblVictoryPointsP1.Content = Game.Peoples[0].Nickname + "'s victory points : 1";
-            lblVictoryPointsP2.Content = Game.Peoples[1].Nickname + "'s victory points : 1";
+            lblVictoryPointsP1.Content = "Victory points : 1";
+            lblVictoryPointsP2.Content = "Victory points : 1";
 
             game.PropertyChanged += new PropertyChangedEventHandler(update); // Souscription au OnPropertyChanged*/
         }
 
         /// <summary>
-        /// Delegate called when a property is changed in GameImpl
+        /// Delegate called when a property is changed in Game
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -126,7 +127,7 @@ namespace Graphics
         /// <summary>
         /// Clears and updates the list of units of the selected cell
         /// </summary>
-        private void updateListUnits()
+        public void updateListUnits()
         {
             listUnitGrid.Children.Clear();
             List<Unit> all = Game.Peoples[0].units.Concat(Game.Peoples[1].units).ToList();
@@ -142,20 +143,16 @@ namespace Graphics
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnEndTurn_Click(object sender, RoutedEventArgs e, Game g)
+        private void btnEndTurn_Click(object sender, RoutedEventArgs e)
         {
             if (!IsPaused)
-<<<<<<< HEAD
             {
-                Game.nextTurn();
-                lblVictoryPointsP1.Content = Game.Peoples[0].Nickname + "'s victory points : " + Game.Peoples[0].nbPoints;
-                lblVictoryPointsP2.Content = Game.Peoples[1].Nickname + "'s victory points : " + Game.Peoples[1].nbPoints;
+                game.nextTurn();
+                lblVictoryPointsP1.Content = "Victory points : " + Game.Peoples[0].nbPoints;
+                lblVictoryPointsP2.Content = "Victory points : " + Game.Peoples[1].nbPoints;
+                lblRemainingTurns.Content = Game.NbTurnsLeft + " turns left.";
             }
-=======
-                //Game.nextTurn();
-            lblVictoryPointsP1.Content = Game.Peoples[0].Nickname + "'s victory points : " + Game.Peoples[0].nbPoints;
-            lblVictoryPointsP2.Content = Game.Peoples[1].Nickname + "'s victory points : " + Game.Peoples[1].nbPoints;
->>>>>>> origin/master
+
         }
 
         /// <summary>
@@ -184,13 +181,14 @@ namespace Graphics
         /// <param name="e"></param>
         private void WindowInGame_KeyUp(object sender, KeyEventArgs e)
         {
+
             int x = game.SelectionUnit.axis;
             int y = game.SelectionUnit.ordinate;
             Unit u = game.SelectionUnit;
             switch (e.Key)
             {
                 case Key.Enter:
-                    btnEndTurn_Click(sender, e,game);
+                    btnEndTurn_Click(sender, e);
                     break;
                 case Key.Escape:
                     toggleMenu();
@@ -227,7 +225,7 @@ namespace Graphics
             MenuRectangle.Visibility = MenuRectangle.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
             btnContinue.Visibility = btnContinue.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
             btnQuit.Visibility = btnQuit.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
-            btnSaveGame.Visibility = btnSaveGame.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+            //btnSaveGame.Visibility = btnSaveGame.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
             lblGamePaused.Visibility = lblGamePaused.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
         }
 

@@ -101,6 +101,7 @@ namespace Jeu
         {
             return Type.Unit;
         }
+
         public Space.Type favoriteSpace
         {
             get;

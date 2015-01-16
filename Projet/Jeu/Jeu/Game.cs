@@ -60,7 +60,7 @@ namespace Jeu
             Peoples[0] = p1;
             Peoples[1] = p2;
             Peoples[0].surnom("Joueur 1");
-            Peoples[0].surnom("Joueur 2");
+            Peoples[1].surnom("Joueur 2");
             GameOnGoing = true;
             NbUnitsAlive = Peoples[0].nbUnits * 2;
             Turn = new Turn(0);

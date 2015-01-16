@@ -37,14 +37,14 @@ namespace Graphics
             game = g;
             Unit = u;
             InitializeComponent();
-            u.PropertyChanged += new PropertyChangedEventHandler(update);
-            game.PropertyChanged += new PropertyChangedEventHandler(update);
-            pbHealth.Maximum = 5 - u.hp;
-            pbHealth.Minimum = 0;
-            pbMovingPoints.Maximum = 2;
-            pbMovingPoints.Minimum = 0;
-            lblAttack.Content = Unit.attackPoints;
-            lblDefense.Content = Unit.defencePoints;
+            //u.PropertyChanged += new PropertyChangedEventHandler(update);
+            //game.PropertyChanged += new PropertyChangedEventHandler(update);
+            //pbHealth.Maximum = 5 - u.hp;
+           // pbHealth.Minimum = 0;
+            //pbMovingPoints.Maximum = 2;
+            //pbMovingPoints.Minimum = 0;
+            //lblAttack.Content = Unit.attackPoints;
+            //lblDefense.Content = Unit.defencePoints;
             grid.AddHandler(FrameworkElement.MouseDownEvent, new MouseButtonEventHandler(grid_MouseLeftButtonDown), true);
         }
 
@@ -68,7 +68,7 @@ namespace Graphics
         protected void OnUnitLoaded(object sender, RoutedEventArgs e)
         {
             update(this, null);
-            imgUnit.Source = Util.getImageResourceFromFaction(Unit.getType());
+            //imgUnit.Source = Util.getImageResourceFromFaction(Unit.getType());
         }
 
         private void grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

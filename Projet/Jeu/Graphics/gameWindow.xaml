@@ -5,13 +5,13 @@
         xmlns:local="clr-namespace:Graphics"
         xmlns:PM="clr-namespace:Jeu;assembly=SmallWorld" KeyUp="WindowInGame_KeyUp" WindowStartupLocation="Manual" WindowStyle="None" ResizeMode="NoResize" WindowState="Maximized" Width="1457" Height="920"
         >
- 
+
     <Viewbox x:Name="main">
         <Grid x:Name="mainGrid">
-           <Grid.Resources>
+            <Grid.Resources>
                 <local:BoolVisibilityConverter x:Key="BoolVisibilityConverter" />
-                </Grid.Resources>
-                <Grid.RowDefinitions>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
                 <RowDefinition Height="70px"/>
                 <RowDefinition Height="750px"/>
                 <RowDefinition Height="100px"/>
@@ -40,7 +40,7 @@
                 </Rectangle>
                 <Label x:Name="lblP2" Content="Player 2" FontSize="25" Foreground="#FF910000" HorizontalAlignment="Left" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontWeight="Bold" Margin="95,277,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="lblTribeP2" Content="Tribe :" FontSize="25" Foreground="#FF910000" HorizontalAlignment="Left" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Margin="95,322,0,387" FontWeight="Bold"/>
-                <Label x:Name="lblVictoryPointsP2" Content="Victory Points :" FontSize="20" Foreground="#FF910000" Margin="95,368,0,0" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Height="32" VerticalAlignment="Top" FontWeight="Bold" HorizontalAlignment="Left" Width="217"/>
+                <Label x:Name="lblVictoryPointsP2" Content="Victory Points :" FontSize="20" Foreground="#FF910000" Margin="95,368,0,0" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Height="71" VerticalAlignment="Top" FontWeight="Bold" HorizontalAlignment="Left" Width="295"/>
             </Grid>
             <!--list of unit Grid-->
             <ScrollViewer Grid.Row="1" Grid.Column="2" IsHitTestVisible="True" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible" >
