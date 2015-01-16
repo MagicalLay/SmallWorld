@@ -10,6 +10,7 @@ namespace Jeu
             movePoints = 2; // initialisé à 2 pour pouvoir décrémenter de 2 quand un Elf va sur une case Desert 
             attackPoints = 2;  
             defencePoints = 1;
+            bonusPoints = 0;
         }
         public int axis
         {
@@ -20,12 +21,12 @@ namespace Jeu
         {
             get;
             protected set;
-        } 
-        public void placer(int x, int y) {
-            axis = x;
-            ordinate = y;
         }
-
+        public int bonusPoints
+        {
+            get;
+            protected set;
+        }
         public int hp
         {
             get;
@@ -48,6 +49,15 @@ namespace Jeu
             get;
             protected set;
         }
+        public void placer(int x, int y) {
+            axis = x;
+            ordinate = y;
+        }
+        public void initMovePoints()
+        {
+            movePoints = 2;
+        }
+
         public Boolean isNeighbour(int x, int y, Map m)
         {
             if (!m.ValidCoordinates(x, y) || !m.ValidCoordinates(axis,ordinate)) { return false; }
@@ -91,10 +101,12 @@ namespace Jeu
         {
             Map m = g.Map;
             return
-                ((m.ValidCoordinates(x,y) && getType() == Type.Dwarf && m[x, y].getType() == Space.Type.Mountain && movePoints >= 1 && m.zeroUnit(x, y, g.getPeople(opponent(g)))) ||
+                (
+                (m[axis, ordinate].getType() == Space.Type.Mountain && m.ValidCoordinates(x,y) && getType() == Type.Dwarf && m[x, y].getType() == Space.Type.Mountain && movePoints >= 1 && m.zeroUnit(x, y, g.getPeople(opponent(g)))) ||
                 (isNeighbour(x, y, m) && getType() == Type.Elf && m[x, y].getType() == Space.Type.Desert && movePoints == 2) ||
                 (isNeighbour(x, y, m) && m[x, y].getType() == favoriteSpace && movePoints >= 0.5) ||
-                (isNeighbour(x, y, m) && m[x, y].getType() != favoriteSpace && movePoints >= 1));
+                (isNeighbour(x, y, m) && m[x, y].getType() != favoriteSpace && movePoints >= 1)
+                );
         }
 
         // Renvoie le numéro du peuple adversaire de l'unité courante dans le jeu g, 
@@ -115,13 +127,14 @@ namespace Jeu
             }
         }
         
-        // Effectue le déplacement de l'unité sur la case [x,y] de m, si c'est possible
+        // Effectue le déplacement de l'unité sur la case [x,y] de m, si c'est possible, en sachant que
+        // les nains peuvent accéder à n'importe quelle case Mountain depuis une case Mountain si ils ont assez de points 
+        // de mouvement et si la case visée ne contient pas d'unité adverse
         public void move(int x, int y, Game g) 
-            // Les nains peuvent accéder aux cases Mountain si ils ont assez de points de mouvement et si cette case
-            // ne contient pas d'unité adverse
         {
             Map m = g.Map;
-                if (getType() == Type.Dwarf && m[x, y].getType() == Space.Type.Mountain && movePoints >= 1 && opponent(g) != -1
+            Space.Type st = m[axis, ordinate].getType();
+                if (st == Space.Type.Mountain && getType() == Type.Dwarf  && m[x, y].getType() == Space.Type.Mountain && movePoints >= 1 && opponent(g) != -1
                     && m.zeroUnit(x,y,g.getPeople(opponent(g))))
                 {
                     placer(x, y);
@@ -133,22 +146,58 @@ namespace Jeu
             }
             if (isNeighbour(x,y,m) && getType() == Type.Elf && m[x, y].getType() == Space.Type.Desert && movePoints == 2)
             {
-                placer(x, y);
-                movePoints = 0;
+                if (!m.zeroUnit(x, y, g.getPeople(opponent(g))))
+                {
+                    movePoints = movePoints - 2;
+                    fight(x, y, g);
+                    if (!isDead() && m.zeroUnit(x, y, g.getPeople(opponent(g))))
+                    {
+                        placer(x, y);
+                    }
+                }
+                else
+                {
+                    placer(x, y);
+                    movePoints = movePoints - 2;
+                }
             }
             if (isNeighbour(x, y, m) && m[x, y].getType() == favoriteSpace && movePoints >= 0.5)
             {
-                placer(x, y);
-                movePoints = movePoints - 0.5;
+                if (!m.zeroUnit(x, y, g.getPeople(opponent(g))))
+                {
+                    movePoints = movePoints - 0.5;
+                    fight(x, y, g);
+                    if (!isDead() && m.zeroUnit(x, y, g.getPeople(opponent(g))))
+                    {
+                        placer(x, y);
+                    }
+                }
+                else
+                {
+                    placer(x, y);
+                    movePoints = movePoints - 0.5;
+                }
             }
             if (isNeighbour(x, y, m) && m[x, y].getType() != favoriteSpace && movePoints >= 1)
             {
-                placer(x, y);
-                movePoints--;
+                if (!m.zeroUnit(x, y, g.getPeople(opponent(g))))
+                {
+                    movePoints--;
+                    fight(x, y, g);
+                    if (!isDead() && m.zeroUnit(x, y, g.getPeople(opponent(g))))
+                    {
+                        placer(x, y);
+                    }
+                }
+                else
+                {
+                    placer(x, y);
+                    movePoints--;
+                }
             } 
         }
         // Renvoie pour une case[x,y] la meilleure unité défensive adverse présente
-        // cette fonction sera utilisée dans la fonction fight qui vérifie déjà la validité de [x,y]
+        // Cette fonction sera utilisée dans la fonction fight qui vérifie déjà la validité de [x,y]
         // ainsi que l'existence de l'adversaire dans g
         Unit bestDefensiveUnit(int x, int y, Game g)
         {
@@ -156,107 +205,92 @@ namespace Jeu
             Unit attacked = opp.units[0]; // par défaut
             foreach (Unit u in opp.units)
             {
-                if (u.axis == x && u.ordinate == y && u.hp >= attacked.hp) { attacked = u; }
+                if (u.axis == x && u.ordinate == y && u.hp > attacked.hp) { attacked = u; }
             }
             return attacked;
         }
-        // Algorithme simplifié des combats : renvoie vrai si le combat a eu lieu, faux sinon
+
+        // Premier essai : algorithme simplifié des combats
         // L'unité tuée à la fin est choisie de façon aléatoire
-        public Boolean SimpleFight(int x, int y, Game g)
+        public void SimpleFight(int x, int y, Game g)
         {
-            Boolean b;
             if (attackPoints == 0 || g.Map.zeroUnit(x, y, g.getPeople(opponent(g))))
             {
                 Console.WriteLine("You can't attack this space");
-                b = false;
-                return b;
             }
             else
             {
-                b = true;
-                // choice of the defensive Unit
                 Unit attacked = bestDefensiveUnit(x, y, g);
+
                 Random rnd2 = new Random();
-                int noLuck = rnd2.Next(0, 2);
-                if (noLuck == 0)
+                int badLuck = rnd2.Next(0, 2);
+                if (badLuck == 0)
                 {
                     die(g);
                 }
                 else
                 {
                     attacked.die(g);
-                    if (g.Map.zeroUnit(x, y, g.getPeople(opponent(g))))
+                    if (this.getType() == Type.Orc)
                     {
-                        move(x, y, g);
+                        bonusPoints++;
                     }
                 }
-                return b;
             }
         }
-        // Algorithme des combats : renvoie vrai si le combat a eu lieu, faux sinon
-        public Boolean fight(int x, int y, Game g)
+
+        // Algorithme des combats respectant le cahier des charges
+        public void fight(int x, int y, Game g)
         {
-            Boolean b;
             if (attackPoints == 0 || g.Map.zeroUnit(x,y,g.getPeople(opponent(g))))
             {
                 Console.WriteLine("You can't attack this space");
-                b = false;
-                return b;
             }
             else 
             {
-                b = true;
-                // choice of the defensive Unit
                 Unit attacked = bestDefensiveUnit(x, y, g);
-                // number of rounds
+
                 int nbFights;
                 Random rnd = new Random();
-                if (hp > attacked.hp)
-                {
-                    nbFights = rnd.Next(3, hp + 3);
-                }
-                else
-                {
-                    nbFights = rnd.Next(3, attacked.hp + 3);
-                }
+                nbFights = rnd.Next(3, Math.Max(hp + 3, attacked.hp +3));
 
-                // chances of losing hp for the attacker
-                double attackerChancesOfLosingHp = 0.5 + 0.5 * (attackPoints / (attacked.defencePoints));
-                
-                // probabilities for attacker and defender
                 double probaAttacker = (this.hp / 5) * this.attackPoints;
                 double probaDefender = (attacked.hp / 5) * attacked.attackPoints;
 
-                for (int i = 0; i < nbFights; i++) 
+                double dieProbaAttacker = 0.5;
+
+                double ratio = ((double)Math.Abs(probaAttacker - probaDefender) / Math.Max(probaAttacker, probaDefender));
+                if (probaAttacker > probaDefender)
                 {
-                    if (i % 2 == 0 && attacked.hp != 0 && attacked.defencePoints != 0) 
+                    dieProbaAttacker -= ratio;
+                }
+                else
+                {
+                    dieProbaAttacker += ratio;
+                }
+                Random random = new Random();
+                while(hp > 0 && attacked.hp > 0 && nbFights > 0) 
+                {
+                    double r = random.Next(100);
+                    if (r < dieProbaAttacker * 100)
                     {
-                        attacked.hp--;
-                        attacked.defencePoints--;
-                        attackPoints--;
-                    }
-                    else if (i % 2 == 0 && (attacked.hp == 0 || attacked.defencePoints == 0))
-                    {
-                        attacked.die(g);
-                        //move(attacked.Space.axis, attacked.Space.ordinate);
-                        Console.WriteLine("End of fight - Attacker wins");
-                        return b;
-                    }
-                    else if (i % 2 == 1 && (hp == 0 || defencePoints == 0))
-                    {
-                        die(g);
-                        //attacked.move(Space.axis, Space.ordinate);
-                        Console.WriteLine("End of fight - Defender wins");
-                        return b;
+                        hp--;
                     }
                     else
                     {
-                        hp--;
-                        defencePoints--;
-                        attacked.attackPoints--;
+                        attacked.hp--;
+                    }
+                    nbFights--;
+                }
+                if (hp == 0) { die(g); }
+                if (attacked.hp == 0) 
+                { 
+                    attacked.die(g);
+                    if (this.getType() == Type.Orc)
+                    {
+                        bonusPoints++;
                     }
                 }
-                return b;
             }
         }
         public Boolean isDead()

@@ -46,7 +46,7 @@ namespace Graphics
         private void ClickNext(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Are sure you want to move to the next turn ?", "Confirmation", MessageBoxButton.OKCancel);
-            Jeu.Game.nextTurn();
+            //Jeu.Game.nextTurn();
         }
 
         private void ClickNewGame(object sender, RoutedEventArgs e)

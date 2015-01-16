@@ -171,13 +171,17 @@ namespace Jeu
             SelectionY = y;
         }
 
-        public static void nextTurn()
+        public void nextTurn()
         {
             if (Turn.numTurn + 1 < NbTurns)
             {
                 changePlayer();
                 int newTurn = Turn.numTurn + 1;
                 Turn = new Turn(newTurn);
+                foreach (People p in Peoples) {
+                    p.initMovePoints();
+                    p.majPoints(Map);
+                }
                 NbTurnsLeft--;
             }
             else
