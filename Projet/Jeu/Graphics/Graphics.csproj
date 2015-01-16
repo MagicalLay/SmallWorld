@@ -170,6 +170,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="elements\background.jpg" />
+    <Resource Include="elements\boot.png" />
+    <Resource Include="elements\coeur.png" />
+    <Resource Include="elements\shield.png" />
+    <Resource Include="elements\sword.png" />
     <Content Include="peoples\dwarf.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

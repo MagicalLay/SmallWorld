@@ -33,7 +33,7 @@
         </Rectangle>
         <Path Name="path" Fill="Red"/>
 
-        <Image Name="imgUnitDwarf" 
+        <Image Name="imgUnit" 
             Width="35"
             Source="peoples/dwarf.png"/>
 

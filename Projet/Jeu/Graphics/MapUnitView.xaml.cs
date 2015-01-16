@@ -75,7 +75,7 @@ namespace Graphics
         protected void OnUnitLoaded(object sender, RoutedEventArgs e)
         {
             update(this, null);
-            //this.imgUnit.Source = Util.getImageResourceFromFaction(Unit.getType());
+            this.imgUnit.Source = Util.getImageResourceFromFaction(Unit.getType());
         }
     }
 }

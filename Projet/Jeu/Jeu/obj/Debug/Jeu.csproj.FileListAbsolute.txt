@@ -5,3 +5,10 @@ C:\Users\Pierre-Marie\Downloads\SmallWorld-4b38fa16ab8dda92d512065fbc6442f70c367
 C:\Users\Pierre-Marie\Downloads\SmallWorld-4b38fa16ab8dda92d512065fbc6442f70c367c3b\SmallWorld-4b38fa16ab8dda92d512065fbc6442f70c367c3b\Projet\Jeu\Jeu\obj\Debug\Jeu.csprojResolveAssemblyReference.cache
 C:\Users\Pierre-Marie\Downloads\SmallWorld-4b38fa16ab8dda92d512065fbc6442f70c367c3b\SmallWorld-4b38fa16ab8dda92d512065fbc6442f70c367c3b\Projet\Jeu\Jeu\obj\Debug\Jeu.dll
 C:\Users\Pierre-Marie\Downloads\SmallWorld-4b38fa16ab8dda92d512065fbc6442f70c367c3b\SmallWorld-4b38fa16ab8dda92d512065fbc6442f70c367c3b\Projet\Jeu\Jeu\obj\Debug\Jeu.pdb
+D:\Github\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Jeu.dll
+D:\Github\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Jeu.pdb
+D:\Github\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Wrapper.dll
+D:\Github\SmallWorld\Projet\Jeu\Jeu\bin\Debug\Wrapper.pdb
+D:\Github\SmallWorld\Projet\Jeu\Jeu\obj\Debug\Jeu.csprojResolveAssemblyReference.cache
+D:\Github\SmallWorld\Projet\Jeu\Jeu\obj\Debug\Jeu.dll
+D:\Github\SmallWorld\Projet\Jeu\Jeu\obj\Debug\Jeu.pdb
