@@ -6,9 +6,9 @@
 \contentsline {subsection}{\numberline {2.1}Lancement du jeu}{5}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Cr\IeC {\'e}er une partie}{5}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Interface du jeu}{7}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Les donn\IeC {\'e}es des joueurs}{7}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}La carte}{7}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.1}Les donn\IeC {\'e}es des joueurs}{9}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}La carte}{9}{subsubsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.3}Le d\IeC {\'e}placement des unit\IeC {\'e}s}{9}{subsubsection.2.3.3}
 \contentsline {subsubsection}{\numberline {2.3.4}Les combats}{9}{subsubsection.2.3.4}
-\contentsline {subsubsection}{\numberline {2.3.5}Fin du tour}{10}{subsubsection.2.3.5}
-\contentsline {subsubsection}{\numberline {2.3.6}Fin du jeu}{10}{subsubsection.2.3.6}
+\contentsline {subsubsection}{\numberline {2.3.5}Fin du tour}{9}{subsubsection.2.3.5}
+\contentsline {subsubsection}{\numberline {2.3.6}Fin du jeu}{9}{subsubsection.2.3.6}
