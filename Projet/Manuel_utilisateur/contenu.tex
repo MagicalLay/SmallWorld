@@ -1,6 +1,6 @@
 \section{Rappel des règles du jeu}
 
-Il s’agit d’un jeu au tour-par-tour inspiré de \og Small World \fg{}, dans lequel chaque joueur dirige un peuple. Le but du jeu est de gérer des unités sur une carte pour obtenir le plus de points possible, à la fin d’un certain nombre de tours. Pour ce faire, chaque joueur commence avec ses unités placées sur une même case de la carte. Il doit ensuite les répartir au mieux sur les différentes cases de la carte : par défaut, une case rapporte 1 point. Les unités d’un joueur peuvent également attaquer les unités de l'autre pour les détruire (limitant ainsi l’acquisition de points de l’adversaire) et occuper une case de la carte. Les points sont recomptés à la fin de chaque tour pour que tous les joueurs connaissent leur nombre courant de points ainsi que celui de leurs adversaires.
+Il s’agit d’un jeu tour-par-tour inspiré de \og Small World \fg{}, dans lequel chaque joueur dirige un peuple. Le but du jeu est de gérer des unités sur une carte pour obtenir le plus de points possible, à la fin d’un certain nombre de tours. Pour ce faire, chaque joueur commence avec toutes ses unités placées sur une même case de la carte. Il doit ensuite les répartir au mieux sur les différentes cases de la carte : par défaut, une case rapporte 1 point (hors bonus/malus). Les unités d’un joueur peuvent également attaquer les unités de l'autre pour les détruire (limitant ainsi l’acquisition de points de l’adversaire) et occuper une case de la carte. 
 
 \subsection{Les peuples et leurs unités}
 
@@ -14,19 +14,19 @@ Il existe trois peuples \textit{Elf}, \textit{Orc}, et \textit{Nain}, ayant des 
 
 \end{itemize}
 
-Lors d'un tour, toutes les unités du peuple peuvent être déplacées et attaquer. Par défaut, chaque unité possède deux points de mouvement, et chaque déplacement en coûte un (hors bonus/malus). Cela signifie qu’une même unité peut se déplacer ou attaquer plusieurs fois par tour. Chaque unité possède 2 points d’attaque, 1 point de défense et 5 points de vie. Les unités ne récupèrent pas leurs points de vie à la fin d’un tour, mais leurs points de déplacement sont réinitialisés à 2 à chaque tour.
+Lors d'un tour, toutes les unités du peuple peuvent être déplacées et attaquer. Par défaut, chaque unité possède 2 points de mouvement, et chaque déplacement en coûte un (hors bonus/malus). Cela signifie qu’une même unité peut se déplacer plusieurs fois par tour. Chaque unité possède en plus à la base 2 points d’attaque, 1 point de défense et 5 points de vie. Les unités ne récupèrent pas leurs points de vie à la fin d’un tour, mais leurs points de déplacement sont réinitialisés à 2 à chaque tour.
 
 \subsection{Le plateau de jeu}
 
-La carte du monde se compose de cases hexagonales. Il existe quatre types de case : \textit{Plaine}, \textit{Désert}, \textit{Montagne} , \textit{Forêt}. 
+La carte du monde se compose de quatre types de cases (hexagonales) : \textit{Plaine}, \textit{Désert}, \textit{Montagne} , \textit{Forêt}.
 
-Il existe 3 tailles de carte :
+Il existe 3 tailles de carte, auxquelles sont associées un nombre de tours ainsi qu'un nombre d'unités :
 
 \begin{itemize}
 
-\item \textbf{Petite} (\textit{Small}) : 6 cases * 6 cases, 5 tours, 4 unités par peuple.
-\item \textbf{Moyenne} (\textit{Medium}) : 10 cases * 10 cases, 20 tours, 6 unités par peuple.
-\item \textbf{Grande} (\textit{Large}) : 14 cases * 14 cases, 30 tours, 8 unités par peuple.
+\item \textbf{Petite} (\textit{Small}) : 6 * 6 cases, 5 tours, 4 unités par peuple.
+\item \textbf{Moyenne} (\textit{Medium}) : 10 * 10 cases, 20 tours, 6 unités par peuple.
+\item \textbf{Grande} (\textit{Large}) : 14 * 14 cases, 30 tours, 8 unités par peuple.
 
 \end{itemize}
 
@@ -38,7 +38,7 @@ La carte, ainsi que les unités des deux peuples, sont visibles par les deux jou
 
 Pour lancer le jeu, 
 
-\begin{figure}
+\begin{figure}[!h]
     \centering
     \includegraphics[height=0.70\textwidth]{figure/ecranAccueil.png}
     \caption{Page d'accueil du jeu.}
@@ -49,50 +49,46 @@ C'est à partir de cet écran d'accueil que vous allez pouvoir créer une nouvel
 
 \subsection{Créer une partie}
 
-Pour créer une partie à partir de l'écran d'accueil, cliquez sur \og Create new game \fg{}. Une boîte de dialogue s'affiche alors, par laquelle il faut choisir la taille de la carte par sélection dans la liste déroulante dont vous avez un aperçu à la {\sc Figure}~\ref{fig:sizeMap}. 
+Pour créer une nouvelle partie à partir de l'écran d'accueil, cliquez sur \og Create new game \fg{}. Une boîte de dialogue s'affiche alors, par laquelle il faut choisir la taille de la carte par sélection dans la liste déroulante dont vous avez un aperçu à la {\sc Figure}~\ref{fig:sizeMap}. Après validation, une nouvelle fenêtre s'affiche et chaque joueur doit choisir son peuple (une vérification a été mise en place afin de s'assurer que les peuples choisis soient différents). Cette fenêtre est similaire à celle de la {\sc Figure}~\ref{fig:choicePeoples}. Après cette dernière étape, vous pouvez alors commencer la partie en cliquant sur \og Valider \fg{}.
 
-\begin{figure}
+\begin{figure}[!h]
     \centering
-    \includegraphics[height=0.70\textwidth]{figure/sizeMap.png}
+    \includegraphics[height=0.60\textwidth]{figure/sizeMap.png}
     \caption{Choix de la taille de la carte.}
     \label{fig:sizeMap}
 \end{figure}
 
-Après validation, une nouvelle fenêtre s'affiche et chaque joueur doit choisir son peuple (une vérification a été mise en place afin de s'assurer que les peuples choisis soient différents). Cette fenêtre est similaire à celle de la {\sc Figure}~\ref{fig:choicePeoples}.
-
-\begin{figure}
+\begin{figure}[!h]
     \centering
     \includegraphics[height=0.60\textwidth]{figure/choicePeoples.png}
     \caption{Choix des peuples des joueurs 1 et 2.}
     \label{fig:choicePeoples}
 \end{figure}
 
-Après cette dernière étape, vous pouvez alors commencer la partie en cliquant sur \og Valider \fg{}.
+\begin{landscape}
+    \begin{figure}[!h]
+    \centering
+    \includegraphics[height=0.90\textwidth]{figure/game.png}
+    \caption{Interface globale du jeu.}
+    \label{fig:game}
+    \end{figure}
+\end{landscape}
 
 \subsection{Interface du jeu}
 
 La {\sc Figure}~\ref{fig:game} montre un aperçu de l'interface globale du jeu (avec une carte de taille Medium). Différents éléments sont accessibles et/ou manipulables à partir de cette dernière.
 
-\begin{landscape}
-            \begin{figure}
-                \centering
-                \includegraphics[height=0.66\textwidth]{figure/ecranAccueil.png}
-                \caption{Interface globale du jeu.}
-                \label{fig:game}
-            \end{figure}
-        \end{landscape}
-
 \subsubsection{Les données des joueurs}
 
-Vous pouvez voir, à gauche de la carte, le nombre de points de chacun des joueurs (recalculé à chaque nouveau tour). À droite de la carte est également affiché le nombre d'unités restantes de chaque peuple. 
+Vous pouvez voir, à gauche de la carte, le nombre de points de chacun des joueurs (recalculé à chaque nouveau tour). À droite de la carte est également affichée la liste des unités sélectionnées. 
 
 \subsubsection{La carte}
 
-Au début du jeu, toutes les unités d'un même peuple (et donc d'un même joueur) sont regroupées sur une même case. Le premier joueur (désigné aléatoirement) peut alors commencer à déplacer ses unités. La case sur laquelle se trouve le curseur de la souris est entourée de blanc, comme sur la {\sc Figure}~\ref{fig:sizeMap}, et s'assombrit lorsque le joueur la sélectionne.
+Au début du jeu, toutes les unités de chaque peuple (et donc d'un même joueur) sont regroupées sur une même case. Les deux peuples sont initialement positionnés de façon à être le plus loin possible l'un de l'autre. Le premier joueur (désigné aléatoirement) peut alors commencer à déplacer ses unités. La case sur laquelle se trouve le curseur de la souris est entourée de blanc, comme sur la {\sc Figure}~\ref{fig:sizeMap}, et s'assombrit lorsque le joueur la sélectionne.
 
-\begin{figure}
+\begin{figure}[!h]
     \centering
-    \includegraphics[height=0.70\textwidth]{figure/selectSpace.png}
+    \includegraphics[height=0.40\textwidth]{figure/selectSpace.png}
     \caption{Au milieu : passage de la souris au-dessus d'une case.}
     \label{fig:onSpace}
 \end{figure}
@@ -115,7 +111,7 @@ Le jeu se termine de façon automatique si le nombre de tours fixé lors de la c
 
 \begin{figure}
     \centering
-    \includegraphics[height=0.70\textwidth]{figure/echap.png}
+    \includegraphics[height=0.60\textwidth]{figure/echap.png}
     \caption{Menu obtenu par pression de la touche Echap.}
     \label{fig:echap}
 \end{figure}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.21)  16 JAN 2015 06:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.21)  16 JAN 2015 08:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -698,35 +698,35 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 30.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 49.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 44.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 44.
 
 (c:/texlive/2014/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 49.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 44.
 
 (c:/texlive/2014/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \degres on input line 49.
-LaTeX Info: Redefining \dots on input line 49.
-LaTeX Info: Redefining \up on input line 49.
+LaTeX Info: Redefining \degres on input line 44.
+LaTeX Info: Redefining \dots on input line 44.
+LaTeX Info: Redefining \up on input line 44.
 
 (c:/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -816,7 +816,7 @@ LaTeX Info: Redefining \selectfont on input line 126.
 \RaggedRightParindent=\skip72
 \JustifyingParindent=\skip73
 )
-Package hyperref Info: Link coloring ON on input line 49.
+Package hyperref Info: Link coloring ON on input line 44.
 
 (c:/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -826,192 +826,205 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count144
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 44.
+LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \nameref on input line 44.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 51.
- <figure/couv.pdf, id=32, 597.23125pt x 845.1575pt>
+Package hyperref Info: Option `pageanchor' set `false' on input line 46.
+ <figure/couv.pdf, id=4, 597.23125pt x 845.1575pt>
 File: figure/couv.pdf Graphic file (type pdf)
 
 <use figure/couv.pdf>
-Package pdftex.def Info: figure/couv.pdf used on input line 52.
+Package pdftex.def Info: figure/couv.pdf used on input line 47.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: figure/couv.pdf Graphic file (type pdf)
  <use figure/couv.pdf>
-Package pdftex.def Info: figure/couv.pdf used on input line 52.
+Package pdftex.def Info: figure/couv.pdf used on input line 47.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
-<figure/couv.pdf, id=35, page=1, 597.23125pt x 845.1575pt>
+<figure/couv.pdf, id=7, page=1, 597.23125pt x 845.1575pt>
 File: figure/couv.pdf Graphic file (type pdf)
 
 <use figure/couv.pdf, page 1>
-Package pdftex.def Info: figure/couv.pdf, page1 used on input line 52.
+Package pdftex.def Info: figure/couv.pdf, page1 used on input line 47.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: figure/couv.pdf Graphic file (type pdf)
  <use figure/couv.pdf, page 1>
-Package pdftex.def Info: figure/couv.pdf, page1 used on input line 52.
+Package pdftex.def Info: figure/couv.pdf, page1 used on input line 47.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: figure/couv.pdf Graphic file (type pdf)
 
 <use figure/couv.pdf, page 1>
-Package pdftex.def Info: figure/couv.pdf, page1 used on input line 52.
+Package pdftex.def Info: figure/couv.pdf, page1 used on input line 47.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: figure/couv.pdf Graphic file (type pdf)
  <use figure/couv.pdf, page 1>
-Package pdftex.def Info: figure/couv.pdf, page1 used on input line 52.
+Package pdftex.def Info: figure/couv.pdf, page1 used on input line 47.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: figure/couv.pdf Graphic file (type pdf)
 
 <use figure/couv.pdf, page 1>
-Package pdftex.def Info: figure/couv.pdf, page1 used on input line 52.
+Package pdftex.def Info: figure/couv.pdf, page1 used on input line 47.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
  [1
 
  <./figure/couv.pdf>]
-Package hyperref Info: Option `pageanchor' set `true' on input line 53.
- [2] (./main.toc
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 3.
+Package hyperref Info: Option `pageanchor' set `true' on input line 48.
+ [2]
 
-(c:/texlive/2014/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 3.
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
 
-(c:/texlive/2014/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 3.
-
-(c:/texlive/2014/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 3.
-
-(c:/texlive/2014/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 3.
-)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [3{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./contenu.t
-ex [4]
-<figure/ecranAccueil.png, id=86, 448.67625pt x 448.67625pt>
+[3{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./contenu.tex [4] <figure/ecranAccueil.png, id=54, 448.67625pt x 448.67625pt>
 File: figure/ecranAccueil.png Graphic file (type png)
 
 <use figure/ecranAccueil.png>
 Package pdftex.def Info: figure/ecranAccueil.png used on input line 43.
 (pdftex.def)             Requested size: 298.76305pt x 298.75264pt.
 
-<figure/sizeMap.png, id=88, 225.84375pt x 225.09094pt>
+
+LaTeX Warning: Reference `fig:sizeMap' on page 5 undefined on input line 52.
+
+
+LaTeX Warning: Reference `fig:choicePeoples' on page 5 undefined on input line 
+52.
+
+<figure/sizeMap.png, id=55, 225.84375pt x 225.09094pt>
 File: figure/sizeMap.png Graphic file (type png)
 
 <use figure/sizeMap.png>
 Package pdftex.def Info: figure/sizeMap.png used on input line 56.
-(pdftex.def)             Requested size: 299.78601pt x 298.75264pt.
-
-<figure/choicePeoples.png, id=90, 223.58531pt x 224.33812pt>
+(pdftex.def)             Requested size: 256.96484pt x 256.07741pt.
+ [5 <./figure/ecranAccueil.png>]
+<figure/choicePeoples.png, id=65, 223.58531pt x 224.33812pt>
 File: figure/choicePeoples.png Graphic file (type png)
 
 <use figure/choicePeoples.png>
-Package pdftex.def Info: figure/choicePeoples.png used on input line 65.
+Package pdftex.def Info: figure/choicePeoples.png used on input line 63.
 (pdftex.def)             Requested size: 255.24469pt x 256.07741pt.
- [5 <./figure/ecranAccueil.png>] [6 <./figure/sizeMap.png>] [7 <./figure/choice
-Peoples.png>]
-File: figure/ecranAccueil.png Graphic file (type png)
- <use figure/ecranAccueil.png>
-Package pdftex.def Info: figure/ecranAccueil.png used on input line 79.
-(pdftex.def)             Requested size: 281.69536pt x 281.68385pt.
+ [6 <./figure/sizeMap.png> <./figure/choicePeoples.png>] <figure/game.png, id=7
+2, 1028.34187pt x 578.16pt>
+File: figure/game.png Graphic file (type png)
 
-[8] <figure/selectSpace.png, id=115, 108.405pt x 100.87688pt>
+<use figure/game.png>
+Package pdftex.def Info: figure/game.png used on input line 71.
+(pdftex.def)             Requested size: 683.19543pt x 384.1096pt.
+
+Overfull \hbox (65.77063pt too wide) in paragraph at lines 71--72
+ [][] 
+ []
+
+[7
+
+ <./figure/game.png>]
+
+LaTeX Warning: Reference `fig:game' on page 8 undefined on input line 79.
+
+
+LaTeX Warning: Reference `fig:sizeMap' on page 8 undefined on input line 87.
+
+<figure/selectSpace.png, id=79, 108.405pt x 100.87688pt>
 File: figure/selectSpace.png Graphic file (type png)
 
 <use figure/selectSpace.png>
-Package pdftex.def Info: figure/selectSpace.png used on input line 95.
-(pdftex.def)             Requested size: 321.05238pt x 298.75264pt.
+Package pdftex.def Info: figure/selectSpace.png used on input line 91.
+(pdftex.def)             Requested size: 183.45567pt x 170.71393pt.
+ [8
 
-<figure/echap.png, id=118, 243.15843pt x 348.55219pt>
+ <./figure/selectSpace.png>]
+
+LaTeX Warning: Reference `fig:game' on page 9 undefined on input line 106.
+
+
+LaTeX Warning: Reference `fig:echap' on page 9 undefined on input line 110.
+
+<figure/echap.png, id=89, 243.15843pt x 348.55219pt>
 File: figure/echap.png Graphic file (type png)
  <use figure/echap.png>
-Package pdftex.def Info: figure/echap.png used on input line 118.
-(pdftex.def)             Requested size: 208.42577pt x 298.75264pt.
-
-[9
-
-
-] [10 <./figure/selectSpace.png>]) [11 <./figure/echap.png>] [12] [13]
+Package pdftex.def Info: figure/echap.png used on input line 114.
+(pdftex.def)             Requested size: 178.65437pt x 256.07741pt.
+)
+[9 <./figure/echap.png>] [10] [11]
 File: figure/couv.pdf Graphic file (type pdf)
-
-<use figure/couv.pdf>
-Package pdftex.def Info: figure/couv.pdf used on input line 76.
+ <use figure/couv.pdf>
+Package pdftex.def Info: figure/couv.pdf used on input line 71.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: figure/couv.pdf Graphic file (type pdf)
  <use figure/couv.pdf>
-Package pdftex.def Info: figure/couv.pdf used on input line 76.
+Package pdftex.def Info: figure/couv.pdf used on input line 71.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
-<figure/couv.pdf, id=150, page=2, 597.23125pt x 845.1575pt>
+<figure/couv.pdf, id=108, page=2, 597.23125pt x 845.1575pt>
 File: figure/couv.pdf Graphic file (type pdf)
 
 <use figure/couv.pdf, page 2>
-Package pdftex.def Info: figure/couv.pdf, page2 used on input line 76.
+Package pdftex.def Info: figure/couv.pdf, page2 used on input line 71.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: figure/couv.pdf Graphic file (type pdf)
  <use figure/couv.pdf, page 2>
-Package pdftex.def Info: figure/couv.pdf, page2 used on input line 76.
+Package pdftex.def Info: figure/couv.pdf, page2 used on input line 71.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: figure/couv.pdf Graphic file (type pdf)
 
 <use figure/couv.pdf, page 2>
-Package pdftex.def Info: figure/couv.pdf, page2 used on input line 76.
+Package pdftex.def Info: figure/couv.pdf, page2 used on input line 71.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: figure/couv.pdf Graphic file (type pdf)
  <use figure/couv.pdf, page 2>
-Package pdftex.def Info: figure/couv.pdf, page2 used on input line 76.
+Package pdftex.def Info: figure/couv.pdf, page2 used on input line 71.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: figure/couv.pdf Graphic file (type pdf)
 
 <use figure/couv.pdf, page 2>
-Package pdftex.def Info: figure/couv.pdf, page2 used on input line 76.
+Package pdftex.def Info: figure/couv.pdf, page2 used on input line 71.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [14 <./figure/couv.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
+ [12 <./figure/couv.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 72.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D32DEE09A1BF02F780935247C7702EAB;459.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  D32DEE09A1BF02F780935247C7702EAB;459.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 11495 strings out of 493109
- 162988 string characters out of 6138586
- 266795 words of memory out of 5000000
- 14710 multiletter control sequences out of 15000+600000
- 45501 words of font info for 37 fonts, out of 8000000 for 9000
+ 11417 strings out of 493109
+ 161329 string characters out of 6138586
+ 266321 words of memory out of 5000000
+ 14657 multiletter control sequences out of 15000+600000
+ 34491 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,18n,45p,871b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,18n,45p,736b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2014/tex
 mf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2014/texmf-dist/fonts/type
 1/public/lm/lmbx12.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmcsc1
 0.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2
 014/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
-Output written on main.pdf (14 pages, 1043260 bytes).
+Output written on main.pdf (12 pages, 1499516 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 32 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
