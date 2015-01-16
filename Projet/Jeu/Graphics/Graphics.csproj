@@ -71,6 +71,7 @@
     <Compile Include="selectionPeuples.xaml.cs">
       <DependentUpon>selectionPeuples.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Util.cs" />
     <Page Include="Cellule.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

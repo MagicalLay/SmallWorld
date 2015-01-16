@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Graphics.ecranAccueil"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ecranAccueil" Height="300" Width="300" Background="White" BorderBrush="#FFFFFCFC" Foreground="Black">
+        Title="ecranAccueil" Height="300" Width="300" Background="White" BorderBrush="#FFFFFCFC" Foreground="Black" >
     <Grid>
         <TextBlock Text="Sélectionnez la taille de la carte : " Margin="59,76,59,165" />
         <ComboBox Name="comboBoxTaille" HorizontalAlignment="Left" Margin="86,122,0,0" VerticalAlignment="Top" Width="120">

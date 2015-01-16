@@ -88,6 +88,8 @@ namespace Jeu
             Random rnd = new Random();
             int player = rnd.Next(2);
             CurrentPlayer = Peoples[player]; // First player = current player
+            if (player == 0) NotCurrentPlayer = Peoples[1];
+            else NotCurrentPlayer = Peoples[0];
         }
 
         public static Turn Turn
@@ -173,7 +175,7 @@ namespace Jeu
 
         public static void nextTurn()
         {
-            if (Turn.numTurn + 1 < NbTurns)
+            if (NbTurnsLeft > 0)
             {
                 changePlayer();
                 int newTurn = Turn.numTurn + 1;
@@ -192,16 +194,24 @@ namespace Jeu
             private set;
         }
 
+        public static People NotCurrentPlayer
+        {
+            get;
+            private set;
+        }
+
         public static void changePlayer()
         {
             People p = CurrentPlayer;
             if (p.Equals(Peoples[0]))
             {
                 CurrentPlayer = Peoples[1];
+                NotCurrentPlayer = Peoples[0];
             }
             else
             {
                 CurrentPlayer = Peoples[0];
+                NotCurrentPlayer = Peoples[1];
             }
         }
 

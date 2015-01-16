@@ -5,7 +5,7 @@
              StartupUri="MainWindow.xaml">
 
     <Application.Resources>
-        <BitmapImage x:Key="backgroundImage" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="elements/background.jpg"/>
+        <BitmapImage x:Key="backgroundImage" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./elements/background.jpg"/>
         <BitmapImage x:Key="FieldCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./textures/field.png"/>
         <BitmapImage x:Key="MountainCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./textures/mountain.png"/>
         <BitmapImage x:Key="DesertCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="./textures/desert.png"/>
@@ -17,7 +17,7 @@
         <BitmapImage x:Key="Shield"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="elements/shield.png" />
         <local:BoolVisibilityConverter x:Key="BoolVisibilityConverter" />
         <local:EnumBooleanConverter x:Key="EnumToBooleanConverter" />
-
+<!--
         <Style TargetType="Button">
             <Setter Property="VerticalAlignment" Value="Top" />
             <Setter Property="Width" Value="100" />
@@ -26,7 +26,7 @@
             <Setter Property="FontFamily" Value="/WpfSmallWorld;component/Resources/#Trajan Pro" />
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Top" />
-        </Style>
+        </Style>-->
         
         <!--Control colors.-->
         <Color x:Key="WindowColor">#FFE8EDF9</Color>

@@ -37,8 +37,8 @@ namespace Graphics
             game = g;
             Unit = u;
             InitializeComponent();
-            //u.PropertyChanged += new PropertyChangedEventHandler(update);
-            //GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update);
+            u.PropertyChanged += new PropertyChangedEventHandler(update);
+            game.PropertyChanged += new PropertyChangedEventHandler(update);
             pbHealth.Maximum = 5 - u.hp;
             pbHealth.Minimum = 0;
             pbMovingPoints.Maximum = 2;
@@ -68,7 +68,7 @@ namespace Graphics
         protected void OnUnitLoaded(object sender, RoutedEventArgs e)
         {
             update(this, null);
-            //imgUnit.Source = Util.getImageResourceFromFaction(Unit.getType());
+            imgUnit.Source = Util.getImageResourceFromFaction(Unit.getType());
         }
 
         private void grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

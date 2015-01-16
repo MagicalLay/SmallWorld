@@ -41,6 +41,7 @@ namespace Graphics
         /// </summary>
         public gameWindow(CreateBuilder cB)
         {
+            this.Background = Brushes.Black;
             game = cB.game;
             InitializeComponent();
             IsPaused = false;
@@ -63,17 +64,17 @@ namespace Graphics
                     break;
             }
 
-
+            game.selectionUnite(Game.CurrentPlayer.units[0]);
             mapGrid.Margin = new Thickness(-moveOffsetX, -moveOffsetY, 0, 0);
 
             // Populate the map with the units
             foreach (Unit u in cB.p[0].units)
             {
-                unitViews.Add(new MapUnitView(u));
+                unitViews.Add(new MapUnitView(u, cB.game));
             }
             foreach (Unit u in cB.p[1].units)
             {
-                unitViews.Add(new MapUnitView(u));
+                unitViews.Add(new MapUnitView(u, cB.game));
             }
             foreach (MapUnitView uv in unitViews)
             {
@@ -144,9 +145,11 @@ namespace Graphics
         private void btnEndTurn_Click(object sender, RoutedEventArgs e)
         {
             if (!IsPaused)
+            {
                 Game.nextTurn();
-            lblVictoryPointsP1.Content = Game.Peoples[0].Nickname + "'s victory points : " + Game.Peoples[0].nbPoints;
-            lblVictoryPointsP2.Content = Game.Peoples[1].Nickname + "'s victory points : " + Game.Peoples[1].nbPoints;
+                lblVictoryPointsP1.Content = Game.Peoples[0].Nickname + "'s victory points : " + Game.Peoples[0].nbPoints;
+                lblVictoryPointsP2.Content = Game.Peoples[1].Nickname + "'s victory points : " + Game.Peoples[1].nbPoints;
+            }
         }
 
         /// <summary>
@@ -174,10 +177,10 @@ namespace Graphics
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void WindowInGame_KeyUp(object sender, KeyEventArgs e)
-        {/*
-            int x = GameImpl.INSTANCE.SelectedUnit.X;
-            int y = GameImpl.INSTANCE.SelectedUnit.Y;
-            Unit u = GameImpl.INSTANCE.SelectedUnit;
+        {
+            int x = game.SelectionUnit.axis;
+            int y = game.SelectionUnit.ordinate;
+            Unit u = game.SelectionUnit;
             switch (e.Key)
             {
                 case Key.Enter:
@@ -187,24 +190,24 @@ namespace Graphics
                     toggleMenu();
                     break;
                 case Key.NumPad1:
-                    GameImpl.INSTANCE.MoveUnit(u, y % 2 == 0 ? x + 1 : x, y % 2 == 0 ? y : y + 1);
+                    game.moveUnit(u, y % 2 == 0 ? x + 1 : x, y % 2 == 0 ? y : y + 1);
                     break;
                 case Key.NumPad3:
-                    GameImpl.INSTANCE.MoveUnit(u, y % 2 == 0 ? x : x+1, y+1);
+                    game.moveUnit(u, y % 2 == 0 ? x : x + 1, y + 1);
                     break;
                 case Key.NumPad4:
-                    GameImpl.INSTANCE.MoveUnit(u, x - 1, y);
+                    game.moveUnit(u, x - 1, y);
                     break;
                 case Key.NumPad6:
-                    GameImpl.INSTANCE.MoveUnit(u, x + 1, y);
+                    game.moveUnit(u, x + 1, y);
                     break;
                 case Key.NumPad7:
-                    GameImpl.INSTANCE.MoveUnit(u, y % 2 == 0 ? x-1 : x, y - 1);
+                    game.moveUnit(u, y % 2 == 0 ? x - 1 : x, y - 1);
                     break;
                 case Key.NumPad9:
-                    GameImpl.INSTANCE.MoveUnit(u, y % 2 == 0 ? x : x + 1, y-1);
+                    game.moveUnit(u, y % 2 == 0 ? x : x + 1, y - 1);
                     break;
-            }*/
+            }
         }
 
         /// <summary>
@@ -263,21 +266,21 @@ namespace Graphics
         /// Deletes the dead units's views from the map
         /// </summary>
         public void deleteDeadUnits()
-        {/*
+        {
             foreach (UIElement uv in mapGrid.Children.Cast<UIElement>().ToArray())
             {
-                if (uv is MapUnitView && ((MapUnitView)uv).Unit.IsDead)
+                if (uv is MapUnitView && ((MapUnitView)uv).Unit.isDead())
                 {
                     mapGrid.Children.Remove(uv);
                 }
             }
             foreach (UIElement uv in listUnitGrid.Children.Cast<UIElement>().ToArray())
             {
-                if (uv is FullUnitView && ((FullUnitView)uv).Unit.IsDead)
+                if (uv is ListUnite && ((ListUnite)uv).Unit.isDead())
                 {
                     mapGrid.Children.Remove(uv);
                 }
-            }*/
+            }
         }
 
 
